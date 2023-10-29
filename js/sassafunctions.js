@@ -4,6 +4,7 @@
 function toggleImageSrc(imgElement, altSrc) {
     let currentSrc = imgElement.getAttribute('src');
     
+	// Thanks CGPT4.
     // Check if the current source is the same as the alternate source.
     // If it is, you might want to toggle it back to the original or handle it differently.
     if (currentSrc === altSrc) {
