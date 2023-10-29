@@ -42,25 +42,41 @@
        </div>
     </nav>
 
-    <hr class="my-4">
     <div class="jumbotron jumbotron-fluid text-center">
        <h1 class="display-4"><img src="images/sassa-logo1.png" width="578" height="154" alt=""/>&nbsp;</h1>
-	    
 		<div class="container">
+    <hr class="my-4">
+	  <b>SA ID Number:</b>&nbsp&nbsp&nbsp&nbsp<input type="text" name="id_no" id="id_no" placeholder="     13 digit ID number">
+	<hr class="my-4">
 			<div class="row">
-				<div class="col-sm">x</div>
-				<div class="col-sm">x</div>
-				<div class="col-sm">x</div>
+				<div class="col-sm"><img src="images/1.0.caredependency.png" onmouseover="toggleImageSrc(this, 'images/1.1.caredependency.png')" onmouseout="toggleImageSrc(this, 'images/1.0.caredependency.png')" width="126" height="132.8" alt="" class="toggleImage"/></div>
+				<div class="col-sm"><img src="images/2.0.childcare.png" onmouseover="toggleImageSrc(this, 'images/2.1.childcare.png')" onmouseout="toggleImageSrc(this, 'images/2.0.childcare.png')" width="126" height="132.8" alt="" class="toggleImage"/></div>
+				<div class="col-sm"><img src="images/3.0.fosterchild.png" onmouseover="toggleImageSrc(this, 'images/3.1.fosterchild.png')"  onmouseout="toggleImageSrc(this, 'images/3.0.fosterchild.png')" width="126" height="132.8" alt="" class="toggleImage"/></div>
 			</div>
 			<div class="row">
-				<div class="col-sm">x</div>
-				<div class="col-sm">x</div>
-				<div class="col-sm">x</div>
+				<div class="col-sm">Care Dependancy</div>
+				<div class="col-sm">Child Support</div>
+				<div class="col-sm">Foster Child</div>
 			</div>
 			<div class="row">
-				<div class="col-sm">x</div>
-				<div class="col-sm">x</div>
-				<div class="col-sm">x</div>
+				<div class="col-sm"><img src="images/4.0.disability.png" onmouseover="toggleImageSrc(this, 'images/4.1.disability.png')" onmouseout="toggleImageSrc(this, 'images/4.0.disability.png')" width="126" height="132.8" alt="" class="toggleImage"/></div>
+				<div class="col-sm"><img src="images/5.0.grantinaid.png" onmouseover="toggleImageSrc(this, 'images/5.1.grantinaid.png')" onmouseout="toggleImageSrc(this, 'images/5.0.grantinaid.png')" width="126" height="132.8" alt="" class="toggleImage"/></div>
+				<div class="col-sm"><img src="images/6.0.oldagegrant.png" onmouseover="toggleImageSrc(this, 'images/6.1.oldagegrant.png')" onmouseout="toggleImageSrc(this, 'images/6.0.oldagegrant.png')" width="126" height="132.8" alt="" class="toggleImage"/></div>
+			</div>
+			<div class="row">
+				<div class="col-sm">Disability</div>
+				<div class="col-sm">Grant-in-Aid</div>
+				<div class="col-sm">Older Persons</div>
+			</div>
+			<div class="row">
+				<div class="col-sm"><img src="images/7.0.reliefofdistress.png" onmouseover="toggleImageSrc(this, 'images/7.1.reliefofdistress.png')" onmouseout="toggleImageSrc(this, 'images/7.0.reliefofdistress.png')" width="126" height="132.8" alt="" class="toggleImage"/></div>
+				<div class="col-sm"><img src="images/8.0.warveterans.png" onmouseover="toggleImageSrc(this, 'images/8.1.warveterans.png')" onmouseout="toggleImageSrc(this, 'images/8.0.warveterans.png')" width="126" height="132.8" alt="" class="toggleImage"/></div>
+				<div class="col-sm"><img src="images/9.0.caredependencycovid.png" onmouseover="toggleImageSrc(this, 'images/9.1.caredependencycovid.png')" onmouseout="toggleImageSrc(this, 'images/9.0.caredependencycovid.png')" width="126" height="132.8" alt="" class="toggleImage"/></div>
+			</div>
+			<div class="row">
+				<div class="col-sm">Relief of Distress</div>
+				<div class="col-sm">War Veterans</div>
+				<div class="col-sm">Relief of Distress</div>
 			</div>
 		</div>
     </div>
@@ -79,6 +95,10 @@
 
     <!-- Include all compiled plugins (below), or include individual files as needed --> 
     <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+	  
+	<!-- Custom functions for SASSA -->
+    <script src="js/sassafunctions.js"></script>
+	  
   </body>
 </html>

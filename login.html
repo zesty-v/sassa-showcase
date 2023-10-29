@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap - Prebuilt Layout</title>
-
+    
+	  <style>
+        #centeredPlaceholder::placeholder {
+            text-align: center;
+        }
+    </style>
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
 
   </head>
   <body>
+	
+	<script src="sassa-functions.js"></script>
+	  
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        <a class="navbar-brand" href="#">Navbar</a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,10 +58,10 @@
     <div class="jumbotron jumbotron-fluid text-center">
        <h1 class="display-4"><img src="images/sassa-logo1.png" width="578" height="154" alt=""/>&nbsp;</h1>
        <p class="lead">
-         <input type="text" name="u_name" id="u_name" placeholder="           user name">
+         <input type="text" name="u_name" id="u_name" placeholder="user name">
        </p>
        <p class="lead">
-         <input type="password" name="u_pwd" id="u_pwd" placeholder="            password">
+         <input type="password" name="u_pwd" id="u_pwd" placeholder="password">
        </p>
 
        <p class="lead">
