@@ -8,12 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SASSA - Login</title>
-    
-	  <style>
-        #centeredPlaceholder::placeholder {
-            text-align: center;
-        }
-    </style>
+
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
 
@@ -68,9 +63,10 @@
        </p>
 
        <p class="lead">
-		  <a class="btn btn-primary btn-lg" href="loggedin.html" role="button">Submit</a>
+		  <a class="btn btn-primary btn-lg" href="menu.php" role="button">Login</a>
        </p>
     </div>
+	  
     <div class="container">
        <div class="row">
 		  <p class="text-center"><span class="badge badge-info"></span></p>
