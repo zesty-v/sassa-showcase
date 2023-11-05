@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+
+.max-size-210 {
+	max-width: 210px;
+	max-height: 222px;
+}
