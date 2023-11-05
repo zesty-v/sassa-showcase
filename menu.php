@@ -37,8 +37,8 @@
 				<div class="col-sm"><img src="images/6.0.oldagegrant.png" onmouseover="toggleImageSrc(this, 'images/6.1.oldagegrant.png');" alt="Older Persons" onmouseout="toggleImageSrc(this, 'images/6.0.oldagegrant.png');" class="toggleImage img-fluid max-size-210"><br>Older Persons<br><br></div>
 			</div>
 			<div class="row">
-				<div class="col-sm"><img src="images/7.0.reliefofdistress.png" onmouseover="toggleImageSrc(this, 'images/7.1.reliefofdistress.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/7.0.reliefofdistress.png');" class="toggleImage img-fluid max-size-210"><br>Relief of Distress<br></div>
-				<div class="col-sm"><img src="images/8.0.warveterans.png" onmouseover="toggleImageSrc(this, 'images/8.1.warveterans.png');" alt="War Veterans" onmouseout="toggleImageSrc(this, 'images/8.0.warveterans.png');" class="toggleImage img-fluid max-size-210"><br>War Veterans<br></div>
+				<div class="col-sm"><img src="images/7.0.reliefofdistress.png" onmouseover="toggleImageSrc(this, 'images/7.1.reliefofdistress.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/7.0.reliefofdistress.png');" class="toggleImage img-fluid max-size-210"><br>Relief of Distress<br><br></div>
+				<div class="col-sm"><img src="images/8.0.warveterans.png" onmouseover="toggleImageSrc(this, 'images/8.1.warveterans.png');" alt="War Veterans" onmouseout="toggleImageSrc(this, 'images/8.0.warveterans.png');" class="toggleImage img-fluid max-size-210"><br>War Veterans<br><br></div>
 				<div class="col-sm"><img src="images/9.0.caredependencycovid.png" onmouseover="toggleImageSrc(this, 'images/9.1.caredependencycovid.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/9.0.caredependencycovid.png');" class="toggleImage img-fluid max-size-210"><br>Covid-19 Relief of Distress<br><br></div>
 			</div>
 		</div>
