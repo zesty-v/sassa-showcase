@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 
-<!-- include session -->
-<?php include 'sessionstart.php';?>
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -16,8 +13,7 @@
   </head>
   <body>
 	
-	<script src="sassa-functions.js"></script>
-	  
+	
    <hr class="my-4">
     <div class="jumbotron jumbotron-fluid text-center">
        <h1 class="display-4"><img src="images/sassa-logo1.png" width="578" height="154" alt=""/>&nbsp;</h1>
@@ -48,6 +44,10 @@
 
     <!-- Include all compiled plugins (below), or include individual files as needed --> 
     <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    
+    <!-- Custom functions for SASSA -->
+    <script src="js/sassa-functions.js"></script>
+	  
   </body>
 </html>

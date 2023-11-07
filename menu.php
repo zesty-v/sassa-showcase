@@ -1,5 +1,31 @@
 <!-- include session -->
-<?php include 'sessionstart.php';?>
+<?php 
+
+	if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true)
+        {
+            $_SESSION['loggedin'] = false;
+            header('Location: login.php');
+echo 'DEBUG: 1';
+            exit;
+        }
+    else
+        {
+            if ($_POST['u_name'] == 'testuser' && $_SESSION['password'])
+                {
+                    $_SESSION['loggedin'] = true;
+echo 'DEBUG: 2';
+                }
+            else
+                {
+                    $_SESSION['loggedin'] = false;
+                    header('Location: login.php');
+echo 'DEBUG: 3';
+                    exit;
+                }
+        }    
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

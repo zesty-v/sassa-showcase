@@ -62,4 +62,6 @@
 <file name="iconset3.xcf" server="192.168.0.121//var/www/html2/" local="133430039198186504" remote="133436799600000000" Dst="0" />
 <file name="iconset2.xcf" server="192.168.0.121//var/www/html2/" local="133430044884613598" remote="133436799600000000" Dst="0" />
 <file name="sassa-logo1.png" server="192.168.0.121//var/www/html2/" local="133436651069874182" remote="133436799600000000" Dst="0" />
+<file name="card-img.png" server="192.168.0.121//var/www/html/" local="133429786233552341" remote="133438103400000000" Dst="0" />
+<file name="card-img.png" server="192.168.0.121//var/www/html2/" local="133429786233552341" remote="133438104000000000" Dst="0" />
 </dwsync>
