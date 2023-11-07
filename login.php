@@ -16,17 +16,20 @@
 	
    <hr class="my-4">
     <div class="jumbotron jumbotron-fluid text-center">
-       <h1 class="display-4"><img src="images/sassa-logo1.png" width="578" height="154" alt=""/>&nbsp;</h1>
-       <p class="lead">
-         <input type="text" name="u_name" id="u_name" placeholder="            user name">
+       <h1 class="display-4"><img src="images/sassa-logo1.png" width="578" height="154" alt="">&nbsp;</h1>
+
+       <form action="menu.php" method="post" >
+        <p class="lead">
+         <input class="rounded-lg" type="text" name="username" id="username" required placeholder="            user name">
        </p>
        <p class="lead">
-         <input type="password" name="u_pwd" id="u_pwd" placeholder="             password">
+         <input class="rounded-lg" type="password" name="password" id="password" required placeholder="             password">
        </p>
 
        <p class="lead">
-		  <a class="btn btn-primary btn-lg" href="menu.php" role="button">Login</a>
+		  <input class="rounded-lg" type="submit" name="submit" id="submit" value="Login">
        </p>
+        </form>
     </div>
 	  
     <div class="container">
@@ -47,7 +50,7 @@
     <script src="js/bootstrap-4.4.1.js"></script>
     
     <!-- Custom functions for SASSA -->
-    <script src="js/sassa-functions.js"></script>
+    <script src="js/sassafunctions.js"></script>
 	  
   </body>
 </html>

@@ -1,32 +1,41 @@
-<!-- include session -->
-<?php 
+<?php
 
-	if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true)
-        {
-            $_SESSION['loggedin'] = false;
-            header('Location: login.php');
-echo 'DEBUG: 1';
-            exit;
-        }
-    else
-        {
-            if ($_POST['u_name'] == 'testuser' && $_SESSION['password'])
-                {
-                    $_SESSION['loggedin'] = true;
-echo 'DEBUG: 2';
-                }
-            else
-                {
-                    $_SESSION['loggedin'] = false;
-                    header('Location: login.php');
-echo 'DEBUG: 3';
-                    exit;
-                }
-        }    
+// auth.php
 
+// Static credentials
+$valid_username = 'testuser';
+$valid_password = 'password';
+
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+    {
+
+        // Retrieve the form data
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+    
+        // Validate the credentials
+        if ($username !== $valid_username || $password !== $valid_password)
+            {
+
+                // Credentials are invalid
+                echo 'Login failed: Incorrect username or password.';
+
+                // Redir back to the login page
+                header('Location: login.php');
+                exit;
+            }
+    }
+
+else 
+    
+    {
+        // Not a POST request, redirect to the login form.
+        header('Location: login.php');
+        exit;
+    }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -74,7 +83,17 @@ echo 'DEBUG: 3';
 		  <p class="text-center"><span class="badge badge-info"></span></p>
           <div class="text-center col-lg-6 offset-lg-3">
             <p>Copyright &copy; 2023 &middot; All Rights Reserved.
-				<br><span class="badge badge-danger">logged out</span></p>
+				<br><span class="<?php 
+                    
+                    if ($_SESSION['loggedin'] !== true)
+                        {
+                            echo "badge badge-success";
+                        }
+                    else
+                        {
+                            echo "badge badge-danger";
+                        }
+                    ?>">logged out</span></p>
           </div>
 
        </div>
@@ -91,3 +110,4 @@ echo 'DEBUG: 3';
 	  
     </body>
 </html>
+
