@@ -3,31 +3,42 @@
 // auth.php
 
 // Static credentials
-// WARNING: Never store credentials like this for a production system.
-$valid_username = 'testuser';
-$valid_password = 'password';
+$valid_username = 'sytze';
+$valid_password = 'Rhopalocera777!';
+$_SESSION['loggedin'] = False;
 
 // Check if the form is submitted
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Retrieve the form data
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+    {
+
+        // Retrieve the form data
+        $username = $_POST['username'];
+        $password = $_POST['password'];
     
-    // Validate the credentials
-    if ($username === $valid_username && $password === $valid_password) {
-        // Credentials are valid
-        echo 'Login successful. Welcome, ' . htmlspecialchars($username) . '!';
-        // Here you would typically redirect or start a session
-    } else {
-        // Credentials are invalid
-        echo 'Login failed: Incorrect username or password.';
-        // Optionally provide a link back to the login page
-        echo '<br><a href="login.html">Try again</a>';
+        // Validate the credentials
+        if ($username !== $valid_username || $password !== $valid_password)
+            {
+
+                // Redir back to the login page
+                header('Location: login.php');
+                $_SESSION['loggedin'] = False;
+                exit;
+            }
     }
-} else {
-    // Not a POST request, redirect to the login form.
-    header('Location: login.html');
-    exit;
-}
+
+else 
+    
+    {
+        // Not a POST request, redirect to the login form.
+        $_SESSION['loggedin'] = False;
+        header('Location: login.php');
+        exit;
+    }
+
+// If we got this far the login was a success.
+// Redir back to the login page
+header('Location: menu.php');
+$_SESSION['loggedin'] = True;
+exit;
 
 ?>

@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="README.md" server="192.168.0.121//var/www/html/" local="133436651836398380" remote="133436540400000000" Dst="0" />
-<file name="sessionstart.php" server="192.168.0.121//var/www/html/" local="133438113936781322" remote="133438419000000000" Dst="0" />
-<file name="menu.php" server="192.168.0.121//var/www/html/" local="133438457752359118" remote="133438457400000000" Dst="0" />
-<file name="login.php" server="192.168.0.121//var/www/html/" local="133438460782512614" remote="133438460400000000" Dst="0" />
+<file name="menu.php" server="192.168.0.121//var/www/html/" local="133438552026362864" remote="133438553400000000" Dst="0" />
+<file name="login.php" server="192.168.0.121//var/www/html/" local="133438547989562506" remote="133438553400000000" Dst="0" />
 <file name="menu_qh4se3nks0.php" server="192.168.0.121//var/www/html/" local="133436653800000000" remote="133436653800000000" Dst="0" />
 <file name="php.php" server="192.168.0.121//var/www/html/" local="133429774200000000" remote="133429774200000000" Dst="0" />
-<file name="login.php" server="192.168.0.121//var/www/html2/" local="133438441793534592" remote="133438443000000000" Dst="0" />
-<file name="menu.php" server="192.168.0.121//var/www/html2/" local="133438443034718148" remote="133438443000000000" Dst="0" />
+<file name="login.php" server="192.168.0.121//var/www/html2/" local="133439278567950322" remote="133439278800000000" Dst="0" />
+<file name="menu.php" server="192.168.0.121//var/www/html2/" local="133439346708238892" remote="133439346600000000" Dst="0" />
 <file name="menu_qh4se3nks0.php" server="192.168.0.121//var/www/html2/" local="133436653800000000" remote="133436799600000000" Dst="0" />
 <file name="php.php" server="192.168.0.121//var/www/html2/" local="133429774200000000" remote="133436799600000000" Dst="0" />
 <file name="README.md" server="192.168.0.121//var/www/html2/" local="133436651836398380" remote="133436799600000000" Dst="0" />
-<file name="sessionstart.php" server="192.168.0.121//var/www/html2/" local="133438113936781322" remote="133438120200000000" Dst="0" />
-<file name="auth.php" server="192.168.0.121//var/www/html2/" local="133438426579915136" remote="133438426200000000" Dst="0" />
-<file name="auth.php" server="192.168.0.121//var/www/html/" local="133438426579915136" remote="133438426800000000" Dst="0" />
-<file name="login.html" server="192.168.0.121//var/www/html2/" local="133438423441354964" remote="133438425000000000" Dst="0" />
-<file name="login.html" server="192.168.0.121//var/www/html/" local="133438423441354964" remote="133438425600000000" Dst="0" />
+<file name="auth.php" server="192.168.0.121//var/www/html2/" local="133438550680904032" remote="133438551000000000" Dst="0" />
+<file name="auth.php" server="192.168.0.121//var/www/html/" local="133438550680904032" remote="133438553400000000" Dst="0" />
+<file name="favicon.ico" server="192.168.0.121//var/www/html/" local="133438471251005237" remote="133438471800000000" Dst="0" />
+<file name="favicon.ico" server="192.168.0.121//var/www/html2/" local="133438471251005237" remote="133438471800000000" Dst="0" />
 </dwsync>

@@ -9,16 +9,20 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Custom CSS -->
+	<link href="css/sassa-custom.css" rel="stylesheet">
 
   </head>
+    
   <body>
-	
 	
    <hr class="my-4">
     <div class="jumbotron jumbotron-fluid text-center">
        <h1 class="display-4"><img src="images/sassa-logo1.png" width="578" height="154" alt="">&nbsp;</h1>
 
-       <form action="menu.php" method="post" >
+       <form action="auth.php" method="post" >
         <p class="lead">
          <input class="rounded-lg" type="text" name="username" id="username" required placeholder="            user name">
        </p>
@@ -27,7 +31,7 @@
        </p>
 
        <p class="lead">
-		  <input class="rounded-lg" type="submit" name="submit" id="submit" value="Login">
+		  <input class="rounded-lg btn-outline-primary" type="submit" name="submit" id="submit" value="Login">
        </p>
         </form>
     </div>
