@@ -19,26 +19,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         if ($username !== $valid_username || $password !== $valid_password)
             {
 
-                // Redir back to the login page
-                header('Location: login.php');
+                // User name and password combination is incorrect.
                 $_SESSION['loggedin'] = False;
+                header('Location: login.php');
                 exit;
+            }
+        else
+            {
+                // User name and password is fine.
+                $_SESSION['loggedin'] = True;
+                header('Location: menu.php');
+                exit;
+
             }
     }
 
 else 
     
     {
-        // Not a POST request, redirect to the login form.
+        // Request from login page is not a POST request, redirect to the login form.
         $_SESSION['loggedin'] = False;
         header('Location: login.php');
         exit;
     }
-
-// If we got this far the login was a success.
-// Redir back to the login page
-header('Location: menu.php');
-$_SESSION['loggedin'] = True;
-exit;
 
 ?>

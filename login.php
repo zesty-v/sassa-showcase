@@ -1,3 +1,11 @@
+<?php
+
+    include './dn-api/dn-active-check.php';
+    // include 'dw-active-check.php';
+
+    $dn_isactive = dn_isonline();
+
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -20,7 +28,7 @@
 	
    <hr class="my-4">
     <div class="jumbotron jumbotron-fluid text-center">
-       <h1 class="display-4"><img src="images/sassa-logo1.png" width="578" height="154" alt="">&nbsp;</h1>
+       <h1 class="display-4"><img src="images/sassa-logo1.png" class="img-fluid" max-width="578" max-height="154" alt="">&nbsp;</h1>
 
        <form action="auth.php" method="post" >
         <p class="lead">
@@ -41,7 +49,7 @@
 		  <p class="text-center"><span class="badge badge-info"></span></p>
           <div class="text-center col-lg-6 offset-lg-3">
             <p>Copyright &copy; 2023 &middot; All Rights Reserved.
-				<br><span class="badge badge-danger">logged out</span></p>
+				<br><span class="badge badge-warning">logged out</span>&nbsp;<span class="badge badge-info">Datanamics</span>&nbsp;<span class="badge badge-danger">DocuWare</span></p>
           </div>
 
        </div>

@@ -1,3 +1,9 @@
+<?php
+
+    include './dn-api/dn-active-check.php';
+    // include 'dw-active-check.php';
+
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -50,19 +56,21 @@
             <p>Copyright &copy; 2023 &middot; All Rights Reserved.
 				<br><span class="<?php 
                     
-                    if ($_SESSION['loggedin'] == False)
-                        {
-                            echo 'badge badge-danger">logged out';
-                        }
-                    else
-                        {
-                            echo 'badge badge-success">logged in';
-                        }
-                    ?></span></p>
+                echo $_SESSION['loggedin'] ? 'badge badge-success">logged in' : 'badge badge-warning">logged out';
+                    
+                    ?></span>&nbsp;<span class="badge <?php 
+                          
+                echo dn_isonline() ? 'badge-primary' : 'badge-danger'; 
+                          
+                          ?>">Datanamics</span>&nbsp;<span class="badge <?php 
+                          
+                echo 'badge-danger">DocuWare' . $_SESSION['loggedin'] . '<--';
+                ?></span></p>
           </div>
 
        </div>
     </div>
+                    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
     <script src="js/jquery-3.4.1.min.js"></script>
 
