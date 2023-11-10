@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     include './dn-api/dn-active-check.php';
     // include 'dw-active-check.php';
 
@@ -32,21 +32,23 @@
 			<input type="text" id="numberInput" oninput="formatInput(this)" placeholder="711005 5084 08 1" pattern="\d*">
 			<input type="submit" id="submitbtn" value="Go">
 	        <hr class="my-4">
-			<div class="row">
-				<div class="col-sm"><img src="images/1.0.caredependency.png" onmouseover="toggleImageSrc(this, 'images/1.1.caredependency.png');" alt="Care Dependency" onmouseout="toggleImageSrc(this, 'images/1.0.caredependency.png');" class="img-fluid max-size-210"><br>Care Dependency<br><br></div>
-				<div class="col-sm"><img src="images/2.0.childcare.png" onmouseover="toggleImageSrc(this, 'images/2.1.childcare.png');" alt="Child Support" onmouseout="toggleImageSrc(this, 'images/2.0.childcare.png');" class="img-fluid max-size-210"><br>Child Support<br><br></div>
-				<div class="col-sm"><img src="images/3.0.fosterchild.png" onmouseover="toggleImageSrc(this, 'images/3.1.fosterchild.png');" alt="Foster Child" onmouseout="toggleImageSrc(this, 'images/3.0.fosterchild.png');" class="img-fluid max-size-210"><br>Foster Child<br><br></div>
-			</div>
-			<div class="row">
-				<div class="col-sm"><img src="images/4.0.disability.png" onmouseover="toggleImageSrc(this, 'images/4.1.disability.png');" alt="Disability" onmouseout="toggleImageSrc(this, 'images/4.0.disability.png');" class="img-fluid max-size-210"><br>Disability<br><br></div>
-				<div class="col-sm"><img src="images/5.0.grantinaid.png" onmouseover="toggleImageSrc(this, 'images/5.1.grantinaid.png');" alt="Grant-in-Aid" onmouseout="toggleImageSrc(this, 'images/5.0.grantinaid.png');" class="img-fluid max-size-210"><br>Grant-in-Aid<br><br></div>
-				<div class="col-sm"><img src="images/6.0.oldagegrant.png" onmouseover="toggleImageSrc(this, 'images/6.1.oldagegrant.png');" alt="Older Persons" onmouseout="toggleImageSrc(this, 'images/6.0.oldagegrant.png');" class="img-fluid max-size-210"><br>Older Persons<br><br></div>
-			</div>
-			<div class="row">
-				<div class="col-sm"><img src="images/7.0.reliefofdistress.png" onmouseover="toggleImageSrc(this, 'images/7.1.reliefofdistress.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/7.0.reliefofdistress.png');" class="img-fluid max-size-210"><br>Relief of Distress<br><br></div>
-				<div class="col-sm"><img src="images/8.0.warveterans.png" onmouseover="toggleImageSrc(this, 'images/8.1.warveterans.png');" alt="War Veterans" onmouseout="toggleImageSrc(this, 'images/8.0.warveterans.png');" class="img-fluid max-size-210"><br>War Veterans<br><br></div>
-				<div class="col-sm"><img src="images/9.0.caredependencycovid.png" onmouseover="toggleImageSrc(this, 'images/9.1.caredependencycovid.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/9.0.caredependencycovid.png');" class="img-fluid max-size-210"><br>Covid-19 Relief of Distress<br><br></div>
-			</div>
+			<div class="jumbotron jumbotron-fluid text-center">
+                <div class="row">
+                    <div class="col-sm"><a href="grantpages/care-dependency.php"><img src="images/1.0.caredependency.png" onmouseover="toggleImageSrc(this, 'images/1.1.caredependency.png');" alt="Care Dependency" onmouseout="toggleImageSrc(this, 'images/1.0.caredependency.png');" class="img-fluid max-size-210"></a><br>Care Dependency<br><br></div>
+                    <div class="col-sm"><a href="grantpages/child-support.php"><img src="images/2.0.childcare.png" onmouseover="toggleImageSrc(this, 'images/2.1.childcare.png');" alt="Child Support" onmouseout="toggleImageSrc(this, 'images/2.0.childcare.png');" class="img-fluid max-size-210"></a><br>Child Support<br><br></div>
+                    <div class="col-sm"><a href="grantpages/foster-child.php"><img src="images/3.0.fosterchild.png" onmouseover="toggleImageSrc(this, 'images/3.1.fosterchild.png');" alt="Foster Child" onmouseout="toggleImageSrc(this, 'images/3.0.fosterchild.png');" class="img-fluid max-size-210"></a><br>Foster Child<br><br></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm"><a href="grantpages/disability.php"><img src="images/4.0.disability.png" onmouseover="toggleImageSrc(this, 'images/4.1.disability.png');" alt="Disability" onmouseout="toggleImageSrc(this, 'images/4.0.disability.png');" class="img-fluid max-size-210"></a><br>Disability<br><br></div>
+                    <div class="col-sm"><a href="grantpages/grant-in-aid.php"><img src="images/5.0.grantinaid.png" onmouseover="toggleImageSrc(this, 'images/5.1.grantinaid.png');" alt="Grant-in-Aid" onmouseout="toggleImageSrc(this, 'images/5.0.grantinaid.png');" class="img-fluid max-size-210"></a><br>Grant-in-Aid<br><br></div>
+                    <div class="col-sm"><a href="grantpages/older-persons.php"><img src="images/6.0.oldagegrant.png" onmouseover="toggleImageSrc(this, 'images/6.1.oldagegrant.png');" alt="Older Persons" onmouseout="toggleImageSrc(this, 'images/6.0.oldagegrant.png');" class="img-fluid max-size-210"></a><br>Older Persons<br><br></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm"><a href="grantpages/relief-of-distress.php"><img src="images/7.0.reliefofdistress.png" onmouseover="toggleImageSrc(this, 'images/7.1.reliefofdistress.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/7.0.reliefofdistress.png');" class="img-fluid max-size-210"></a><br>Relief of Distress<br><br></div>
+                    <div class="col-sm"><a href="grantpages/war-veterans.php"><img src="images/8.0.warveterans.png" onmouseover="toggleImageSrc(this, 'images/8.1.warveterans.png');" alt="War Veterans" onmouseout="toggleImageSrc(this, 'images/8.0.warveterans.png');" class="img-fluid max-size-210"></a><br>War Veterans<br><br></div>
+                    <div class="col-sm"><a href="grantpages/covid-19-relief.php"><img src="images/9.0.caredependencycovid.png" onmouseover="toggleImageSrc(this, 'images/9.1.caredependencycovid.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/9.0.caredependencycovid.png');" class="img-fluid max-size-210"></a><br>Covid-19 Relief of Distress<br><br></div>
+                </div>
+            </div>
 		</div>
     </div>
     <div class="container">
@@ -64,7 +66,7 @@
                           
                           ?>">Datanamics</span>&nbsp;<span class="badge <?php 
                           
-                echo 'badge-danger">DocuWare' . $_SESSION['loggedin'] . '<--';
+                echo 'badge-danger">DocuWare';
                 ?></span></p>
           </div>
 

@@ -1,10 +1,10 @@
 <?php
 
-// auth.php
+session_start();
 
 // Static credentials
-$valid_username = 'sytze';
-$valid_password = 'Rhopalocera777!';
+$valid_username = 'testuser';
+$valid_password = 'password';
 $_SESSION['loggedin'] = False;
 
 // Check if the form is submitted
