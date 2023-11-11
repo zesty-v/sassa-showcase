@@ -1,7 +1,8 @@
 <?php
-    session_start();
-    include './dn-api/dn-active-check.php';
-    // include 'dw-active-check.php';
+   
+    include 'page-man.php';
+    include 'dn-api/dn-active-check.php';
+    include 'dw-api/dw-active-check.php';
 
 ?>
 <!DOCTYPE html>
@@ -28,10 +29,9 @@
 	   <img src="images/sassa-logo1.png" alt="" class="img-fluid">
 		<div class="container">
 	        <hr class="my-4">
-			<label for="submitbtn"><br> <b>SA ID Number:</b>&nbsp;&nbsp;&nbsp;&nbsp;</label>
-			<input type="text" id="numberInput" oninput="formatInput(this)" placeholder="711005 5084 08 1" pattern="\d*">
-			<input type="submit" id="submitbtn" value="Go">
-	        <hr class="my-4">
+			<label for="submitbtn"><b>Enter SA ID Number:</b>&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" id="numberInput" oninput="formatInput(this)" placeholder="711005 5084 08 1" pattern="\d*" required>
+            <div class="text-info">Enter ID number and select the grant type.</div>
 			<div class="jumbotron jumbotron-fluid text-center">
                 <div class="row">
                     <div class="col-sm"><a href="grantpages/care-dependency.php"><img src="images/1.0.caredependency.png" onmouseover="toggleImageSrc(this, 'images/1.1.caredependency.png');" alt="Care Dependency" onmouseout="toggleImageSrc(this, 'images/1.0.caredependency.png');" class="img-fluid max-size-210"></a><br>Care Dependency<br><br></div>

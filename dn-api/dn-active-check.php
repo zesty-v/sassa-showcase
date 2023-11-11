@@ -1,14 +1,14 @@
 <?php
 
+include '/page-man.php';
+
 function dn_isonline() {
-    
-    $url = 'https://veriid.com/PBVerify/webservice/hello-world';
 
     // Initialize cURL session
     $ch = curl_init();
 
     // Set cURL options
-    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_URL, $_SESSION['DN-CONST.PBverifyWS']);
     curl_setopt($ch, CURLOPT_HTTPGET, true);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, [

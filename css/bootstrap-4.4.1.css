@@ -5241,15 +5241,24 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .jumbotron {
+/*
+  Sytze original
   padding: 2rem 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; 
+*/
+    
+  /*Updated the following 2 lines - see orig above.*/
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+    
+    
   background-color: #e9ecef;
   border-radius: 0.3rem;
 }
 
 @media (min-width: 576px) {
   .jumbotron {
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
   }
 }
 

@@ -1,11 +1,14 @@
 <?php
 
-    session_start();
-
-    include './dn-api/dn-active-check.php';
-    // include 'dw-active-check.php';
+    include 'page-man.php';
+    include 'dn-api/dn-active-check.php';
+    include 'dw-api/dw-active-check.php';
 
     $dn_isactive = dn_isonline();
+
+    if (!isset($_SESSION['loginmsg'])) {
+      $_SESSION['loginmsg'] = 'Please log in...';
+    }
 
 ?>
 <!DOCTYPE html>
@@ -38,6 +41,9 @@
        </p>
        <p class="lead">
          <input class="rounded-lg" type="password" name="password" id="password" required placeholder="             password">
+       </p>
+       <p class="text-danger">
+         <?php echo $_SESSION['loginmsg'];?>
        </p>
 
        <p class="lead">
