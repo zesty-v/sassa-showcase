@@ -1,8 +1,9 @@
 <?php
 
-include '/page-man.php';
-include '/dn-api/dn-active-check.php';
-include '/dw-api/dw-active-check.php';
+    require($_SERVER['DOCUMENT_ROOT'] . '/page-man.php');
+    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
+    require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
+
 
 ?>
 
@@ -57,18 +58,18 @@ include '/dw-api/dw-active-check.php';
 		  <p class="text-center"><span class="badge badge-info"></span></p>
           <div class="text-center col-lg-6 offset-lg-3">
             <p>Copyright &copy; 2023 &middot; All Rights Reserved.
-				<br><span class="<?php 
+				<br><span class="badge <?php 
                     
-                echo $_SESSION['loggedin'] ? 'badge badge-success">logged in' : 'badge badge-warning">logged out';
+                echo $_SESSION['loggedin'] ? 'badge-success' : 'badge-warning';
                     
-                    ?></span>&nbsp;<span class="badge <?php 
+                    ?>">Login</span>&nbsp;<span class="badge <?php 
                           
                 echo dn_isonline() ? 'badge-primary' : 'badge-danger'; 
                           
                           ?>">Datanamics</span>&nbsp;<span class="badge <?php 
                           
-                echo 'badge-danger">DocuWare';
-                ?></span></p>
+                echo dw_isonline() ? 'badge-primary' : 'badge-danger'; 
+                          ?>">DocuWare</span></p>
           </div>
 
        </div>

@@ -1,6 +1,6 @@
 <?php
 
-include '/page-man.php';
+require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-const.php');
 
 function dn_isonline() {
 
@@ -31,8 +31,8 @@ function dn_isonline() {
     $decodedResponse = json_decode($response, true);
 
     // Check if the response matches the success output
-    return isset($decodedResponse['Status']) && $decodedResponse['Status'] === 'Success' 
-           && isset($decodedResponse['Result']) && $decodedResponse['Result'] === 'Hello World';
+    return isset($decodedResponse['Status']) && $decodedResponse['Status'] == 'Success' 
+           && isset($decodedResponse['Result']) && $decodedResponse['Result'] == 'Hello World';
     
 }
 

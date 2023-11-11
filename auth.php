@@ -1,9 +1,6 @@
 <?php
 
-include 'page-man.php';
-include 'dn-api/dn-active-check.php';
-include 'dw-api/dw-active-check.php';
-
+session_start();
 
 // Static credentials
 $valid_username = 'sytze';
@@ -19,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         // Retrieve the form data
         $username = $_POST['username'];
         $password = $_POST['password'];
-        error_log($username . ' 1 ' . $password);
     
         // Validate the credentials
         if ($username !== $valid_username || $password !== $valid_password)
@@ -28,16 +24,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 // User name and password combination is incorrect.
                 $_SESSION['loggedin'] = false;
                 $_SESSION['loginmsg'] = 'The login credentials are incorrect';
-                error_log($username . ' 2 ' . $password);
+
                 header('Location: login.php');
                 exit;
             }
         else
             {
                 // User name and password is fine.
-                $_SESSION['loggedin'] = false;
+                $_SESSION['loggedin'] = true;
                 $_SESSION['loginmsg'] = 'Please log in...';
-                error_log($username . ' 3 ' . $password);
+
                 header('Location: menu.php');
                 exit;
 
