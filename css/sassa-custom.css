@@ -5,3 +5,8 @@
 	max-width: 210px;
 	max-height: 221px;
 }
+
+.custom-jumbotron {
+    padding-bottom: 0;  /* Reduces bottom padding */
+    margin-bottom: 0;   /* Reduces bottom margin */
+}

@@ -1,14 +1,15 @@
 <?php
 
+    require($_SERVER['DOCUMENT_ROOT'] . '/const-site.php');
+    sleep(CONST_PAGE_DELAY);
+
     require($_SERVER['DOCUMENT_ROOT'] . '/page-man.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
 
     $_SESSION['loggedin'] = false;
 
-    if (!isset($_SESSION['loginmsg'])) {
-      $_SESSION['loginmsg'] = 'Please log in...';
-    }
+    if (!isset($_SESSION['loginmsg'])) {$_SESSION['loginmsg'] = 'Please log in...';}
 
 ?>
 <!DOCTYPE html>
@@ -37,17 +38,15 @@
 
        <form action="auth.php" method="post" >
         <p class="lead">
-         <input class="rounded-lg" type="text" name="username" id="username" required placeholder="            user name">
+         <input class="rounded-lg text-center" type="text" name="username" id="username" required placeholder="user name">
        </p>
        <p class="lead">
-         <input class="rounded-lg" type="password" name="password" id="password" required placeholder="             password">
+         <input class="rounded-lg text-center" type="password" name="password" id="password" required placeholder="password">
        </p>
-       <p class="text-danger">
-         <?php echo $_SESSION['loginmsg'];?>
-       </p>
+       <p class="text-danger"><?php echo $_SESSION['loginmsg'];?></p>
 
        <p class="lead">
-		  <input class="rounded-lg btn-outline-primary" type="submit" name="submit" id="submit" value="Login">
+		  <input class="rounded-lg btn-outline-primary text-center" type="submit" name="submit" id="submit" value="Login">
        </p>
         </form>
     </div>

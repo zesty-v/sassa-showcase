@@ -10,15 +10,11 @@
         // Avoid direct access without login.
         if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']) {
 
-            error_log('Redirect done!!!');
-            header('Location: login.php'); 
+            // Go back to login.
+            header('Location: /login.php'); 
             exit;
         
         }
-    } else {
-        
-        error_log('Redirect avoided since its called from login.php!!!');
-    
     }
 
 ?>

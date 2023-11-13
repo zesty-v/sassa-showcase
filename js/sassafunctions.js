@@ -1,6 +1,27 @@
 // JavaScript Document
 
-// Handler for the mouse click event.
+var spinnerShown = false; // Global flag
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('click', function(e) {
+        if (spinnerShown && e.target.tagName === 'IMG') {
+            var activeSpinners = document.querySelectorAll('.spinner-border');
+            activeSpinners.forEach(function(spinner) {
+                spinner.style.display = 'none';
+            });
+        }
+        spinnerShown = false; // Reset the flag after processing the click
+    });
+});
+
+function showSpinner(linkElement) {
+    setTimeout(function() {
+    // Code to execute after the delay
+        var spinner = linkElement.querySelector('.spinner-border');
+        spinner.style.display = 'block';
+        spinnerShown = true; // Set the flag when showing the spinner
+    }, 10)
+}
 function toggleImageSrc(imgElement, altSrc) {
     let currentSrc = imgElement.getAttribute('src');
     
@@ -70,3 +91,4 @@ function formatInput(input) {
   input.value = sections.join(' ').trim();
 	
 }
+

@@ -4,7 +4,7 @@
 
 function dw_isonline() {
 
-    return true;
+    return false;
     
 }
 

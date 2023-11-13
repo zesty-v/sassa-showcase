@@ -1,12 +1,13 @@
 <?php
 
+    require($_SERVER['DOCUMENT_ROOT'] . '/const-site.php');
+    sleep(CONST_PAGE_DELAY);
+   
     require($_SERVER['DOCUMENT_ROOT'] . '/page-man.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
 
-
 ?>
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -14,42 +15,77 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SASSA - New Grant Options</title>
+    <title>SASSA - Older Persons Grant</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 	
     <!-- Custom CSS -->
-	<link href="css/sassa-custom.css" rel="stylesheet">
+	<link href="/css/sassa-custom.css" rel="stylesheet">
 
   </head>
 
   <body>
       
-	<div class="jumbotron jumbotron-fluid text-center">
-	   <img src="images/sassa-logo1.png" alt="" class="img-fluid">
+	<div class="jumbotron jumbotron-fluid text-center custom-jumbotron">
+	   <div class="row">
+	       <div class="col-sm"><img src="/images/6.2.oldagegrant.png" alt="" class="img-fluid"></div>
+        </div>
 		<div class="container">
-	        <hr class="my-4">
-			<label for="submitbtn"><br> <b>SA ID Number:</b>&nbsp;&nbsp;&nbsp;&nbsp;</label>
-			<input type="text" id="numberInput" oninput="formatInput(this)" placeholder="711005 5084 08 1" pattern="\d*" required>
-            <div class="text-info"> Enter ID number and select the grant.</div>
-	        <hr class="my-4">
-            <div class="jumbotron jumbotron-fluid text-center">
-                <div class="row">
-                    <div class="col-sm">Photo</div>
-                    <div class="col-sm">Older Persons Grant Banner and ID number just below</div>
+	        <hr class="my-0">
+			<div class="jumbotron jumbotron-fluid text-center custom-jumbotron">
+                <div class="row flex-nowrap justify-content-center">
+                    <div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">First Name: </div> 
+                    <div class="col-md-4 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">Sytze</div>
                 </div>
-                <div class="row">
-                    <div class="col-sm">Labels left</div>
-                    <div class="col-sm">Values Right</div>
-                    <div class="col-sm">messages of concern</div>
+                <div class="row flex-nowrap justify-content-center">
+                    <div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Second Name: </div>
+                    <div class="col-md-4 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">(none)</div>
                 </div>
-                <div class="row">
-                    <div class="col-sm">Button Back</div>
-                    <div class="col-sm">Button Exit</div>
-                    <div class="col-sm">Button Next</div>
+                <div class="row flex-nowrap justify-content-center">
+                    <div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Last Name: </div>
+                    <div class="col-md-4 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">Visser</div>
                 </div>
+                <div class="row flex-nowrap justify-content-center">
+                    <div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Date of Birth: </div>
+                    <div class="col-md-4 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">1971/10/05</div>
+                </div>
+                <div class="row flex-nowrap justify-content-center">
+                    <div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Age: </div>
+                    <div class="col-md-4 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">52</div>
+                </div>
+                <div class="row flex-nowrap justify-content-center">
+                    <div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Gender: </div>
+                    <div class="col-md-4 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">Male</div>
+                </div>
+                <div class="row flex-nowrap justify-content-center">
+                    <div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Citizenship: </div>
+                    <div class="col-md-4 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">South African</div>
+                </div>
+                <div class="row flex-nowrap justify-content-center">
+                    <div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow flex-nowrap">Deceased Status </div>
+                    <div class="col-md-4 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">Alive</div>
+                </div>
+                <div class="row flex-nowrap justify-content-center">
+                    <div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Other Grants: </div>
+                    <div class="col-md-4 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">???</div>
+                </div>
+                <div class="row flex-nowrap justify-content-center">
+                    <div class="col-md-7 text-danger font-weight-bold">Applicant is not eligible: Aged under 60 years</div>
+                </div>
+                <div class="row flex-nowrap justify-content-center">
+                    <div class="col-md-3 m-1 p-1 text-center">
+                        <button type="button" class="btn btn-outline-primary">&lt;- Back</button>
+                    </div>
+                    <div class="col-md-3 m-1 p-1 text-center">
+                        <button type="button" class="btn btn-outline-warning">Cancel</button>
+                    </div>
+                    <div class="col-md-3 m-1 p-1 text-center">
+                        <button type="button" class="btn btn-outline-primary">Next -&gt;</button>
+                    </div>
+                </div>
+                <hr>
             </div>
 		</div>
     </div>
@@ -57,19 +93,26 @@
        <div class="row">
 		  <p class="text-center"><span class="badge badge-info"></span></p>
           <div class="text-center col-lg-6 offset-lg-3">
-            <p>Copyright &copy; 2023 &middot; All Rights Reserved.
-				<br><span class="badge <?php 
+            <p>Copyright &copy; 2023 &middot; All Rights Reserved.<br>
+				<span class="shadow badge <?php 
+                
+                // Determine if the user is currently logged-in.
+                echo $_SESSION['loggedin'] ? 'badge-success">logged in' : 'badge-warning">logged out';
                     
-                echo $_SESSION['loggedin'] ? 'badge-success' : 'badge-warning';
+                    ?></span></span>&nbsp;<span class="badge <?php 
                     
-                    ?>">Login</span>&nbsp;<span class="badge <?php 
-                          
+                // Determine if Datanamics is on line.
                 echo dn_isonline() ? 'badge-primary' : 'badge-danger'; 
+                    
+                    ?> shadow">Datanamics</span>&nbsp;<span class="badge <?php 
+                    
+                // Determine if Docuware is on line.
+                echo dw_isonline() ? 'badge-primary' : 'badge-danger';
                           
-                          ?>">Datanamics</span>&nbsp;<span class="badge <?php 
-                          
-                echo dw_isonline() ? 'badge-primary' : 'badge-danger'; 
-                          ?>">DocuWare</span></p>
+                    ?> shadow">DocuWare
+                
+                </span>
+              </p>
           </div>
 
        </div>
