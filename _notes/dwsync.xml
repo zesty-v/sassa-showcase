@@ -5,7 +5,7 @@
 <file name="login.php" server="192.168.0.121//var/www/html/" local="133442123296490472" remote="133442157600000000" Dst="0" />
 <file name="php.php" server="192.168.0.121//var/www/html/" local="133429774200000000" remote="133429774200000000" Dst="0" />
 <file name="login.php" server="192.168.0.121//var/www/html2/" local="133443237277869644" remote="133443273600000000" Dst="0" />
-<file name="menu.php" server="192.168.0.121//var/www/html2/" local="133443262995198132" remote="133443262800000000" Dst="0" />
+<file name="menu.php" server="192.168.0.121//var/www/html2/" local="133443594010000000" remote="133443594000000000" Dst="0" />
 <file name="php.php" server="192.168.0.121//var/www/html2/" local="133429774200000000" remote="133436799600000000" Dst="0" />
 <file name="README.md" server="192.168.0.121//var/www/html2/" local="133436651836398380" remote="133436799600000000" Dst="0" />
 <file name="auth.php" server="192.168.0.121//var/www/html2/" local="133442135035833775" remote="133442160000000000" Dst="0" />
@@ -14,5 +14,5 @@
 <file name="favicon.ico" server="192.168.0.121//var/www/html2/" local="133438471251005237" remote="133438471800000000" Dst="0" />
 <file name="page-man.php" server="192.168.0.121//var/www/html2/" local="133442870438220071" remote="133442870400000000" Dst="0" />
 <file name="page-man.php" server="192.168.0.121//var/www/html/" local="133442133254447784" remote="133442157600000000" Dst="0" />
-<file name="const-site.php" server="192.168.0.121//var/www/html2/" local="133443262393671760" remote="133443262200000000" Dst="0" />
+<file name="const-site.php" server="192.168.0.121//var/www/html2/" local="133443665644054725" remote="133443665400000000" Dst="0" />
 </dwsync>

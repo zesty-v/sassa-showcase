@@ -9,4 +9,17 @@
 .custom-jumbotron {
     padding-bottom: 0;  /* Reduces bottom padding */
     margin-bottom: 0;   /* Reduces bottom margin */
+    padding-top: 0;  /* Reduces bottom padding */
+    margin-top: 0;   /* Reduces bottom margin */
+}
+
+.fade-in {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }

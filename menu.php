@@ -32,17 +32,48 @@
 	<div class="jumbotron jumbotron-fluid text-center">
 	   <img src="/images/sassa-logo1.png" alt="" class="img-fluid">
 		<div class="container">
-	        <hr class="my-0">
+	        <hr class="my-3">
 			<label for="submitbtn"><b>ID:</b>&nbsp;&nbsp;&nbsp;&nbsp;</label>
 			<input type="text" id="numberInput" oninput="formatInput(this)" placeholder="711005 5084 08 1" pattern="\d*" required>
             <div class="text-info">Enter Client SA ID number and select the grant type.</div>
-			<div class="jumbotron jumbotron-fluid text-center">
-                <div class="row">
-                    <div class="col-sm"><a href="grantpages/care-dependency.php"><img src="images/1.0.caredependency.png" onmouseover="toggleImageSrc(this, 'images/1.1.caredependency.png');" alt="Care Dependency" onmouseout="toggleImageSrc(this, 'images/1.0.caredependency.png');" class="img-fluid max-size-210"></a><br>Care Dependency<br><br></div>
-                    <div class="col-sm"><a href="grantpages/child-support.php"><img src="images/2.0.childcare.png" onmouseover="toggleImageSrc(this, 'images/2.1.childcare.png');" alt="Child Support" onmouseout="toggleImageSrc(this, 'images/2.0.childcare.png');" class="img-fluid max-size-210"></a><br>Child Support<br><br></div>
-                    <div class="col-sm"><a href="grantpages/foster-child.php"><img src="images/3.0.fosterchild.png" onmouseover="toggleImageSrc(this, 'images/3.1.fosterchild.png');" alt="Foster Child" onmouseout="toggleImageSrc(this, 'images/3.0.fosterchild.png');" class="img-fluid max-size-210"></a><br>Foster Child<br><br></div>
+<!--			<div class="jumbotron jumbotron-fluid text-center"> -->
+                <div class="row justify-content-md-center my-3">
+                    
+                    <div class="col-sm">
+                        <a href="grantpages/care-dependency.php" onclick="showSpinner(this);">
+                            <div class="position-relative">
+                                <img src="images/1.0.caredependency.png" onmouseover="toggleImageSrc(this, 'images/1.1.caredependency.png');" alt="Care Dependency" onmouseout="toggleImageSrc(this, 'images/1.0.caredependency.png');" class="img-fluid max-size-210">
+                                <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
+                                </div>
+                            </div>
+                        </a>
+                        Care Dependency<br><br>
+                    </div>
+                    
+                    <div class="col-sm">
+                        <a href="grantpages/child-support.php">
+                            <div class="position-relative" onclick="showSpinner(this);">
+                                <img src="images/2.0.childcare.png" onmouseover="toggleImageSrc(this, 'images/2.1.childcare.png');" alt="Child Support" onmouseout="toggleImageSrc(this, 'images/2.0.childcare.png');" class="img-fluid max-size-210">
+                                <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
+                                </div>
+                            </div>
+                        </a>
+                        Child Support<br><br>
+                    </div>
+                    
+                    <div class="col-sm">
+                        <a href="grantpages/foster-child.php">
+                            <div class="position-relative" onclick="showSpinner(this);">
+                                <img src="images/3.0.fosterchild.png" onmouseover="toggleImageSrc(this, 'images/3.1.fosterchild.png');" alt="Foster Child" onmouseout="toggleImageSrc(this, 'images/3.0.fosterchild.png');" class="img-fluid max-size-210">
+                                <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
+                                </div>
+                            </div>
+                        </a>
+                        Foster Child<br><br>
+                    </div>
                 </div>
-                <div class="row">
+                
+                <div class="row justify-content-md-center">
                     
                     <div class="col-sm">
                         <a href="grantpages/disability.php" onclick="showSpinner(this);">
@@ -52,7 +83,7 @@
                                 </div>
                             </div>
                         </a>
-                        <br>Disability<br><br>
+                        Disability<br><br>
                     </div>
                     
                     <div class="col-sm">
@@ -63,7 +94,7 @@
                                 </div>
                             </div>
                         </a>
-                        <br>Grant-in-Aid<br><br>
+                        Grant-in-Aid<br><br>
                     </div>
                     
                     <div class="col-sm">
@@ -74,17 +105,46 @@
                                 </div>
                             </div>
                         </a>
-                        <br>Older Persons<br><br>
+                        Older Persons<br><br>
                     </div>
                     
                 </div>
-                <div class="row">
-                    <div class="col-sm"><a href="grantpages/relief-of-distress.php"><img src="images/7.0.reliefofdistress.png" onmouseover="toggleImageSrc(this, 'images/7.1.reliefofdistress.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/7.0.reliefofdistress.png');" class="img-fluid max-size-210"></a><br>Relief of Distress<br><br></div>
-                    <div class="col-sm"><a href="grantpages/war-veterans.php"><img src="images/8.0.warveterans.png" onmouseover="toggleImageSrc(this, 'images/8.1.warveterans.png');" alt="War Veterans" onmouseout="toggleImageSrc(this, 'images/8.0.warveterans.png');" class="img-fluid max-size-210"></a><br>War Veterans<br><br></div>
-                    <div class="col-sm"><a href="grantpages/covid-19-relief.php"><img src="images/9.0.caredependencycovid.png" onmouseover="toggleImageSrc(this, 'images/9.1.caredependencycovid.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/9.0.caredependencycovid.png');" class="img-fluid max-size-210"></a><br>Covid-19 Relief of Distress<br><br></div>
+                <div class="row justify-content-md-center">
+                    
+                    <div class="col-sm">
+                        <a href="grantpages/relief-of-distress.php" onclick="showSpinner(this);">
+                            <div class="position-relative">
+                                <img src="images/7.0.reliefofdistress.png" onmouseover="toggleImageSrc(this, 'images/7.1.reliefofdistress.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/7.0.reliefofdistress.png');" class="img-fluid max-size-210">
+                                <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
+                                </div>
+                            </div>
+                        </a>
+                        Relief of Distress<br><br>
+                    </div>
+                    
+                    <div class="col-sm">
+                        <a href="grantpages/war-veterans.php" onclick="showSpinner(this);">
+                            <div class="position-relative">
+                                <img src="images/8.0.warveterans.png" onmouseover="toggleImageSrc(this, 'images/8.1.warveterans.png');" alt="War Veterans" onmouseout="toggleImageSrc(this, 'images/8.0.warveterans.png');" class="img-fluid max-size-210">
+                                <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
+                                </div>
+                            </div>
+                        </a>
+                        War Veterans<br><br>
+                    </div>
+                    <div class="col-sm">
+                        <a href="grantpages/covid-19-relief.php" onclick="showSpinner(this);">
+                            <div class="position-relative">
+                                <img src="images/9.0.caredependencycovid.png" onmouseover="toggleImageSrc(this, 'images/9.1.caredependencycovid.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/9.0.caredependencycovid.png');" class="img-fluid max-size-210">
+                                <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
+                                </div>
+                            </div>
+                        </a>
+                        Covid-19 Relief of Distress<br><br>
+                    </div>
                 </div>
             </div>
-		</div>
+<!--		</div> -->
     </div>
     <div class="container">
        <div class="row">

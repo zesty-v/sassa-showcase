@@ -1,6 +1,9 @@
 // JavaScript Document
-
 var spinnerShown = false; // Global flag
+
+window.addEventListener('load', (event) => {
+    document.body.classList.add('fade-in');
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(e) {
@@ -12,6 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         spinnerShown = false; // Reset the flag after processing the click
     });
+});
+
+document.addEventListener('keydown', function(event) {
+    console.log(event.key + ' pressed...');
+    if (event.key === 'Escape') {
+        // Code to execute when Esc is pressed
+        var activeSpinners = document.querySelectorAll('.spinner-border');
+        activeSpinners.forEach(function(spinner) {
+            spinner.style.display = 'none';
+        });
+    }
 });
 
 function showSpinner(linkElement) {

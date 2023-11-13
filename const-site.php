@@ -1,5 +1,5 @@
 <?php
 
-    const CONST_PAGE_DELAY = 2;
+    const CONST_PAGE_DELAY = 0;
 
 ?>
