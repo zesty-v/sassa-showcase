@@ -5,10 +5,10 @@ require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-const.php');
 function dn_isonline() {
 
     // Initialize cURL session
-    $ch = curl_init();
+    $ch = curl_init($_SESSION['DN-CONST.PBverifyWS'] . '/hello-world');
 
     // Set cURL options
-    curl_setopt($ch, CURLOPT_URL, $_SESSION['DN-CONST.PBverifyWS'] . '/hello-world');
+    curl_setopt($ch, CURLOPT_URL, true);
     curl_setopt($ch, CURLOPT_HTTPGET, true);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, [
