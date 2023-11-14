@@ -47,76 +47,77 @@
 		<div class="container">
 			<div class="jumbotron jumbotron-fluid text-center custom-jumbotron">
                 <div class="row flex-nowrap">
-                    <div class="col-md-4 m-1 p-1">x:x</div>
-                    <div class="col-md-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">ID Number:</div>
-                    <div class="col-md-3 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">711005 084 08 1</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
+                    <div class="col-md-3 m-1 p-1"></div>
+                    <div class="col-md-3 m-1 p-1 rounded-lg shadow">
+                        <img src="/images/id_photo.jpg" alt="ID Photo" class="img-fluid">
+                    </div>
+                    <div class="col-md-3 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow text-center">Verified</div>
+                    <div class="col-md-3 m-1 p-1"></div>
                 </div>
                 <div class="row flex-nowrap">
-                    <div class="col-md-4 m-1 p-1">x:x</div>
-                    <div class="col-md-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">ID Number:</div>
+                    <div class="col-md-3 m-1 p-1"></div>
+                    <div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">ID Number:</div>
                     <div class="col-md-3 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">711005 084 08 1</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
+                    <div class="col-md-3 m-1 p-1"></div>
                 </div>
                 <div class="row flex-nowrap">
-                    <div class="col-md-4 m-1 p-1">x:x</div>
-                    <div class="col-md-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">First Name:</div>
+                    <div class="col-md-3 m-1 p-1"></div>
+                    <div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">First Name:</div>
                     <div class="col-md-3 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">Sytze</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
+                    <div class="col-md-3 m-1 p-1"></div>
                 </div>
 				<div class="row flex-nowrap">
-                    <div class="col-md-4 m-1 p-1">x:x</div>
-					<div class="col-md-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Second Name: </div>
+                    <div class="col-md-3 m-1 p-1"></div>
+					<div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Second Name: </div>
 					<div class="col-md-3 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">(none)</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
+                    <div class="col-md-3 m-1 p-1"></div>
 				</div>
 				<div class="row flex-nowrap">
-                    <div class="col-md-4 m-1 p-1">x:x</div>
-					<div class="col-md-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Last Name: </div>
+                    <div class="col-md-3 m-1 p-1"></div>
+					<div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Last Name: </div>
 					<div class="col-md-3 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">Visser</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
+                    <div class="col-md-3 m-1 p-1"></div>
 				</div>
 				<div class="row flex-nowrap">
-                    <div class="col-md-4 m-1 p-1">x:x</div>
-					<div class="col-md-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Date of Birth: </div>
+                    <div class="col-md-3 m-1 p-1"></div>
+					<div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Date of Birth: </div>
 					<div class="col-md-3 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">1971/10/05</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
+                    <div class="col-md-3 m-1 p-1"></div>
 				</div>
 				<div class="row flex-nowrap">
-                    <div class="col-md-4 m-1 p-1">x:x</div>
-					<div class="col-md-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Age: </div>
+                    <div class="col-md-3 m-1 p-1"></div>
+					<div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Age: </div>
 					<div class="col-md-3 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">52</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
+                    <div class="col-md-3 m-1 p-1"></div>
 				</div>
 				<div class="row flex-nowrap">
-                    <div class="col-md-4 m-1 p-1">x:x</div>
-					<div class="col-md-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Gender: </div>
+                    <div class="col-md-3 m-1 p-1"></div>
+					<div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Gender: </div>
 					<div class="col-md-3 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">Male</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
+                    <div class="col-md-3 m-1 p-1"></div>
 				</div>
 				<div class="row flex-nowrap">
-                    <div class="col-md-4 m-1 p-1">x:x</div>
-					<div class="col-md-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Citizenship: </div>
+                    <div class="col-md-3 m-1 p-1"></div>
+					<div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Citizenship: </div>
 					<div class="col-md-3 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">South African</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
+                    <div class="col-md-3 m-1 p-1"></div>
 				</div>
 				<div class="row flex-nowrap">
-                    <div class="col-md-4 m-1 p-1">x:x</div>
-					<div class="col-md-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow flex-nowrap">Deceased Status </div>
+                    <div class="col-md-3 m-1 p-1"></div>
+					<div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow flex-nowrap">Deceased Status </div>
 					<div class="col-md-3 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">Alive</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
+                    <div class="col-md-3 m-1 p-1"></div>
 				</div>
 				<div class="row flex-nowrap">
-                    <div class="col-md-4 m-1 p-1">x:x</div>
-					<div class="col-md-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Other Grants: </div>
+                    <div class="col-md-3 m-1 p-1"></div>
+					<div class="col-md-3 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Other Grants: </div>
 					<div class="col-md-3 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">???</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
+                    <div class="col-md-3 m-1 p-1"></div>
 				</div>
-				<div class="row flex-nowrap">
-                    <div class="col-md-3 m-1 p-1">x:x</div>
-					<div class="col-md-7 pt-4 pb-2 text-danger font-weight-bold">Applicant is not eligible: Aged under 60 years</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
-                    <div class="col-md-3 m-1 p-1">x:x</div>
+				<div class="row flex-nowrap justify-content-center">
+                    <div class="col-md-2 m-1 p-1"></div>
+					<div class="col-md-8 pt-4 pb-2 text-danger font-weight-bold">Applicant is not eligible: Aged under 60 years</div>
+                    <div class="col-md-2 m-1 p-1"></div>
 				</div>
 
 
