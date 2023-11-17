@@ -1,6 +1,7 @@
 <?php
 
     require($_SERVER['DOCUMENT_ROOT'] . '/const-site.php');
+
     sleep(CONST_PAGE_DELAY);
 
     require($_SERVER['DOCUMENT_ROOT'] . '/page-man.php');
@@ -12,13 +13,17 @@
     if (!isset($_SESSION['loginmsg'])) {$_SESSION['loginmsg'] = 'Please log in...';}
 
 ?>
+
 <!DOCTYPE html>
 
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <?php include 'graph4socialmedia.php'; ?>
+
+    
     <title>SASSA - Login</title>
 
     <!-- Bootstrap -->
@@ -62,7 +67,7 @@
                     
                     ?>">Login</span>&nbsp;<span class="badge <?php 
                           
-                echo dn_isonline() ? 'badge-primary' : 'badge-danger'; 
+                // echo dn_isonline() ? 'badge-primary' : 'badge-danger'; 
                           
                           ?>">Datanamics</span>&nbsp;<span class="badge <?php 
                           

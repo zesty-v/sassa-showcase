@@ -16,6 +16,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+    <?php include 'graph4socialmedia.php'; ?>
+
     <title>SASSA - New Grant Options</title>
 
     <!-- Bootstrap -->
@@ -37,9 +40,8 @@
 			<input type="text" id="numberInput" oninput="formatInput(this)" placeholder="711005 5084 08 1" pattern="\d*" required>
             <div class="text-info">Enter Client SA ID number and select the grant type.</div>
 <!--			<div class="jumbotron jumbotron-fluid text-center"> -->
-                <div class="row justify-content-md-center my-3">
-                    
-                    <div class="col-sm">
+                <div class="row flex-nowrap justify-content-center my-3">
+                    <div class="col-md">
                         <a href="grantpages/care-dependency.php" onclick="showSpinner(this);">
                             <div class="position-relative">
                                 <img src="images/1.0.caredependency.png" onmouseover="toggleImageSrc(this, 'images/1.1.caredependency.png');" alt="Care Dependency" onmouseout="toggleImageSrc(this, 'images/1.0.caredependency.png');" class="img-fluid max-size-210">
@@ -50,7 +52,7 @@
                         Care Dependency<br><br>
                     </div>
                     
-                    <div class="col-sm">
+                    <div class="col-md">
                         <a href="grantpages/child-support.php">
                             <div class="position-relative" onclick="showSpinner(this);">
                                 <img src="images/2.0.childcare.png" onmouseover="toggleImageSrc(this, 'images/2.1.childcare.png');" alt="Child Support" onmouseout="toggleImageSrc(this, 'images/2.0.childcare.png');" class="img-fluid max-size-210">
@@ -61,7 +63,7 @@
                         Child Support<br><br>
                     </div>
                     
-                    <div class="col-sm">
+                    <div class="col-md">
                         <a href="grantpages/foster-child.php">
                             <div class="position-relative" onclick="showSpinner(this);">
                                 <img src="images/3.0.fosterchild.png" onmouseover="toggleImageSrc(this, 'images/3.1.fosterchild.png');" alt="Foster Child" onmouseout="toggleImageSrc(this, 'images/3.0.fosterchild.png');" class="img-fluid max-size-210">
@@ -71,11 +73,12 @@
                         </a>
                         Foster Child<br><br>
                     </div>
+                    
                 </div>
                 
-                <div class="row justify-content-md-center">
+                <div class="row flex-nowrap justify-content-center my-3">
                     
-                    <div class="col-sm">
+                    <div class="col-md">
                         <a href="grantpages/disability.php" onclick="showSpinner(this);">
                             <div class="position-relative">
                                 <img src="images/4.0.disability.png" onmouseover="toggleImageSrc(this, 'images/4.1.disability.png');" alt="Disability" onmouseout="toggleImageSrc(this, 'images/4.0.disability.png');" class="img-fluid max-size-210">
@@ -86,7 +89,7 @@
                         Disability<br><br>
                     </div>
                     
-                    <div class="col-sm">
+                    <div class="col-md">
                         <a href="grantpages/grant-in-aid.php" onclick="showSpinner(this);">
                             <div class="position-relative">
                                 <img src="images/5.0.grantinaid.png" onmouseover="toggleImageSrc(this, 'images/5.1.grantinaid.png');" alt="Grant-in-Aid" onmouseout="toggleImageSrc(this, 'images/5.0.grantinaid.png');" class="img-fluid max-size-210">
@@ -97,7 +100,7 @@
                         Grant-in-Aid<br><br>
                     </div>
                     
-                    <div class="col-sm">
+                    <div class="col-md">
                         <a href="grantpages/older-persons.php" onclick="showSpinner(this);">
                             <div class="position-relative">
                                 <img src="images/6.0.oldagegrant.png" onmouseover="toggleImageSrc(this, 'images/6.1.oldagegrant.png');" alt="Older Persons" onmouseout="toggleImageSrc(this, 'images/6.0.oldagegrant.png');" class="img-fluid max-size-210">
@@ -109,9 +112,9 @@
                     </div>
                     
                 </div>
-                <div class="row justify-content-md-center">
+                <div class="row flex-nowrap justify-content-center my-3">
                     
-                    <div class="col-sm">
+                    <div class="col-md">
                         <a href="grantpages/relief-of-distress.php" onclick="showSpinner(this);">
                             <div class="position-relative">
                                 <img src="images/7.0.reliefofdistress.png" onmouseover="toggleImageSrc(this, 'images/7.1.reliefofdistress.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/7.0.reliefofdistress.png');" class="img-fluid max-size-210">
@@ -122,7 +125,7 @@
                         Relief of Distress<br><br>
                     </div>
                     
-                    <div class="col-sm">
+                    <div class="col-md">
                         <a href="grantpages/war-veterans.php" onclick="showSpinner(this);">
                             <div class="position-relative">
                                 <img src="images/8.0.warveterans.png" onmouseover="toggleImageSrc(this, 'images/8.1.warveterans.png');" alt="War Veterans" onmouseout="toggleImageSrc(this, 'images/8.0.warveterans.png');" class="img-fluid max-size-210">
@@ -132,7 +135,7 @@
                         </a>
                         War Veterans<br><br>
                     </div>
-                    <div class="col-sm">
+                    <div class="col-md">
                         <a href="grantpages/covid-19-relief.php" onclick="showSpinner(this);">
                             <div class="position-relative">
                                 <img src="images/9.0.caredependencycovid.png" onmouseover="toggleImageSrc(this, 'images/9.1.caredependencycovid.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/9.0.caredependencycovid.png');" class="img-fluid max-size-210">

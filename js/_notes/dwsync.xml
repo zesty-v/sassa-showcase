@@ -8,4 +8,8 @@
 <file name="jquery-3.4.1.min.js" server="192.168.0.121//var/www/html2/" local="133436651070696129" remote="133436799600000000" Dst="0" />
 <file name="popper.min.js" server="192.168.0.121//var/www/html2/" local="133436651071533873" remote="133436799600000000" Dst="0" />
 <file name="sassafunctions.js" server="192.168.0.121//var/www/html2/" local="133443647532030756" remote="133443647400000000" Dst="0" />
+<file name="jquery-3.4.1.min.js" server="192.168.0.117//var/www/html/" local="133436651070696129" remote="133446874200000000" Dst="0" />
+<file name="bootstrap-4.4.1.js" server="192.168.0.117//var/www/html/" local="133436651072457341" remote="133446874200000000" Dst="0" />
+<file name="popper.min.js" server="192.168.0.117//var/www/html/" local="133436651071533873" remote="133446874200000000" Dst="0" />
+<file name="sassafunctions.js" server="192.168.0.117//var/www/html/" local="133443647532030756" remote="133446874200000000" Dst="0" />
 </dwsync>

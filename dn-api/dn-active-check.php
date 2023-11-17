@@ -4,6 +4,9 @@ require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-const.php');
 
 function dn_isonline() {
 
+    return true;
+    exit;
+    
     // Initialize cURL session
     $ch = curl_init($_SESSION['DN-CONST.PBverifyWS'] . '/hello-world');
 

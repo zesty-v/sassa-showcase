@@ -4,4 +4,6 @@
 <file name="dw-const.php" server="192.168.0.121//var/www/html2/" local="133442123297619683" remote="133442122800000000" Dst="0" />
 <file name="dw-active-check.php" server="192.168.0.121//var/www/html/" local="133442123298347836" remote="133442157600000000" Dst="0" />
 <file name="dw-const.php" server="192.168.0.121//var/www/html/" local="133442123297619683" remote="133442157600000000" Dst="0" />
+<file name="dw-active-check.php" server="192.168.0.117//var/www/html/" local="133442566758468012" remote="133446874200000000" Dst="0" />
+<file name="dw-const.php" server="192.168.0.117//var/www/html/" local="133442123297619683" remote="133446874200000000" Dst="0" />
 </dwsync>

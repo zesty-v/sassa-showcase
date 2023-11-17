@@ -15,6 +15,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+    <?php include 'graph4socialmedia.php'; ?>
+
     <title>SASSA - Older Persons Grant</title>
 
     <!-- Bootstrap -->
@@ -45,14 +48,14 @@
 
             <div class="row flex-nowrap">
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 pt-2 rounded-lg shadow">
+                <div class="col-sm-2 m-1 p-1 pt-3 rounded-lg shadow bg-dark">
                     <div class="row flex-nowrap">
                         <div class="col-sm-12">
                             <img src="/images/id_photo.jpg" alt="ID Photo" class="img-fluid">
                         </div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 text-white">
                             Online Profile / Home Affairs Live 
                         </div>
                     </div>
