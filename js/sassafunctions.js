@@ -26,16 +26,74 @@ document.addEventListener('keydown', function(event) {
             spinner.style.display = 'none';
         });
     }
-});
+}); 
 
-function showSpinner(linkElement) {
-    setTimeout(function() {
-    // Code to execute after the delay
-        var spinner = linkElement.querySelector('.spinner-border');
-        spinner.style.display = 'block';
-        spinnerShown = true; // Set the flag when showing the spinner
-    }, 10)
+function isValidSAID(linkElement, idNumber) {
+    
+    // Remove all the spaces from the ID number. 
+    idNumber = idNumber.replace(/\s/g, "");
+    
+    // Check if the length of the ID number is at least 13
+    if (idNumber.length !== 13 || isNaN(idNumber)) {
+        goBackToIDField();
+        alert('ID number must be 13 digits and numeric.');
+        return false;
+    } else {
+        // Extract the date of birth from the ID
+        let dob = idNumber.substring(0, 6);
+        let year = parseInt(dob.substring(0, 2), 10);
+        let month = parseInt(dob.substring(2, 4), 10) - 1; // Month is 0-indexed in JS
+        let day = parseInt(dob.substring(4, 6), 10);
+
+        // Check the validity of the date
+        let dateOfBirth = new Date(year + 1900, month, day);
+        if (dateOfBirth.getFullYear() != year + 1900 ||
+            dateOfBirth.getMonth() != month ||
+            dateOfBirth.getDate() != day) {
+            goBackToIDField();
+            alert('Please check the date of birth in the ID number.');
+            return false;
+        }
+
+        // Luhn algorithm check (modulus 10)
+        let total = 0;
+        let count = 0;
+
+        for (let i = 0; i < 13; i++) {
+            let digit = parseInt(idNumber.charAt(i), 10);
+            if (isNaN(digit)) {
+                goBackToIDField();
+                alert('Please ensure that there are only numeric characters in the ID number.');
+                return false;
+            }
+            if (count % 2 !== 0) {
+              digit *= 2;
+              if (digit > 9) digit -= 9;
+            }
+            total += digit;
+            count++;
+        }
+
+        // Validate with Luhn algorithm
+        if (total % 10 === 0) {
+        
+            setTimeout(function() {
+                // Code to execute after the delay
+                var spinner = linkElement.querySelector('.spinner-border');
+                spinner.style.display = 'block';
+                spinnerShown = true; // Set the flag when showing the spinner
+            }, 10)
+            return true; // Continue with default action
+        } else {
+            goBackToIDField();
+            alert('Invalid ID number');
+            return false; // Continue with default action
+        }
+        
+    } 
+
 }
+
 function toggleImageSrc(imgElement, altSrc) {
     let currentSrc = imgElement.getAttribute('src');
     
@@ -51,50 +109,8 @@ function toggleImageSrc(imgElement, altSrc) {
     }
 }
 
-function isValidSAID(number) {
-  // Check for the correct length
-  if (number.length !== 13) return false;
-
-  // Extract the date of birth from the ID
-  let dob = number.substring(0, 6);
-  let year = parseInt(dob.substring(0, 2), 10);
-  let month = parseInt(dob.substring(2, 4), 10) - 1; // Month is 0-indexed in JS
-  let day = parseInt(dob.substring(4, 6), 10);
-
-  // Check the validity of the date
-  let dateOfBirth = new Date(year + 1900, month, day);
-  if (dateOfBirth.getFullYear() != year + 1900 ||
-      dateOfBirth.getMonth() != month ||
-      dateOfBirth.getDate() != day) {
-    return false;
-  }
-
-  // Luhn algorithm check (modulus 10)
-  let total = 0;
-  let count = 0;
-
-  for (let i = 0; i < 13; i++) {
-    let digit = parseInt(number.charAt(i), 10);
-    if (isNaN(digit)) return false;
-    if (count % 2 !== 0) {
-      digit *= 2;
-      if (digit > 9) digit -= 9;
-    }
-    total += digit;
-    count++;
-  }
-
-  return (total % 10 === 0);
-}
-
 function formatInput(input) {
   let numbers = input.value.replace(/\D/g, '');
-
-  // If the input is not a valid SA ID number, do nothing
-  if (!isValidSAID(numbers)) {
-    // Optionally, provide user feedback that the ID is invalid
-    return;
-  }
 
   let sections = [];
   sections.push(numbers.substring(0, 6)); // First 6 digits
@@ -106,3 +122,13 @@ function formatInput(input) {
 	
 }
 
+function goBackToIDField() {
+    
+    var inputField = document.getElementById('numberInput');
+
+    window.scrollTo(0, 0); // Scroll to the top of the page
+    inputField.focus(); // Focus on the input field
+    inputField.select(); // Select all text in the input field
+    
+    return;
+}

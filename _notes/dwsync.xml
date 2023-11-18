@@ -4,8 +4,8 @@
 <file name="menu.php" server="192.168.0.121//var/www/html/" local="133442155411337525" remote="133442157600000000" Dst="0" />
 <file name="login.php" server="192.168.0.121//var/www/html/" local="133442123296490472" remote="133442157600000000" Dst="0" />
 <file name="php.php" server="192.168.0.121//var/www/html/" local="133429774200000000" remote="133429774200000000" Dst="0" />
-<file name="login.php" server="192.168.0.121//var/www/html2/" local="133447094644854086" remote="133447095000000000" Dst="0" />
-<file name="menu.php" server="192.168.0.121//var/www/html2/" local="133447095480908173" remote="133447095000000000" Dst="0" />
+<file name="login.php" server="192.168.0.121//var/www/html2/" local="133447944082377016" remote="133447969200000000" Dst="0" />
+<file name="menu.php" server="192.168.0.121//var/www/html2/" local="133448015287454340" remote="133448015400000000" Dst="0" />
 <file name="php.php" server="192.168.0.121//var/www/html2/" local="133429774200000000" remote="133436799600000000" Dst="0" />
 <file name="README.md" server="192.168.0.121//var/www/html2/" local="133436651836398380" remote="133436799600000000" Dst="0" />
 <file name="auth.php" server="192.168.0.121//var/www/html2/" local="133447099353638830" remote="133447101600000000" Dst="0" />
@@ -28,4 +28,15 @@
 <file name="README.md" server="192.168.0.117//var/www/html/" local="133436651836398380" remote="133446874200000000" Dst="0" />
 <file name="oldies.bak.html" server="192.168.0.121//var/www/html2/" local="133443706220832212" remote="133447072200000000" Dst="0" />
 <file name="graph4socialmedia.php" server="192.168.0.121//var/www/html2/" local="133447093585285643" remote="133447095000000000" Dst="0" />
+<file name="coltest.html" server="sassa-dev.futurism.co.za//var/www/html/" local="133444406952552311" remote="133448034600000000" Dst="0" />
+<file name="auth.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133447099353638830" remote="133448034600000000" Dst="0" />
+<file name="const-site.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133443665644054725" remote="133448034600000000" Dst="0" />
+<file name="favicon.ico" server="sassa-dev.futurism.co.za//var/www/html/" local="133438471251005237" remote="133448034600000000" Dst="0" />
+<file name="graph4socialmedia.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133447093585285643" remote="133448034600000000" Dst="0" />
+<file name="login.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133447944082377016" remote="133448034600000000" Dst="0" />
+<file name="menu.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133448015287454340" remote="133448034600000000" Dst="0" />
+<file name="oldies.bak.html" server="sassa-dev.futurism.co.za//var/www/html/" local="133443706220832212" remote="133448034600000000" Dst="0" />
+<file name="page-man.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133442870438220071" remote="133448034600000000" Dst="0" />
+<file name="php.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133429774200000000" remote="133448034600000000" Dst="0" />
+<file name="README.md" server="sassa-dev.futurism.co.za//var/www/html/" local="133436651836398380" remote="133448034600000000" Dst="0" />
 </dwsync>

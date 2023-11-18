@@ -1,13 +1,19 @@
 <?php
 
     require($_SERVER['DOCUMENT_ROOT'] . '/const-site.php');
+
     sleep(CONST_PAGE_DELAY);
    
     require($_SERVER['DOCUMENT_ROOT'] . '/page-man.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
 
+
+
+
+
 ?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -16,14 +22,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
       
-    <?php include 'graph4socialmedia.php'; ?>
-
     <title>SASSA - Older Persons Grant</title>
 
-    <!-- Bootstrap -->
-    <link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-	
+    <link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
+    <?php include 'graph4socialmedia.php'; ?>
+      
     <!-- Custom CSS -->
 	<link href="/css/sassa-custom.css" rel="stylesheet">
 
