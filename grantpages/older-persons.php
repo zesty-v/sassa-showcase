@@ -46,7 +46,7 @@
 	        <hr class="my-0">
             <div class="row">
                 <div class="col-sm">
-                    <div class="display-4">Older Persons Grant</div>
+                    <div class="display-4">Older Persons Grant: ID</div>
                 </div>
             </div>
 		<div>
@@ -121,14 +121,17 @@
 
             <div class="row flex-nowrap  justify-content-center">
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-primary">&lt;- Back</button>
+                    <!-- No backbutton here as this is the first page after the menu. Pressing cancel will take you to the menu again. -->
                 </div>
+                
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-warning">Cancel</button>
+                    <button type="button" class="btn btn-warning" onclick="history.back();">Cancel</button>
                 </div>
+                
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-primary">Next -&gt;</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='https://sassa-dev.futurism.co.za/grantpages/older-persons-docs.php';">Next -&gt;</button>
                 </div>
+                
             </div>
 
             <hr>

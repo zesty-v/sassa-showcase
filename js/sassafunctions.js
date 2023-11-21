@@ -141,6 +141,11 @@ function formatInput(input) {
     let sections = [];
 
     sections.push(numbers.substring(0, 6)); // First 6 digits
+    if (numbers.length == 0) {
+        var divMessage = document.getElementById('idNotice');
+        divMessage.className = 'text-primary';
+        divMessage.textContent = "Please enter an ID Number."; // Replace 'New text content' with the text you want to display
+    } 
     if (numbers.length > 6) sections.push(numbers.substring(6, 10)); // Next 4 digits
     if (numbers.length > 10) sections.push(numbers.substring(10, 12)); // Next 2 digits
     if (numbers.length > 12) sections.push(numbers.substring(12, 13)); // Next digit
