@@ -31,6 +31,9 @@
     <!-- Custom CSS -->
 	<link href="/css/sassa-custom.css" rel="stylesheet">
 
+    <!-- Include Bootstrap CSS (optional, for styling) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+
   </head>
 
   <body>

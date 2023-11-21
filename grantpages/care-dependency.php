@@ -8,4 +8,12 @@
     require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
 
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $idNumber = $_POST['idNumber'];
+        
+        echo 'The ID received is: ' . $idNumber;
+        
+    }
+
+
 ?>

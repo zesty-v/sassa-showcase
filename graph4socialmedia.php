@@ -9,9 +9,8 @@ $host = $_SERVER['HTTP_HOST'];
 $fullURL = $protocol . $host;
 ?>
 
-    <meta property="og:url" content="<?php echo $fullURL;?>" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="SASSA Demo Site" />
-    <meta property="og:description" content="Demo of Datanamics and Docuware for SASSA Demo" />
-    <meta property="og:image" content="<?php echo $protocol . $host ?>/images/sassa-socialmedia.png" />
-
+        <meta property="og:url" content="<?php echo $fullURL;?>" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="SASSA Demo Site" />
+        <meta property="og:description" content="Demo of Datanamics and Docuware for SASSA Demo" />
+        <meta property="og:image" content="<?php echo $protocol . $host ?>/images/sassa-socialmedia.png" />
