@@ -38,20 +38,21 @@
 
   <body>
       
+    <div class="row">
+       <div class="col-sm text-center img-fluid pt-3"><img src="/images/6.2.oldagegrant.png" alt="" class="img-fluid"></div>
+    </div>
+
 	<div class="jumbotron jumbotron-fluid text-center custom-jumbotron">
-	   <div class="row">
-	       <div class="col-sm pt-3"><img src="/images/6.2.oldagegrant.png" alt="" class="img-fluid"></div>
-        </div>
 		<div class="container">
-	        <hr class="my-0">
             <div class="row">
                 <div class="col-sm">
+        	        <hr class="my-0">
                     <div class="display-4">Older Persons Grant: ID</div>
+                    <hr class="my-2">
                 </div>
             </div>
-		<div>
-        <hr class="my-2">
-		<div class="container">
+		</div>
+        <div class="container">
 
             <div class="row flex-nowrap">
                 <div class="col-sm-2 m-1 p-1"></div>
@@ -123,22 +124,22 @@
                 <div class="col-sm-3 m-1 p-1 text-center lead">
                     <!-- No backbutton here as this is the first page after the menu. Pressing cancel will take you to the menu again. -->
                 </div>
-                
+
                 <div class="col-sm-3 m-1 p-1 text-center lead">
                     <button type="button" class="btn btn-warning" onclick="history.back();">Cancel</button>
                 </div>
-                
+
                 <div class="col-sm-3 m-1 p-1 text-center lead">
                     <button type="button" class="btn btn-primary" onclick="window.location.href='https://sassa-dev.futurism.co.za/grantpages/older-persons-docs.php';">Next -&gt;</button>
                 </div>
-                
+
             </div>
 
             <hr>
 
         </div>
     </div>
-    
+      
     <div class="container">
        <div class="row">
 		  <p class="text-center"><span class="badge badge-info"></span></p>

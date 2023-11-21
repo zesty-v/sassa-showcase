@@ -37,13 +37,15 @@
 
     <body>
     
-    <?php require('modalmessage.php'); ?>
-    
+        <?php require('modalmessage.php'); ?>
+         <div class="row">
+           <div class="col-sm text-center img-fluid pt-3"><img src="/images/sassa-logo1.png" alt="" class="img-fluid"></div>
+        </div>  
+        
+        <hr class="my-0">
         <div class="jumbotron jumbotron-fluid text-center">
-            <img src="images/sassa-logo1.png" alt="" class="img-fluid">
-
             <div class="container">
-                <hr class="my-3">
+                
                 <form id="idForm" method="POST">
                     <input type="text" id="numberInput" name="idNumber" oninput="formatInput(this)" placeholder="711005 5000 00 1" pattern="\d*" required>
                 </form>
@@ -51,107 +53,106 @@
                 
                 <div class="row flex-nowrap justify-content-center my-3">
 
-                    <div class="col-md text-right">
+                    <div class="col-md">
                         <div class="position-relative">
                             <a href="grantpages/care-dependency.php" onclick="return isValidSAID(this, document.getElementById('numberInput').value);">
                                 <img src="images/1.0.caredependency.png" onmouseover="toggleImageSrc(this, 'images/1.1.caredependency.png');" alt="Care Dependency" onmouseout="toggleImageSrc(this, 'images/1.0.caredependency.png');" class="img-fluid max-size-210">
                                 <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
                                 </div>
-                            </div>
-                        </a>
-                        Care Dependency<br><br>
+                            </a>
+                        </div>Care Dependency<br><br>
                     </div>
 
-                    <div class="col-md text-center">
+                    <div class="col-md">
                         <div class="position-relative">
                             <a href="grantpages/child-support.php" onclick="return isValidSAID(this, document.getElementById('numberInput').value);">
                                 <img src="images/2.0.childcare.png" onmouseover="toggleImageSrc(this, 'images/2.1.childcare.png');" alt="Child Support" onmouseout="toggleImageSrc(this, 'images/2.0.childcare.png');" class="img-fluid max-size-210">
                                 <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                         Child Support<br><br>
                     </div>
 
-                    <div class="col-md text-left">
+                    <div class="col-md">
                         <div class="position-relative">
                             <a href="grantpages/foster-child.php" onclick="return isValidSAID(this, document.getElementById('numberInput').value);">
                                 <img src="images/3.0.fosterchild.png" onmouseover="toggleImageSrc(this, 'images/3.1.fosterchild.png');" alt="Foster Child" onmouseout="toggleImageSrc(this, 'images/3.0.fosterchild.png');" class="img-fluid max-size-210">
                                 <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                         Foster Child<br><br>
                     </div>
                 </div>
 
                 <div class="row flex-nowrap justify-content-center my-3">
 
-                    <div class="col-md text-right">
+                    <div class="col-md">
                         <div class="position-relative" >
                             <a href="grantpages/disability.php" onclick="return isValidSAID(this, document.getElementById('numberInput').value);">
                                 <img src="images/4.0.disability.png" onmouseover="toggleImageSrc(this, 'images/4.1.disability.png');" alt="Disability" onmouseout="toggleImageSrc(this, 'images/4.0.disability.png');" class="img-fluid max-size-210">
                                 <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
                                 </div>
-                            </div>
-                        </a>
-                        Disability<br><br>
+                            </a>
+                        </div>
+                    Disability<br><br>
                     </div>
 
-                    <div class="col-md text-center">
+                    <div class="col-md">
                         <div class="position-relative">
                             <a href="grantpages/grant-in-aid.php" onclick="return isValidSAID(this, document.getElementById('numberInput').value);">
                                 <img src="images/5.0.grantinaid.png" onmouseover="toggleImageSrc(this, 'images/5.1.grantinaid.png');" alt="Grant-in-Aid" onmouseout="toggleImageSrc(this, 'images/5.0.grantinaid.png');" class="img-fluid max-size-210">
                                 <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                         Grant-in-Aid<br><br>
                     </div>
 
-                    <div class="col-md text-left">
+                    <div class="col-md">
                         <div class="position-relative">
                             <a href="grantpages/older-persons.php" onclick="return isValidSAID(this, document.getElementById('numberInput').value);">
                                 <img src="images/6.0.oldagegrant.png" onmouseover="toggleImageSrc(this, 'images/6.1.oldagegrant.png');" alt="Older Persons" onmouseout="toggleImageSrc(this, 'images/6.0.oldagegrant.png');" class="img-fluid max-size-210">
                                 <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                         Older Persons<br><br>
                     </div>
 
                 </div>
                 <div class="row flex-nowrap justify-content-center my-3">
 
-                    <div class="col-md text-right">
+                    <div class="col-md">
                         <div class="position-relative">
                             <a href="grantpages/relief-of-distress.php" onclick="return isValidSAID(this, document.getElementById('numberInput').value);">
                                 <img src="images/7.0.reliefofdistress.png" onmouseover="toggleImageSrc(this, 'images/7.1.reliefofdistress.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/7.0.reliefofdistress.png');" class="img-fluid max-size-210">
                                 <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                         Relief of Distress<br><br>
                     </div>
 
-                    <div class="col-md text-center">
+                    <div class="col-md">
                         <div class="position-relative">
                             <a href="grantpages/war-veterans.php" onclick="return isValidSAID(this, document.getElementById('numberInput').value);">
                                 <img src="images/8.0.warveterans.png" onmouseover="toggleImageSrc(this, 'images/8.1.warveterans.png');" alt="War Veterans" onmouseout="toggleImageSrc(this, 'images/8.0.warveterans.png');" class="img-fluid max-size-210">
                                 <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                         War Veterans<br><br>
                     </div>
-                    <div class="col-md text-left">
+                    <div class="col-md">
                         <div class="position-relative">
                             <a href="grantpages/covid-19-relief.php" onclick="return isValidSAID(this, document.getElementById('numberInput').value);">
                                 <img src="images/9.0.caredependencycovid.png" onmouseover="toggleImageSrc(this, 'images/9.1.caredependencycovid.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/9.0.caredependencycovid.png');" class="img-fluid max-size-210">
                                 <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                         Covid-19 Relief of Distress<br><br>
                     </div>
                 </div>
