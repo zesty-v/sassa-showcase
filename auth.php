@@ -2,10 +2,10 @@
 
 session_start();
 
-// Static credentials
+// Static credentials --> add more if you want to.
 $credentials = [
     'sytze' => 'Rhopalocera777!',
-    'jason' => 'getmein!' // Add a second set of credentials here
+    'jason' => 'getmein!' 
 ];
 
 $_SESSION['loggedin'] = false;

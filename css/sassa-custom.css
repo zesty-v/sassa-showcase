@@ -33,3 +33,13 @@
     border-color: red;
 }
 
+.blue-checkbox:checked {
+    background-color: blue;
+    border-color: blue;
+}
+
+/* Custom styles for checkboxes */
+.blue-checkbox {
+    accent-color: blue; /* For modern browsers */
+}
+

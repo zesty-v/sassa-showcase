@@ -65,7 +65,7 @@
                 <div class="col-3 text-right">
                     <input class="form-check-input red-checkbox" type="checkbox" id="2-1-check" checked disabled>
                 </div>
-                <div class="col-6 lead text-center">Application Form</div>
+                <div class="col-6 lead text-center">Parent or Guardian's ID</div>
                 <div class="col-3 text-left">
                     <input class="form-check-input" type="checkbox" id="2-2-check">
                 </div>
@@ -76,7 +76,7 @@
                 <div class="col-3 text-right">
                     <input class="form-check-input red-checkbox" type="checkbox" id="3-1-check" checked disabled>
                 </div>
-                <div class="col-6 lead text-center">Grant Applicant SA ID</div>
+                <div class="col-6 lead text-center">Child(rens)'s Birth Certificate</div>
                 <div class="col-3 text-left">
                     <input class="form-check-input" type="checkbox" id="3-2-check">
                 </div>
@@ -87,7 +87,7 @@
                 <div class="col-3 text-right">
                     <input class="form-check-input red-checkbox" type="checkbox" id="4-1-check" checked disabled>
                 </div>
-                <div class="col-6 lead text-center">Proof of Residence</div>
+                <div class="col-6 lead text-center">Proof of maintenance received for child(ren)</div>
                 <div class="col-3 text-left">
                     <input class="form-check-input" type="checkbox" id="4-2-check">
                 </div>
@@ -96,9 +96,9 @@
             <!-- Row 5 -->
             <div class="row flex-nowrap">
                 <div class="col-3 text-right">
-                    <input class="form-check-input" type="checkbox" id="5-1-check">
+                    <input class="form-check-input" type="checkbox" id="5-1-check checked disabled">
                 </div>
-                <div class="col-6 lead text-center">Proof of income / dividends (if any)</div>
+                <div class="col-6 lead text-center">Proof of income</div>
                 <div class="col-3 text-left">
                     <input class="form-check-input" type="checkbox" id="5-2-check">
                 </div>
@@ -109,7 +109,7 @@
                 <div class="col-3 text-right">
                     <input class="form-check-input" type="checkbox" id="6-1-check">
                 </div>
-                <div class="col-6 lead text-center">Proof of assets incl. value of property</div>
+                <div class="col-6 lead text-center">Court order stating applicant has custody over the child (if divorced)</div>
                 <div class="col-3 text-left">
                     <input class="form-check-input" type="checkbox" id="6-2-check">
                 </div>
@@ -120,7 +120,7 @@
                 <div class="col-3 text-right">
                     <input class="form-check-input" type="checkbox" id="7-1-check">
                 </div>
-                <div class="col-6 lead text-center">Proof of Private Pension</div>
+                <div class="col-6 lead text-center">Death certificate if missing persons report from SAPS (orpahns)</div>
                 <div class="col-3 text-left">
                     <input class="form-check-input" type="checkbox" id="7-2-check">
                 </div>
@@ -129,43 +129,20 @@
             <!-- Row 8 -->
             <div class="row flex-nowrap">
                 <div class="col-3 text-right">
-                    <input class="form-check-input" type="checkbox" id="8-1-check" checked disabled>
+                    <input class="form-check-input" type="checkbox" id="8-1-check">
                 </div>
-                <div class="col-6 lead text-center">3 Months bank statements</div>
+                <div class="col-6 lead text-center">Marriage Certificate if applicable</div>
                 <div class="col-3 text-left">
                     <input class="form-check-input" type="checkbox" id="8-2-check">
                 </div>
             </div>
-
-            <!-- Row 9 -->
-            <div class="row flex-nowrap">
-                <div class="col-3 text-right">
-                    <input class="form-check-input" type="checkbox" id="9-1-check">
-                </div>
-                <div class="col-6 lead text-center">UIF Member or Discharge certificate</div>
-                <div class="col-3 text-left">
-                    <input class="form-check-input" type="checkbox" id="9-2-check">
-                </div>
-            </div>
-
-            <!-- Row 10 -->
-            <div class="row flex-nowrap">
-                <div class="col-3 text-right">
-                    <input class="form-check-input red-checkbox" type="checkbox" id="10-1-check" checked disabled>
-                </div>
-                <div class="col-6 lead text-center">Copy of will, final liquidation and distribution accounts</div>
-                <div class="col-3 text-left">
-                    <input class="form-check-input" type="checkbox" id="10-2-check">
-                </div>
-            </div>
-
 
             <div class="row flex-nowrap  justify-content-center">
                 <div class="col-sm-3 m-1 p-1 text-center lead">
                     <button type="button" class="btn btn-primary" onclick="history.back();">&lt;- Back</button>
                 </div>
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-warning" onclick="window.location.href='../menu.php';">Cancel</button>
+                    <button type="button" class="btn btn-warning" onclick="window.location.href='../menu.php'">Cancel</button>
                 </div>
                 <div class="col-sm-3 m-1 p-1 text-center lead">
                     <button type="button" class="btn btn-primary">Next -&gt;</button>
@@ -177,20 +154,18 @@
         </div>
     </div>
 
-        <?php include('../bottom-status.php'); ?>
-                    
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-        <script src="/js/jquery-3.4.1.min.js"></script>
 
-        <!-- Include all compiled plugins (below), or include individual files as needed --> 
-        <script src="/js/popper.min.js"></script>
-        <script src="/js/bootstrap-4.4.1.js"></script>
+    <?php include('../bottom-status.php'); ?>
+                
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="/js/jquery-3.4.1.min.js"></script>
 
-        <!-- Custom functions for SASSA -->
-        <script src="/js/sassafunctions.js"></script>
-
-        <!-- Include Bootstrap JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap-4.4.1.js"></script>
+	  
+	<!-- Custom functions for SASSA -->
+    <script src="/js/sassafunctions.js"></script>
 	  
     </body>
 </html>

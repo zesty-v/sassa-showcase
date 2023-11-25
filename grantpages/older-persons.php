@@ -8,9 +8,9 @@
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
 
-
-
-
+    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-real-time-id-verification.php');
+    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-profile-id-verification.php');
+    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-photo-id-verification.php');
 
 ?>
 
@@ -26,7 +26,6 @@
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
-    <?php include 'graph4socialmedia.php'; ?>
       
     <!-- Custom CSS -->
 	<link href="/css/sassa-custom.css" rel="stylesheet">
@@ -139,45 +138,21 @@
 
         </div>
     </div>
-      
-    <div class="container">
-       <div class="row">
-		  <p class="text-center"><span class="badge badge-info"></span></p>
-          <div class="text-center col-lg-6 offset-lg-3">
-            <p>Copyright &copy; 2023 &middot; All Rights Reserved.<br>
-				<span class="shadow badge <?php 
-                
-                // Determine if the user is currently logged-in.
-                echo $_SESSION['loggedin'] ? 'badge-success">logged in' : 'badge-warning">logged out';
-                    
-                    ?></span></span>&nbsp;<span class="badge <?php 
-                    
-                // Determine if Datanamics is on line.
-                echo dn_isonline() ? 'badge-primary' : 'badge-danger'; 
-                    
-                    ?> shadow">Datanamics</span>&nbsp;<span class="badge <?php 
-                    
-                // Determine if Docuware is on line.
-                echo dw_isonline() ? 'badge-primary' : 'badge-danger';
-                          
-                    ?> shadow">DocuWare
-                
-                </span>
-              </p>
-          </div>
 
-       </div>
-    </div>
+        <?php include('../bottom-status.php'); ?>
                     
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-    <script src="/js/jquery-3.4.1.min.js"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+        <script src="/js/jquery-3.4.1.min.js"></script>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed --> 
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap-4.4.1.js"></script>
-	  
-	<!-- Custom functions for SASSA -->
-    <script src="/js/sassafunctions.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed --> 
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap-4.4.1.js"></script>
+
+        <!-- Custom functions for SASSA -->
+        <script src="/js/sassafunctions.js"></script>
+
+        <!-- Include Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
 	  
     </body>
 </html>

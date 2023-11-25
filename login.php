@@ -26,8 +26,7 @@
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
-    <?php include 'graph4socialmedia.php'; ?>
-      
+    
     <!-- Custom CSS -->
 	<link href="/css/sassa-custom.css" rel="stylesheet">
 
@@ -35,9 +34,12 @@
     
   <body>
 	
-   <hr class="my-4">
+     <div class="row">
+       <div class="col-sm text-center img-fluid pt-3"><img src="/images/sassa-logo1.png" alt="" class="img-fluid"></div>
+    </div>  
+        
+    <hr class="my-0">
     <div class="jumbotron jumbotron-fluid text-center">
-       <h1 class="display-4"><img src="images/sassa-logo1.png" class="img-fluid" max-width="578" max-height="154" alt="">&nbsp;</h1>
 
        <form action="auth.php" method="post" >
         <p class="lead">
@@ -54,29 +56,9 @@
         </form>
         
     </div>
-	  
-    <div class="container">
-       <div class="row">
-		  <p class="text-center"><span class="badge badge-info"></span></p>
-          <div class="text-center col-lg-6 offset-lg-3">
-            <p>Copyright &copy; 2023 &middot; All Rights Reserved.
-				<br><span class="badge <?php 
-                    
-                echo $_SESSION['loggedin'] ? 'badge-success' : 'badge-warning';
-                    
-                    ?>">Login</span>&nbsp;<span class="badge <?php 
-                          
-                // echo dn_isonline() ? 'badge-primary' : 'badge-danger'; 
-                          
-                          ?>">Datanamics</span>&nbsp;<span class="badge <?php 
-                          
-                echo dw_isonline() ? 'badge-primary' : 'badge-danger'; 
-                          ?>">DocuWare</span></p>
-          </div>
+	
+    <?php include('bottom-status.php'); ?>
 
-       </div>
-        
-    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
     <script src="js/jquery-3.4.1.min.js"></script>
 
