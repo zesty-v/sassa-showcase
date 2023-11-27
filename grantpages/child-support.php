@@ -2,8 +2,7 @@
 
     require($_SERVER['DOCUMENT_ROOT'] . '/const-site.php');
 
-    sleep(CONST_PAGE_DELAY);
-   
+    sleep(CONST_PAGE_DELAY); 
     require($_SERVER['DOCUMENT_ROOT'] . '/page-man.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
@@ -11,7 +10,33 @@
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-real-time-id-verification.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-profile-id-verification.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-photo-id-verification.php');
+    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-consumer-lineage.php');
 
+
+    // Get the applican ID record from the "Profile Database".
+    $data = dn_profile_id_verification($_SESSION['curr-id'], time());
+    // Make audit Entry
+    $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Application Start Child Support Grant.';
+
+    // Now check if there were results that were returned.
+    
+    // Now get the ID photo from HA
+    $image = dn_photo_id_verification($_SESSION['curr-id'], time());
+
+
+    // If not, perform a real-time id verification.
+    
+
+    // Ensure fields are ready to be used below.
+    
+
+    // Now check for lineage.
+    
+
+    // If there is no lineage, indicate the error condition or rather that there are no registered biological children for this ID.
+    
+    
+    // Done.
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +62,9 @@
 
   <body>
       
+    <?php require('../modalmessage.php'); ?>
+    <?php require('../navbar.php'); ?>
+
     <div class="row">
        <div class="col-sm text-center img-fluid pt-3"><img src="/images/2.2.childcare.png" alt="" class="img-fluid"></div>
     </div>
@@ -58,7 +86,7 @@
                 <div class="col-sm-2 m-1 p-1 pt-3 rounded-lg shadow bg-dark">
                     <div class="row flex-nowrap">
                         <div class="col-sm-12">
-                            <img src="/images/id_photo.jpg" alt="ID Photo" class="img-fluid">
+                            <img src="<?php echo 'data:image/jpeg;base64,' . $image->IDPhotoResults->IDPhoto; ?>" alt="ID Photo" class="img-fluid">
                         </div>
                     </div>
                     <div class="row flex-nowrap">
@@ -70,39 +98,35 @@
                 <div class="col-sm-6">
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">ID Number:</div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">711005 084 08 1</div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $_SESSION['curr-id']; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">First Name:</div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">Sytze</div>
-                    </div>
-                    <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Second Name: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">(none)</div>
-                    </div>                    
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">First Names:</div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->firstNames; ?></div>
+                    </div>                  
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Last Name: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">Visser</div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->surName; ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Date of Birth: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">1971/10/05</div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->dob; ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Age: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">52</div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->age; ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Gender: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">Male</div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->gender; ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Citizenship: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">South African</div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->citizenship; ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow flex-nowrap">Deceased Status </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow">Alive</div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo empty($data->idProfile->deathDate) ? 'Alive' : 'Deceased'; ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Other Grants: </div>
@@ -130,16 +154,8 @@
             <div class="row flex-nowrap">
                 <div class="col-sm-2 m-1 p-1"></div>
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">First Name:</div>
+                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">First Names:</div>
                 <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">Jean</div>
-                <div class="col-sm-2 m-1 p-1"></div>
-            </div>
-
-            <div class="row flex-nowrap">
-                <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Second Name:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">(none)</div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 
@@ -167,14 +183,6 @@
                 <div class="col-sm-2 m-1 p-1"></div>
                 <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">First Name:</div>
                 <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">Andre</div>
-                <div class="col-sm-2 m-1 p-1"></div>
-            </div>
-
-            <div class="row flex-nowrap">
-                <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Second Name:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">(none)</div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 
@@ -228,6 +236,9 @@
     
 	<!-- Custom functions for SASSA -->
     <script src="/js/sassafunctions.js"></script>
-    
+
+<?php var_dump($_SESSION['sessionAudit']); ?>
+
     </body>
+    
 </html>

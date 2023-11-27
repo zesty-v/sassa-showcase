@@ -25,13 +25,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['loggedin'] = false;
         $_SESSION['loginmsg'] = 'The login credentials are incorrect';
 
+        //Make audit Entry
+        $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' User login failed.';
+
         header('Location: login.php');
         exit;
     } else {
         // User name and password is fine.
         $_SESSION['loggedin'] = true;
         $_SESSION['loginmsg'] = 'Please log in...';
-
+        $_SESSION['userName'] = $username;
+        
+        //Make audit Entry
+        $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' User login succeeded.';
+        
+        //Go to menu page.
         header('Location: menu.php');
         exit;
     }

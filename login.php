@@ -11,6 +11,7 @@
     $_SESSION['loggedin'] = false;
 
     if (!isset($_SESSION['loginmsg'])) {$_SESSION['loginmsg'] = 'Please log in...';}
+    $_SESSION['sessionAudit'] = array();
 
 ?>
 
@@ -68,6 +69,8 @@
     
     <!-- Custom functions for SASSA -->
     <script src="js/sassafunctions.js"></script>
-	  
+
+<?php var_dump($_SESSION['sessionAudit']); ?>
+      
   </body>
 </html>

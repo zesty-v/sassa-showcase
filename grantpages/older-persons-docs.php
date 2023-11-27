@@ -8,9 +8,7 @@
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
 
-
-
-
+    $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Marking Older Persons Grant application documents that are available.';
 
 ?>
 
@@ -36,6 +34,9 @@
   </head>
 
   <body>
+
+    <?php require('../modalmessage.php'); ?>
+    <?php require('../navbar.php'); ?>
 
     <div class="row">
        <div class="col-sm text-center img-fluid pt-3"><img src="/images/6.2.oldagegrant.png" alt="" class="img-fluid"></div>
@@ -191,10 +192,11 @@
 
         <!-- Include Bootstrap JS -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
-	  
+
+<?php var_dump($_SESSION['sessionAudit']); ?>
+      
     </body>
 </html>
-
 
 
             

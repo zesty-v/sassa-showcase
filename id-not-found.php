@@ -37,6 +37,9 @@
 
   <body>
       
+    <?php require('modalmessage.php'); ?>
+    <?php require('navbar.php'); ?>
+
     <div class="row">
        <div class="col-sm text-center img-fluid pt-3"><img src="/images/2.2.childcare.png" alt="" class="img-fluid"></div>
     </div>

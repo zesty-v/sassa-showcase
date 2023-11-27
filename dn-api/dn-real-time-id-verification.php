@@ -3,7 +3,7 @@
 function dn_realtime_id_verification($id_number, $reference_number) {
    
     // Initialize cURL session
-    $ch = curl_init($_SESSION['DN-CONST.PBverifyWS'] . '/hello-world');
+    $ch = curl_init($_SESSION['DN-CONST.PBverifyWS'] . '/pbverify-real-time-id-verification');
 
     // Set cURL options
     curl_setopt($ch, CURLOPT_URL, true);

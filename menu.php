@@ -9,7 +9,8 @@
     require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
 
 
-
+    // Clear the Audit as we are starting with a new session for a new applicant. 
+    $_SESSION['sessionAudit'] = array();
 
 
 ?>
@@ -27,7 +28,7 @@
         <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
 
           <!-- Include Bootstrap CSS (optional, for styling) -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
         <!-- Custom CSS -->
@@ -37,6 +38,8 @@
     <body>
     
         <?php require('modalmessage.php'); ?>
+        <?php require('navbar.php'); ?>
+        
          <div class="row">
            <div class="col-sm text-center img-fluid pt-3"><img src="/images/sassa-logo1.png" alt="" class="img-fluid"></div>
         </div>  
@@ -171,8 +174,10 @@
         <script src="/js/sassafunctions.js"></script>
 
         <!-- Include Bootstrap JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
-  
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+        
+<?php var_dump($_SESSION['sessionAudit']); ?>
+    
     </body>
 
 </html>

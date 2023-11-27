@@ -8,9 +8,7 @@
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
 
-
-
-
+    $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Marking Child Support Grant application documents that are available.';
 
 ?>
 
@@ -37,6 +35,9 @@
 
   <body>
 
+    <?php require('../modalmessage.php'); ?>
+    <?php require('../navbar.php'); ?>
+      
     <div class="row">
        <div class="col-sm text-center img-fluid pt-3"><img src="/images/6.2.oldagegrant.png" alt="" class="img-fluid"></div>
     </div>
@@ -167,6 +168,8 @@
 	<!-- Custom functions for SASSA -->
     <script src="/js/sassafunctions.js"></script>
 	  
+<?php var_dump($_SESSION['sessionAudit']); ?>
+
     </body>
 </html>
 
