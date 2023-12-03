@@ -31,6 +31,10 @@
 <file name="graph4socialmedia.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133448764332530307" remote="133448764200000000" Dst="0" />
 <file name="modalmessage.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133450256148281355" remote="133450255800000000" Dst="0" />
 <file name="bottom-status.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133454098279629989" remote="133454098200000000" Dst="0" />
-<file name="id-not-found.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133455485218414867" remote="133455484800000000" Dst="0" />
-<file name="navbar.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133455485863059478" remote="133455485400000000" Dst="0" />
+<file name="id-not-found.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133460579450216654" remote="133460579400000000" Dst="0" />
+<file name="navbar.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133459955185960086" remote="133459954800000000" Dst="0" />
+<file name="print.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133459915243915750" remote="133459915200000000" Dst="0" />
+<file name="composer.json" server="sassa-dev.futurism.co.za//var/www/html/" local="133456452680005456" remote="133456438800000000" Dst="0" />
+<file name="composer.lock" server="sassa-dev.futurism.co.za//var/www/html/" local="133456452680010552" remote="133456438800000000" Dst="0" />
+<file name="composer.phar" server="sassa-dev.futurism.co.za//var/www/html/" local="133456452685998228" remote="133456404600000000" Dst="0" />
 </dwsync>

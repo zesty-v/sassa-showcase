@@ -9,6 +9,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/login.php">Logout</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/print.php">Print</a>
+            </li>
         </ul>
     </div>
 </nav>

@@ -3,6 +3,9 @@
     require($_SERVER['DOCUMENT_ROOT'] . '/const-site.php');
 
     sleep(CONST_PAGE_DELAY); 
+
+    $appType = 'Child Support Grant';
+
     require($_SERVER['DOCUMENT_ROOT'] . '/page-man.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
@@ -12,20 +15,44 @@
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-photo-id-verification.php');
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-consumer-lineage.php');
 
-
     // Get the applican ID record from the "Profile Database".
     $data = dn_profile_id_verification($_SESSION['curr-id'], time());
+
     // Make audit Entry
     $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Application Start Child Support Grant.';
 
     // Now check if there were results that were returned.
+    if ($data == 0) {
+
+        // No results were returned, so go to the id-not-found page
+            header('Location: ../id-not-found.php?id_no' . urlencode($_SESSION['curr-id']) . '&app_type=' . urlencode($appType));
+            exit;
+        
+        // If not, perform a real-time id verification.
+        $data = dn_realtime_id_verification($_SESSION['curr-id'], time());        
+        
+        //Check if the ID is still not found.
+        if ($data == '') {
+
+            // No results were returned, so go to the id-not-found page
+            header('Location: ../id-not-found.php?id_no' . urlencode($_SESSION['curr-id']) . '&app-type=' . urlencode($appType));
+            exit;
+        }
+        else {
+            
+            // Not much to do here
+            
+        }
+    }
+    else {
+        
+        // Not much to do here I guess.
     
+    }
+
     // Now get the ID photo from HA
     $image = dn_photo_id_verification($_SESSION['curr-id'], time());
 
-
-    // If not, perform a real-time id verification.
-    
 
     // Ensure fields are ready to be used below.
     
@@ -37,6 +64,7 @@
     
     
     // Done.
+
 ?>
 
 <!DOCTYPE html>
@@ -237,7 +265,7 @@
 	<!-- Custom functions for SASSA -->
     <script src="/js/sassafunctions.js"></script>
 
-<?php var_dump($_SESSION['sessionAudit']); ?>
+    <?php var_dump($_SESSION['sessionAudit']); ?>
 
     </body>
     

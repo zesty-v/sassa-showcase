@@ -51,6 +51,11 @@
         	        <hr class="my-0 mt-4">
                     <div class="display-4 text-white bg-danger">ID Not Found</div>
                     <hr class="my-0">
+                    
+                    <div class="dark-text"> ID number not found on Profile or at Home Affairs</div>
+                    <div class="dark-text"> ID number <?php echo $_SESSION['curr-id']; ?></div>
+                    <div class="dark-text"> Application type: <?php echo $_GET['app_type']; ?></div>
+                    
                 </div>
             </div>
 		</div>

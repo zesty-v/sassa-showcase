@@ -60,7 +60,9 @@ function dn_profile_id_verification($id_number, $reference_number) {
             }';
         
         $response = json_decode($jsonString);
-        return $response;
+        return 0;
+        
+        
         
     }
 
