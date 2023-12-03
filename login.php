@@ -44,15 +44,15 @@
 
        <form action="auth.php" method="post" >
         <p class="lead">
-         <input class="rounded-lg text-center" type="text" name="username" id="username" required placeholder="user name">
+         <input class="rounded-lg text-center shadow-sm" type="text" name="username" id="username" required placeholder="user name">
        </p>
        <p class="lead">
-         <input class="rounded-lg text-center" type="password" name="password" id="password" required placeholder="password">
+         <input class="rounded-lg text-center shadow-sm" type="password" name="password" id="password" required placeholder="password">
        </p>
        <p class="text-danger"><?php echo $_SESSION['loginmsg'];?></p>
 
        <p class="lead">
-		  <input class="rounded-lg btn-outline-primary text-center" type="submit" name="submit" id="submit" value="Login">
+		  <input class="rounded-lg btn-outline-primary text-center shadow-sm btn-w-110" type="submit" name="submit" id="submit" value="Login">
        </p>
         </form>
         

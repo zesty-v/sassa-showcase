@@ -1,31 +1,25 @@
 <?php
-
-    require($_SERVER['DOCUMENT_ROOT'] . '/const-site.php');
-
-    sleep(CONST_PAGE_DELAY); 
-
+    
+    // Name of the view.
     $appType = 'Child Support Grant';
-
-    require($_SERVER['DOCUMENT_ROOT'] . '/page-man.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
-
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-real-time-id-verification.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-profile-id-verification.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-photo-id-verification.php');
+    $viewName = 'Child Support Grant';
+    
+    // All standard page includes
+    require('../partials/standard-page-requires.php');
+    
+    // Capture audit Entry
+    $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Application Start for' . $appType;
+    
     require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-consumer-lineage.php');
-
+    
     // Get the applican ID record from the "Profile Database".
     $data = dn_profile_id_verification($_SESSION['curr-id'], time());
-
-    // Make audit Entry
-    $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Application Start Child Support Grant.';
-
+    
     // Now check if there were results that were returned.
     if ($data == 0) {
 
         // No results were returned, so go to the id-not-found page
-            header('Location: ../id-not-found.php?id_no' . urlencode($_SESSION['curr-id']) . '&app_type=' . urlencode($appType));
+            header('Location: ../id-not-found.php?id_no=' . urlencode($_SESSION['curr-id']) . '&app_type=' . urlencode($appType));
             exit;
         
         // If not, perform a real-time id verification.
@@ -83,9 +77,6 @@
     <!-- Custom CSS -->
 	<link href="/css/sassa-custom.css" rel="stylesheet">
 
-    <!-- Include Bootstrap CSS (optional, for styling) -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
-
   </head>
 
   <body>
@@ -111,7 +102,7 @@
 
             <div class="row flex-nowrap">
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 pt-3 rounded-lg shadow bg-dark">
+                <div class="col-sm-2 m-1 p-1 pt-3 rounded-lg shadow-sm bg-dark">
                     <div class="row flex-nowrap">
                         <div class="col-sm-12">
                             <img src="<?php echo 'data:image/jpeg;base64,' . $image->IDPhotoResults->IDPhoto; ?>" alt="ID Photo" class="img-fluid">
@@ -125,40 +116,40 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">ID Number:</div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $_SESSION['curr-id']; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">ID Number:</div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $_SESSION['curr-id']; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">First Names:</div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->firstNames; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">First Names:</div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->firstNames; ?></div>
                     </div>                  
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Last Name: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->surName; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Last Name: </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->surName; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Date of Birth: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->dob; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Date of Birth: </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->dob; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Age: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->age; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Age: </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->age; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Gender: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->gender; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Gender: </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->gender; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Citizenship: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->citizenship; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Citizenship: </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->citizenship; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow flex-nowrap">Deceased Status </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo empty($data->idProfile->deathDate) ? 'Alive' : 'Deceased'; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm flex-nowrap">Deceased Status </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo empty($data->idProfile->deathDate) ? 'Alive' : 'Deceased'; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Other Grants: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">???</div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Other Grants: </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">???</div>
                     </div>
                 </div>
                 <div class="col-sm-2 m-1 p-1"></div>
@@ -170,55 +161,55 @@
 
             <div class="row flex-nowrap">
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-dark text-white rounded-lg shadow">
+                <div class="col-sm-2 m-1 p-1 text-right bg-dark text-white rounded-lg shadow-sm">
                     <label class="form-check-label text-right" for="sibling1Checkbox">Sibling 1: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input class="form-check-input blue-checkbox text-right" type="checkbox" id="sibling1Checkbox">
                 </div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">ID Number:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">000423 5003 08 3</div>
+                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">ID Number:</div>
+                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">000423 5003 08 3</div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 
             <div class="row flex-nowrap">
                 <div class="col-sm-2 m-1 p-1"></div>
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">First Names:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">Jean</div>
+                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">First Names:</div>
+                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">Jean</div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 
             <div class="row flex-nowrap">
                 <div class="col-sm-2 m-1 p-1"></div>
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Last Name:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">Visser</div>
+                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Last Name:</div>
+                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">Visser</div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 
             <div class="row flex-nowrap">
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-dark text-white rounded-lg shadow">
+                <div class="col-sm-2 m-1 p-1 text-right bg-dark text-white rounded-lg shadow-sm">
                     <label class="form-check-label text-right" for="sibling2Checkbox">Sibling 2: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input class="form-check-input blue-checkbox text-right" type="checkbox" id="sibling2Checkbox">
                 </div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">ID Number:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">000423 5003 08 3</div>
+                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">ID Number:</div>
+                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">000423 5003 08 3</div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 
             <div class="row flex-nowrap">
                 <div class="col-sm-2 m-1 p-1"></div>
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">First Name:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">Andre</div>
+                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">First Name:</div>
+                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">Andre</div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 
             <div class="row flex-nowrap">
                 <div class="col-sm-2 m-1 p-1"></div>
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Last Name:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">Visser</div>
+                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Last Name:</div>
+                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">Visser</div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 
@@ -234,16 +225,17 @@
 
 
             <div class="row flex-nowrap  justify-content-center">
+                
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <!-- No backbutton here as this is the first page after the menu. Pressing cancel will take you to the menu again. -->
+                    <button type="button" class="btn btn-warning btn-w-110" onclick="window.location.href='../menu.php';">Cancel</button>
                 </div>
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-warning" onclick="window.location.href='../menu.php';">Cancel</button>
+                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='../print.php';">Print Letter</button>
                 </div>
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-primary" onclick="window.location.href='./child-support-docs.php';">Next -&gt;</button>
+                    <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='./child-support-docs.php';">Next -&gt;</button>
                 </div>
 
             </div>
@@ -264,8 +256,6 @@
     
 	<!-- Custom functions for SASSA -->
     <script src="/js/sassafunctions.js"></script>
-
-    <?php var_dump($_SESSION['sessionAudit']); ?>
 
     </body>
     

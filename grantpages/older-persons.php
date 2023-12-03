@@ -1,26 +1,19 @@
 <?php
 
-    require($_SERVER['DOCUMENT_ROOT'] . '/const-site.php');
-
-    sleep(CONST_PAGE_DELAY);
-   
+    // Name of the view.
     $appType = 'Older Persons Grant';
+    $viewName = 'Older Persons Grant';
 
-    require($_SERVER['DOCUMENT_ROOT'] . '/page-man.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
-
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-real-time-id-verification.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-profile-id-verification.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-photo-id-verification.php');
+    // All standard page includes
+    require('../partials/standard-page-requires.php');
+    
+    // Make audit Entry
+    $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Application Start Older Persons Grant.';
 
     // Get the applican ID record from the "Profile Database".
     $data = dn_profile_id_verification($_SESSION['curr-id'], time());
 
     // Now check if there were results that were returned.
-    // Make audit Entry
-    $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Application Start Older Persons Grant.';
-
 
     // Now get the ID photo from HA
     $image = dn_photo_id_verification($_SESSION['curr-id'], time());
@@ -51,9 +44,6 @@
     <!-- Custom CSS -->
 	<link href="/css/sassa-custom.css" rel="stylesheet">
 
-    <!-- Include Bootstrap CSS (optional, for styling) -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
-
   </head>
 
   <body>
@@ -79,7 +69,7 @@
 
             <div class="row flex-nowrap">
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 pt-3 rounded-lg shadow bg-dark">
+                <div class="col-sm-2 m-1 p-1 pt-3 rounded-lg shadow-sm bg-dark">
                     <div class="row flex-nowrap">
                         <div class="col-sm-12">
                             <img src="<?php echo 'data:image/jpeg;base64,' . $image->IDPhotoResults->IDPhoto; ?>" alt="ID Photo" class="img-fluid">
@@ -93,40 +83,40 @@
                 </div>          
                 <div class="col-sm-6">
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">ID Number:</div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $_SESSION['curr-id'] ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">ID Number:</div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $_SESSION['curr-id'] ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">First Name:</div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->firstNames; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">First Name:</div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->firstNames; ?></div>
                     </div>                  
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Last Name: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->surName; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Last Name: </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->surName; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Date of Birth: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->dob; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Date of Birth: </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->dob; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Age: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->age; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Age: </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->age; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Gender: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->gender; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Gender: </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->gender; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Citizenship: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo $data->idProfile->citizenship; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Citizenship: </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->citizenship; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow flex-nowrap">Deceased Status </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow"><?php echo empty($data->idProfile->deathDate) ? 'Alive' : 'Deceased'; ?></div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm flex-nowrap">Deceased Status </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo empty($data->idProfile->deathDate) ? 'Alive' : 'Deceased'; ?></div>
                     </div>
                     <div class="row flex-nowrap">
-                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow">Other Grants: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow">???</div>
+                        <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Other Grants: </div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">???</div>
                     </div>
                 </div>
                 <div class="col-sm-2 m-1 p-1"></div>
@@ -141,15 +131,15 @@
 
             <div class="row flex-nowrap  justify-content-center">
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <!-- No backbutton here as this is the first page after the menu. Pressing cancel will take you to the menu again. -->
+                    <button type="button" class="btn btn-warning btn-w-110" onclick="history.back();">Cancel</button>
                 </div>
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-warning" onclick="history.back();">Cancel</button>
+                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='../print.php';">Print Letter</button>
                 </div>
-
+                
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-primary" onclick="window.location.href='https://sassa-dev.futurism.co.za/grantpages/older-persons-docs.php';">Next -&gt;</button>
+                    <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='https://sassa-dev.futurism.co.za/grantpages/older-persons-docs.php';">Next -&gt;</button>
                 </div>
 
             </div>
@@ -159,23 +149,18 @@
         </div>
     </div>
 
-        <?php include('../bottom-status.php'); ?>
-                    
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-        <script src="/js/jquery-3.4.1.min.js"></script>
+    <?php include('../bottom-status.php'); ?>
 
-        <!-- Include all compiled plugins (below), or include individual files as needed --> 
-        <script src="/js/popper.min.js"></script>
-        <script src="/js/bootstrap-4.4.1.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="/js/jquery-3.4.1.min.js"></script>
 
-        <!-- Custom functions for SASSA -->
-        <script src="/js/sassafunctions.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap-4.4.1.js"></script>
 
-        <!-- Include Bootstrap JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
-	  
-<?php var_dump($_SESSION['sessionAudit']); ?>
-      
+    <!-- Custom functions for SASSA -->
+    <script src="/js/sassafunctions.js"></script>
+
     </body>
     
 </html>

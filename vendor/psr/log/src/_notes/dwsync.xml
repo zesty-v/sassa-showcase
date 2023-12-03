@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="AbstractLogger.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005091407625" remote="132706872000000000" Dst="0" />
+<file name="InvalidArgumentException.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005091550450" remote="132706872000000000" Dst="0" />
+<file name="LogLevel.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005093351138" remote="132706872000000000" Dst="0" />
+<file name="LoggerAwareInterface.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005093532475" remote="132706872000000000" Dst="0" />
+<file name="LoggerAwareTrait.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005095512364" remote="132706872000000000" Dst="0" />
+<file name="LoggerInterface.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005095690092" remote="132706872000000000" Dst="0" />
+<file name="LoggerTrait.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005097364392" remote="132706872000000000" Dst="0" />
+<file name="NullLogger.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005097513051" remote="132706872000000000" Dst="0" />
+</dwsync>

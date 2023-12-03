@@ -1,5 +1,20 @@
 {
+    "name": "futurism/sassa",
+    "description": "SASSA Showcase",
+    "type": "project",
+    "license": "proprietary",
     "require": {
-        "mpdf/mpdf": "^6.1"
-    }
+        "mpdf/mpdf": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Futurism\\Sassa\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zesty-v",
+            "email": "sytze@futurism.co.za"
+        }
+    ]
 }

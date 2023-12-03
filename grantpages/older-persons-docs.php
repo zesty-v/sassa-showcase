@@ -1,13 +1,13 @@
 <?php
 
-    require($_SERVER['DOCUMENT_ROOT'] . '/const-site.php');
+    // Name of the view.
+    $appType = 'Older Persons Grant';
+    $viewName = 'Older Persons Grant Documents';
 
-    sleep(CONST_PAGE_DELAY);
-   
-    require($_SERVER['DOCUMENT_ROOT'] . '/page-man.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
-
+    // All standard page includes
+    require('../partials/standard-page-requires.php');
+    
+    // Make audit entry.
     $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Marking Older Persons Grant application documents that are available.';
 
 ?>
@@ -27,9 +27,6 @@
       
     <!-- Custom CSS -->
 	<link href="/css/sassa-custom.css" rel="stylesheet">
-
-    <!-- Include Bootstrap CSS (optional, for styling) -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
 
   </head>
 
@@ -163,13 +160,17 @@
 
             <div class="row flex-nowrap  justify-content-center">
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-primary" onclick="history.back();">&lt;- Back</button>
+                    <button type="button" class="btn btn-primary btn-w-110" onclick="history.back();">&lt;- Back</button>
                 </div>
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-warning" onclick="window.location.href='../menu.php';">Cancel</button>
+                    <button type="button" class="btn btn-warning btn-w-110" onclick="window.location.href='../menu.php';">Cancel</button>
                 </div>
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-primary">Next -&gt;</button>
+                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='../print.php';">Print Letter</button>
+                </div>
+
+                <div class="col-sm-3 m-1 p-1 text-center lead">
+                    <button type="button" class="btn btn-primary btn-w-110">Next -&gt;</button>
                 </div>
             </div>
 
@@ -178,28 +179,18 @@
         </div>
     </div>
 
-        <?php include('../bottom-status.php'); ?>
-                    
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-        <script src="/js/jquery-3.4.1.min.js"></script>
+    <?php include('../bottom-status.php'); ?>
 
-        <!-- Include all compiled plugins (below), or include individual files as needed --> 
-        <script src="/js/popper.min.js"></script>
-        <script src="/js/bootstrap-4.4.1.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="/js/jquery-3.4.1.min.js"></script>
 
-        <!-- Custom functions for SASSA -->
-        <script src="/js/sassafunctions.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap-4.4.1.js"></script>
 
-        <!-- Include Bootstrap JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
-
-<?php var_dump($_SESSION['sessionAudit']); ?>
+    <!-- Custom functions for SASSA -->
+    <script src="/js/sassafunctions.js"></script>
       
     </body>
+    
 </html>
-
-
-            
-            
-            
-            

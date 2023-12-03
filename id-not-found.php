@@ -1,5 +1,9 @@
 <?php
 
+    // Name of the view.
+
+    $viewName = 'ID Not Found';
+
     require($_SERVER['DOCUMENT_ROOT'] . '/const-site.php');
 
     sleep(CONST_PAGE_DELAY);
@@ -30,9 +34,6 @@
     <!-- Custom CSS -->
 	<link href="/css/sassa-custom.css" rel="stylesheet">
 
-    <!-- Include Bootstrap CSS (optional, for styling) -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
-
   </head>
 
   <body>
@@ -51,10 +52,10 @@
         	        <hr class="my-0 mt-4">
                     <div class="display-4 text-white bg-danger">ID Not Found</div>
                     <hr class="my-0">
-                    
-                    <div class="dark-text"> ID number not found on Profile or at Home Affairs</div>
-                    <div class="dark-text"> ID number <?php echo $_SESSION['curr-id']; ?></div>
-                    <div class="dark-text"> Application type: <?php echo $_GET['app_type']; ?></div>
+                    <div></div>
+                    <div class="dark-text"><h4 class="mt-4"> ID number not found on Profile or Home Affairs</h4></div>
+                    <div class="dark-text"> ID number: <?= $_GET['id_no'] ?></div>
+                    <div class="dark-text mb-4"> Application type: <?= $_GET['app_type'] ?></div>
                     
                 </div>
             </div>
@@ -62,16 +63,13 @@
         
     
             <div class="row flex-nowrap  justify-content-center">
+
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <!-- No backbutton here as this is the first page after the menu. Pressing cancel will take you to the menu again. -->
+                    <button type="button" class="btn btn-warning btn-w-110" onclick="window.location.href='../menu.php';">Cancel</button>
                 </div>
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-warning" onclick="window.location.href='../menu.php';">Go Back</button>
-                </div>
-
-                <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <!-- <button type="button" class="btn btn-primary" onclick="window.location.href='./child-support-docs.php';">Next -&gt;</button> -->
+                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='../print.php';">Print Letter</button>
                 </div>
 
             </div>

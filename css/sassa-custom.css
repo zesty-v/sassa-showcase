@@ -43,3 +43,6 @@
     accent-color: blue; /* For modern browsers */
 }
 
+  .btn-w-110 {
+    width: 110px; /* Adjust the width as needed */
+  }
