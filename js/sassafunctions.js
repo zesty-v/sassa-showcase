@@ -39,7 +39,7 @@ document.addEventListener('keydown', function(event) {
 function isValidSAID(linkElement, idNumber) {
 
     // Select the div element by its ID
-    var userMessage = '';
+    // var userMessage = '';
 
     // Remove all the spaces from the ID number. 
     idNumber = idNumber.replace(/\s/g, "");
@@ -105,6 +105,7 @@ function isValidSAID(linkElement, idNumber) {
             
             // Navigate to that URL.
             form.action = hrefValue // + '?ID=' + idNumber;
+            form.method = "GET";
             form.submit();
             return false; // Prevent the URL to be followed (the one in the HTML page. We are already achiving that with the submit button above)
             

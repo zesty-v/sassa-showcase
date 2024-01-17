@@ -2,7 +2,7 @@
 
 function sendSms($message, $to) {
     
-    $api_key = 'ac70c746-7ec9-4a45-aa2d-479f4be1aa78'
+    $api_key = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2F1dGg6ODA4MC9hcGkvdjEvdXNlcnMvYXBpL2tleXMvZ2VuZXJhdGUiLCJpYXQiOjE3MDE2Mjc0MjIsIm5iZiI6MTcwMTYyNzQyMiwianRpIjoicWoxZExoRmltdWJuMjgwdSIsInN1YiI6NDM0ODQwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ff5xGI91B5e2-jVP-DHXVEevNZY6xz5WFW0M0OR3BEA';
     $url = 'https://api.sms.to/sms/send';
 
     $data = array(
@@ -31,12 +31,12 @@ function sendSms($message, $to) {
 }
 
 // Example usage:
-$message = "This is test and \n this is a new line";
-$to = '+27815592853';
+// $message = "This is test and \n this is a new line";
+// $to = '+27815592853';
 
-$response = sendSms($message, $to);
+// $response = sendSms($message, $to);
 
 // Handle the response as needed
-echo $response;
+// echo $response;
 
 ?>
