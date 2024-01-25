@@ -1,6 +1,10 @@
 // JavaScript Document
 var spinnerShown = false; // Global flag
 
+window.onload = function (){
+    document.getElementById("numberInput").focus;
+}
+
 window.addEventListener('load', (event) => {
     document.body.classList.add('fade-in');
 });
@@ -24,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('keydown', function(event) {
 
-    console.log(event.key + ' pressed...');
+    // econsole.log(event.key + ' pressed...');
     
     if (event.key === 'Escape') {
         // Code to execute when Esc is pressed

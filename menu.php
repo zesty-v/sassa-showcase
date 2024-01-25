@@ -46,7 +46,7 @@
         <hr class="my-0">
         <div class="jumbotron jumbotron-fluid text-center">
             <div class="container"> 
-                <form id="idForm" method="POST">
+                <form id="idForm" method="GET">
 
                     <div class="row flex-nowrap justify-content-center my-3">
                         <div class="col-md-2"></div>

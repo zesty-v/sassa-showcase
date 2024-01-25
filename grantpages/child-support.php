@@ -1,68 +1,66 @@
 <?php
     
     // Name of the view.
-    $appType = 'Child Support Grant';
-    $viewName = 'Child Support Grant';
-    
+    $appType = 'Child Support Grant';           // NAme of the application
+    $viewName = 'Child Support Grant';          // Name of the View
+    $reference = time();                        // Reference for the Datanamic API calls.
+    $children = FALSE;                          // Flag to check if children were found.
+    $siblingno = 0;                             // Counting the children :-)
+
     // All standard page includes
-    require('../partials/standard-page-requires.php');
-    
+    require('../partials/standard-page-requires.php');    
+    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-consumer-lineage.php');
+
+    //Store the ID
+    $_SESSION['curr-id'] = $_GET['idNumber'];
+
     // Capture audit Entry
     $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Application Start for' . $appType;
-    
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-consumer-lineage.php');
-    
+
     // Get the applican ID record from the "Profile Database".
-    $data = dn_profile_id_verification($_SESSION['curr-id'], time());
+    $data = dn_profile_id_verification($_SESSION['curr-id'], $reference);
     
     // Now check if there were results that were returned.
-    if ($data == 0) {
+    if ($data == '') {
 
-        // No results were returned, so go to the id-not-found page
-            header('Location: ../id-not-found.php?id_no=' . urlencode($_SESSION['curr-id']) . '&app_type=' . urlencode($appType));
-            exit;
+        // Capture audit Entry: ID was NOT found on Profile db.
+        $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' PROFILE ID NOT found for ' . $appType;
         
         // If not, perform a real-time id verification.
-        $data = dn_realtime_id_verification($_SESSION['curr-id'], time());        
-        
-        //Check if the ID is still not found.
+        $data = dn_realtime_id_verification($_SESSION['curr-id'], $reference);        
+
+        // Check if the ID is still not found.
         if ($data == '') {
+
+            // Capture audit Entry: ID was NOT found on realtime HA db.
+            $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' REALTIME ID NOT found for ' . $appType;
 
             // No results were returned, so go to the id-not-found page
             header('Location: ../id-not-found.php?id_no' . urlencode($_SESSION['curr-id']) . '&app-type=' . urlencode($appType));
             exit;
-        }
-        else {
-            
-            // Not much to do here
-            
-        }
-    }
-    else {
         
-        // Not much to do here I guess.
-    
+        } else {
+
+            // Capture audit Entry: ID was found on realtime HA db.
+            $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' REALTIME ID found for ' . $appType;
+
+        }
+    } else {
+        
+        // Capture audit Entry: ID was found on profile.
+        $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' PROFILE ID found for ' . $appType;
+        
     }
 
     // Now get the ID photo from HA
-    $image = dn_photo_id_verification($_SESSION['curr-id'], time());
-
-
-    // Ensure fields are ready to be used below.
-    
+    $image = dn_photo_id_verification($_SESSION['curr-id'], $reference);
 
     // Now check for lineage.
-    
-
-    // If there is no lineage, indicate the error condition or rather that there are no registered biological children for this ID.
-    
-    
-    // Done.
+    $lineage = dn_consumer_lineage($_SESSION['curr-id'], $reference);
 
 ?>
 
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -159,14 +157,29 @@
             <div class="display-4">Eligible Lineage</div>
             <hr class="my-2">
 
+<?php
+            
+    // Check if 'Consumers' and 'Consumer' keys exist and are not empty
+    if (!empty($lineage['Result']['Consumers']['Consumer'])) {
+        
+        // Iterate through each consumer
+        foreach ($lineage['Result']['Consumers']['Consumer'] as $consumer) {
+            
+            // Check if the relationship type is 'Child'
+            if (isset($consumer['Relationship']) && $consumer['Relationship']['Relation'] === 'Child') {
+            
+                $children = TRUE;
+                $siblingno++;
+
+?>
             <div class="row flex-nowrap">
                 <div class="col-sm-2 m-1 p-1"></div>
                 <div class="col-sm-2 m-1 p-1 text-right bg-dark text-white rounded-lg shadow-sm">
-                    <label class="form-check-label text-right" for="sibling1Checkbox">Sibling 1: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <label class="form-check-label text-right" for="sibling1Checkbox">Sibling <?=$siblingno?>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                     <input class="form-check-input blue-checkbox text-right" type="checkbox" id="sibling1Checkbox">
                 </div>
                 <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">ID Number:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">000423 5003 08 3</div>
+                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm"><?=$consumer['RealTimeIDV']['HAIDNO']?></div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 
@@ -174,7 +187,7 @@
                 <div class="col-sm-2 m-1 p-1"></div>
                 <div class="col-sm-2 m-1 p-1"></div>
                 <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">First Names:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">Jean</div>
+                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm"><?=$consumer['RealTimeIDV']['HANames']?></div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 
@@ -182,44 +195,22 @@
                 <div class="col-sm-2 m-1 p-1"></div>
                 <div class="col-sm-2 m-1 p-1"></div>
                 <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Last Name:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">Visser</div>
+                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm"><?=$consumer['RealTimeIDV']['HASurname']?></div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
-
-            <div class="row flex-nowrap">
-                <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-dark text-white rounded-lg shadow-sm">
-                    <label class="form-check-label text-right" for="sibling2Checkbox">Sibling 2: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input class="form-check-input blue-checkbox text-right" type="checkbox" id="sibling2Checkbox">
-                </div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">ID Number:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">000423 5003 08 3</div>
-                <div class="col-sm-2 m-1 p-1"></div>
-            </div>
-
-            <div class="row flex-nowrap">
-                <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">First Name:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">Andre</div>
-                <div class="col-sm-2 m-1 p-1"></div>
-            </div>
-
-            <div class="row flex-nowrap">
-                <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-2 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Last Name:</div>
-                <div class="col-sm-4 m-1 p-1 m-1 p-1 bg-light text-left rounded-lg text-monspace shadow-sm">Visser</div>
-                <div class="col-sm-2 m-1 p-1"></div>
-            </div>
-
-        </div>
+            
+<?php
+            }
+        
+        }
     
-    
+    }          
+?>
+
         <div class="container">
             <div class="row flex-nowrap justify-content-center">
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-8 pt-4 pb-2 text-danger font-weight-bold">Select children to apply for above.</div>
+                <div class="col-sm-8 pt-4 pb-2 text-danger font-weight-bold"><?=$siblingno>0 ? 'Select children to apply for above.' : 'No found for the applicant.' ?></div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 

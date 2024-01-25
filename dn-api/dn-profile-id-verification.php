@@ -31,6 +31,7 @@ function dn_profile_id_verification($id_number, $reference_number) {
 
         // Check for any cURL errors
         if (curl_errno($ch)) {
+            $response = '';
             echo 'Error:' . curl_error($ch);
         }
 

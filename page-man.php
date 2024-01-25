@@ -34,14 +34,14 @@
             break;
 
         case $_SERVER['DOCUMENT_ROOT'] . '/grantpages/child-support.php':
-            $_SESSION['curr-id'] = $_POST['idNumber'];
+            $_SESSION['curr-id'] = $_GET['idNumber'];
             break;
 
         case $_SERVER['DOCUMENT_ROOT'] . '/grantpages/child-support-docs.php':
             break;
 
         case $_SERVER['DOCUMENT_ROOT'] . '/grantpages/older-persons.php':
-            $_SESSION['curr-id'] = $_POST['idNumber'];
+            $_SESSION['curr-id'] = $_GET['idNumber'];
             break;
 
         case $_SERVER['DOCUMENT_ROOT'] . '/grantpages/older-persons-docs.php':

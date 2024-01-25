@@ -20,7 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
       
-    <title>SASSA - Older Persons Grant - Documentation</title>
+    <title>SASSA - Child Support Grant - Documentation</title>
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-sm">
         	        <hr class="my-0">
-                    <div class="display-4">Older Persons Grant: Documents</div>
+                    <div class="display-4">Child Support Grant: Documents</div>
                     <hr class="my-2">
                 </div>
             </div>
