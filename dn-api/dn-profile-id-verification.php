@@ -3,6 +3,7 @@
 function dn_profile_id_verification($id_number, $reference_number) {
     
     if (USE_DN_API) {
+        
         // Initialize cURL session
         $ch = curl_init($_SESSION['DN-CONST.PBverifyWS'] . '/pbverify-profile-id-verification');
 
@@ -49,7 +50,7 @@ function dn_profile_id_verification($id_number, $reference_number) {
                 "idNumber": "8307065125487",
                 "firstNames": "Sytze",
                 "surName": "Visser",
-                "dob": "1971-10-05",
+                "dob": "1961-10-05",
                 "age": 52,
                 "gender": "Male",
                 "citizenship": "South African",

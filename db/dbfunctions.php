@@ -31,9 +31,10 @@ function writeAuditlog($user_name, $idNumber, $action, $description) {
     $formattedTimestamp = $timestamp->format('Y-m-d H:i:s.v'); // Assuming $timestamp is a DateTime object
         
     // Prepare the SQL statement to avoid SQL injection
-    $stmt = $conn->prepare("INSERT INTO your_table_name (timestamp, user_name, id_number, action, description) VALUES (?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO audit (timestamp, user_name, id_number, action, description) VALUES (?, ?, ?, ?, ?)");
 
     // Bind parameters to the prepared statement
+    $idNumber =str_replace(' ', '', $idNumber);
     $stmt->bind_param("sssss", $formattedTimestamp, $user_name, $idNumber, $action, $description);
 
     // Execute the query

@@ -10,19 +10,19 @@ ini_set('display_errors', 1);
 // Create an instance of the Mpdf\Mpdf class
 $mpdf = new \Mpdf\Mpdf;
 
-// Your HTML content
-// $htmlContent = '<h1>Hello World</h1><p>This is a test PDF.</p>';
-$htmlContent = '<html>
+// Load HTML content from an external file
+$htmlFilePath = __DIR__ . '/print-templates/print-older-persons.html';
+$htmlContent = file_get_contents($htmlFilePath);
 
-<p> Some text here...</p>
+// Check if the file was loaded successfully
+if ($htmlContent === false) {
+    die('Error loading the HTML template.');
+}
 
-';
 // Write the HTML content to the PDF
 $mpdf->WriteHTML($htmlContent);
 
 // Output the PDF to a file
 $mpdf->Output('example.pdf', 'I');
-
-
 
 ?>

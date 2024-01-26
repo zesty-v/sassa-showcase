@@ -57,7 +57,7 @@ function dn_realtime_id_verification($id_number, $reference_number) {
                 "idBlocked": "",
                 "firstNames": "Sytze",
                 "surName": "Visser",
-                "dob": "1971-10-05",
+                "dob": "1961-10-05",
                 "age": 52,
                 "gender": "Male",
                 "citizenship": "South African",

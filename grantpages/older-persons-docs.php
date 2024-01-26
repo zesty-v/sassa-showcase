@@ -5,10 +5,11 @@
     $viewName = 'Older Persons Grant Documents';
 
     // All standard page includes
+    require_once '../db/dbfunctions.php';
     require('../partials/standard-page-requires.php');
     
     // Make audit entry.
-    $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Marking Older Persons Grant application documents that are available.';
+    writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Marking Older Persons Grant application documents that are available.');
 
 ?>
 

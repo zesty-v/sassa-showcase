@@ -1,24 +1,92 @@
 <?php
 
-    require_once '/db/dbfunctions.php';
-
     // Name of the view.
     $appType = 'Older Persons Grant';
     $viewName = 'Older Persons Grant';
-
+    $error = '';
+    $dob = '';
+    $citizen = '';
+    $deceasedstatus = '';
+            
     // All standard page includes
+    require_once '../db/dbfunctions.php';
     require('../partials/standard-page-requires.php');
     
-    // Make audit Entry
-    writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, ' Application started.');
+    // Audit Entry
+    writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Application started.');
 
     // Get the applican ID record from the "Profile Database".
     $data = dn_profile_id_verification($_SESSION['curr-id'], time());
 
     // Now check if there were results that were returned.
+    if (empty($data)) {
+        
+        writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Profile ID verification unsuccessful. will try realtime Home Affairs check.');
+        
+        $data = dn_realtime_id_verification($_SESSION['curr-id'], time());
+        
+        if (empty($data)) {
+        
+            // Now check the HA DB.
+            writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID verification unsuccessful.');
+            
+            // TODO: Here we need to navigate to an error page. Like an ID not found. 
+            
+        
+        } else {
+            
+            // Capture dob to be user to determine eligibility.
+            $dob = $data->realTimeResults->dob;
+            $citizen = $data->realTimeResults;
+            $deceasedstatus =  !empty($data->realTimeResults->deceasedDate) ? 'Alive' : 'Deceased';
+       }
+        
+        
+    } else {
+        
+        // Citizen profile was found in the database (non-HA).
+        writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Profile ID verification success.');
+        
+        // Capture dob to be user to determine eligibility for the older persons grant. Must be 60+ years.
+        $dob = $data->idProfile->dob;
+        $citizen = $data->idProfile;
+        $deceasedstatus =  !empty($data->idProfile->deathDate) ? 'Alive' : 'Deceased';
+        
+        // Now get the ID photo from HA
+        $image = dn_photo_id_verification($_SESSION['curr-id'], time());
+        
+        // Check if the image was found. 
+        if (empty($image)) {
+            
+            // this is not the end of the world, we just wont show the ID photo if not found.
+            writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID photo retrieval unsuccessful.');
+        
+        } else {
+            
+            // Make an audit log not that we could not find the id.
+            writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID photo retrieval success.');
+            
+        }
+        
+    }
 
-    // Now get the ID photo from HA
-    $image = dn_photo_id_verification($_SESSION['curr-id'], time());
+    // Determine the difference between the current date and the birth date of the citizen. Used for determining the age of the citizen to check eligibility.
+    if (!empty($dob)) {
+        
+        $dobDateTime = new DateTime($dob);
+        $currentDate = new DateTime('now');
+
+        $interval = $dobDateTime->diff($currentDate);
+        
+    } else {
+        
+        // Show page fail page.
+        
+    }
+
+    $_SESSION['name'] = $citizen->firstNames;
+    $_SESSION['surname'] = $citizen->surName;
+
 
 ?>
 
@@ -66,7 +134,7 @@
                 <div class="col-sm-2 m-1 p-1 pt-3 rounded-lg shadow-sm bg-dark">
                     <div class="row flex-nowrap">
                         <div class="col-sm-12">
-                            <img src="<?php echo 'data:image/jpeg;base64,' . $image->IDPhotoResults->IDPhoto; ?>" alt="ID Photo" class="img-fluid">
+                            <img src="<?= !empty($image) ? 'data:image/jpeg;base64,' . $image->IDPhotoResults->IDPhoto : '' ?>" alt="ID Photo" class="img-fluid">
                         </div>
                     </div>
                     <div class="row flex-nowrap">
@@ -78,35 +146,35 @@
                 <div class="col-sm-6">
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">ID Number:</div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $_SESSION['curr-id'] ?></div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?= $_SESSION['curr-id'] ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">First Name:</div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->firstNames; ?></div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?= $citizen->firstNames; ?></div>
                     </div>                  
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Last Name: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->surName; ?></div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?= $citizen->surName; ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Date of Birth: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->dob; ?></div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?= $data->idProfile->dob; ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Age: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->age; ?></div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?= $citizen->age; ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Gender: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->gender; ?></div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?= $citizen->gender; ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Citizenship: </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo $data->idProfile->citizenship; ?></div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?= $citizen->citizenship; ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm flex-nowrap">Deceased Status </div>
-                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?php echo empty($data->idProfile->deathDate) ? 'Alive' : 'Deceased'; ?></div>
+                        <div class="col-sm-8 m-1 p-1 bg-light text-left rounded-lg text-monospace shadow-sm"><?= $deceasedstatus ?></div>
                     </div>
                     <div class="row flex-nowrap">
                         <div class="col-sm-4 m-1 p-1 text-right bg-secondary text-white rounded-lg shadow-sm">Other Grants: </div>
@@ -118,7 +186,7 @@
 
             <div class="row flex-nowrap justify-content-center">
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-8 pt-4 pb-2 text-danger font-weight-bold">Applicant is not eligible: Aged under 60 years</div>
+                <div class="col-sm-8 pt-4 pb-2 text-danger font-weight-bold"><?= $interval->y < 60 ? 'Applicant is not eligible: Age is under 60' : 'Applicant is eligible'?></div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 
@@ -129,7 +197,7 @@
                 </div>
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='../print.php';">Print Letter</button>
+                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='../print-templates/print-older-persons.php';">Print Letter</button>
                 </div>
                 
                 <div class="col-sm-3 m-1 p-1 text-center lead">

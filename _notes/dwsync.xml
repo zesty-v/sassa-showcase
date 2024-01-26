@@ -33,7 +33,7 @@
 <file name="bottom-status.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133454098279629989" remote="133454098200000000" Dst="0" />
 <file name="id-not-found.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133460746548127750" remote="133460746200000000" Dst="0" />
 <file name="navbar.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133459955185960086" remote="133459954800000000" Dst="0" />
-<file name="print.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133459915243915750" remote="133459915200000000" Dst="0" />
+<file name="print.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133507390401225259" remote="133507389600000000" Dst="0" />
 <file name="composer.json" server="sassa-dev.futurism.co.za//var/www/html/" local="133461003645699807" remote="133459884600000000" Dst="0" />
 <file name="composer.lock" server="sassa-dev.futurism.co.za//var/www/html/" local="133461003668591564" remote="133457116200000000" Dst="0" />
 <file name="composer.phar" server="sassa-dev.futurism.co.za//var/www/html/" local="133456452685998228" remote="133456404600000000" Dst="0" />
@@ -73,6 +73,8 @@
 <file name="navbar.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133459955185960086" remote="133506623060000000" Dst="0" />
 <file name="old.composer.json" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461003754843835" remote="133506623060000000" Dst="0" />
 <file name="page-man.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133506523486064787" remote="133506623060000000" Dst="0" />
-<file name="print.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133459915243915750" remote="133506623070000000" Dst="0" />
+<file name="print.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133507390401225259" remote="133507575630000000" Dst="0" />
 <file name="README.md" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133436651836398380" remote="133506623070000000" Dst="0" />
+<file name="phpinfo.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133507243059991736" remote="133507237200000000" Dst="0" />
+<file name="phpinfo.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133507243059991736" remote="133507575630000000" Dst="0" />
 </dwsync>
