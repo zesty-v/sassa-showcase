@@ -5,4 +5,14 @@
 <file name="qrcode.class.php" server="sassa-dev.futurism.co.za//var/www/html/" local="131259769380000000" remote="133459887000000000" Dst="0" />
 <file name="_LGPL.txt" server="sassa-dev.futurism.co.za//var/www/html/" local="131259769380000000" remote="133459887000000000" Dst="0" />
 <file name="_lisez_moi.txt" server="sassa-dev.futurism.co.za//var/www/html/" local="131259769380000000" remote="133459887000000000" Dst="0" />
+<file name="image.php" server="sassa-live.futurism.co.za" local="131259769380000000" remote="133506620560000000" Dst="0" />
+<file name="index.php" server="sassa-live.futurism.co.za" local="131259769380000000" remote="133506620560000000" Dst="0" />
+<file name="qrcode.class.php" server="sassa-live.futurism.co.za" local="131259769380000000" remote="133506620560000000" Dst="0" />
+<file name="_LGPL.txt" server="sassa-live.futurism.co.za" local="131259769380000000" remote="133506620560000000" Dst="0" />
+<file name="_lisez_moi.txt" server="sassa-live.futurism.co.za" local="131259769380000000" remote="133506620560000000" Dst="0" />
+<file name="image.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131259769380000000" remote="133506623420000000" Dst="0" />
+<file name="index.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131259769380000000" remote="133506623420000000" Dst="0" />
+<file name="qrcode.class.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131259769380000000" remote="133506623420000000" Dst="0" />
+<file name="_LGPL.txt" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131259769380000000" remote="133506623420000000" Dst="0" />
+<file name="_lisez_moi.txt" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131259769380000000" remote="133506623420000000" Dst="0" />
 </dwsync>

@@ -4,4 +4,12 @@
 <file name="FontFileFinder.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004768804109" remote="133438387200000000" Dst="0" />
 <file name="GlyphOperator.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004770399042" remote="133438387200000000" Dst="0" />
 <file name="MetricsGenerator.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004770550635" remote="133438387200000000" Dst="0" />
+<file name="FontCache.php" server="sassa-live.futurism.co.za" local="133461004768661466" remote="133506619280000000" Dst="0" />
+<file name="FontFileFinder.php" server="sassa-live.futurism.co.za" local="133461004768804109" remote="133506619280000000" Dst="0" />
+<file name="GlyphOperator.php" server="sassa-live.futurism.co.za" local="133461004770399042" remote="133506619280000000" Dst="0" />
+<file name="MetricsGenerator.php" server="sassa-live.futurism.co.za" local="133461004770550635" remote="133506619280000000" Dst="0" />
+<file name="FontCache.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004768661466" remote="133506623450000000" Dst="0" />
+<file name="FontFileFinder.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004768804109" remote="133506623450000000" Dst="0" />
+<file name="GlyphOperator.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004770399042" remote="133506623450000000" Dst="0" />
+<file name="MetricsGenerator.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004770550635" remote="133506623450000000" Dst="0" />
 </dwsync>

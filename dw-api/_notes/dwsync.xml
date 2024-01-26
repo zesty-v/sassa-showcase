@@ -8,4 +8,8 @@
 <file name="dw-const.php" server="192.168.0.117//var/www/html/" local="133442123297619683" remote="133446874200000000" Dst="0" />
 <file name="dw-active-check.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133442566758468012" remote="133448034600000000" Dst="0" />
 <file name="dw-const.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133499894115680145" remote="133499893800000000" Dst="0" />
+<file name="dw-active-check.php" server="sassa-live.futurism.co.za" local="133442566758468012" remote="133506619180000000" Dst="0" />
+<file name="dw-const.php" server="sassa-live.futurism.co.za" local="133499894115680145" remote="133506619180000000" Dst="0" />
+<file name="dw-active-check.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133442566758468012" remote="133506622980000000" Dst="0" />
+<file name="dw-const.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133499894115680145" remote="133506622980000000" Dst="0" />
 </dwsync>

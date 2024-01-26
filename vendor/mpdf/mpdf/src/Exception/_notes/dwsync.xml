@@ -3,4 +3,10 @@
 <file name="AssetFetchingException.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004760739171" remote="133438387200000000" Dst="0" />
 <file name="FontException.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004760811429" remote="133438387200000000" Dst="0" />
 <file name="InvalidArgumentException.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004762902337" remote="133438387200000000" Dst="0" />
+<file name="AssetFetchingException.php" server="sassa-live.futurism.co.za" local="133461004760739171" remote="133506619270000000" Dst="0" />
+<file name="FontException.php" server="sassa-live.futurism.co.za" local="133461004760811429" remote="133506619280000000" Dst="0" />
+<file name="InvalidArgumentException.php" server="sassa-live.futurism.co.za" local="133461004762902337" remote="133506619280000000" Dst="0" />
+<file name="AssetFetchingException.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004760739171" remote="133506623440000000" Dst="0" />
+<file name="FontException.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004760811429" remote="133506623440000000" Dst="0" />
+<file name="InvalidArgumentException.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004762902337" remote="133506623440000000" Dst="0" />
 </dwsync>

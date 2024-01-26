@@ -5,4 +5,14 @@
 <file name="composer.json" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005063310485" remote="132471864000000000" Dst="0" />
 <file name="psalm-autoload.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005069513795" remote="132471864000000000" Dst="0" />
 <file name="psalm.xml" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005071253556" remote="132471864000000000" Dst="0" />
+<file name="build-phar.sh" server="sassa-live.futurism.co.za" local="133461005061426010" remote="133506619420000000" Dst="0" />
+<file name="composer.json" server="sassa-live.futurism.co.za" local="133461005063310485" remote="133506619420000000" Dst="0" />
+<file name="LICENSE" server="sassa-live.futurism.co.za" local="133461005061269463" remote="133506619420000000" Dst="0" />
+<file name="psalm-autoload.php" server="sassa-live.futurism.co.za" local="133461005069513795" remote="133506619420000000" Dst="0" />
+<file name="psalm.xml" server="sassa-live.futurism.co.za" local="133461005071253556" remote="133506619420000000" Dst="0" />
+<file name="build-phar.sh" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005061426010" remote="133506623660000000" Dst="0" />
+<file name="composer.json" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005063310485" remote="133506623660000000" Dst="0" />
+<file name="LICENSE" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005061269463" remote="133506623660000000" Dst="0" />
+<file name="psalm-autoload.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005069513795" remote="133506623660000000" Dst="0" />
+<file name="psalm.xml" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005071253556" remote="133506623660000000" Dst="0" />
 </dwsync>

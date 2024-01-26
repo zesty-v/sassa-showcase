@@ -4,4 +4,12 @@
 <file name="NumericString.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004948059655" remote="133438387200000000" Dst="0" />
 <file name="PdfDate.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004949983597" remote="133438387200000000" Dst="0" />
 <file name="UtfString.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004950133727" remote="133438387200000000" Dst="0" />
+<file name="Arrays.php" server="sassa-live.futurism.co.za" local="133461004947947419" remote="133506619340000000" Dst="0" />
+<file name="NumericString.php" server="sassa-live.futurism.co.za" local="133461004948059655" remote="133506619340000000" Dst="0" />
+<file name="PdfDate.php" server="sassa-live.futurism.co.za" local="133461004949983597" remote="133506619340000000" Dst="0" />
+<file name="UtfString.php" server="sassa-live.futurism.co.za" local="133461004950133727" remote="133506619340000000" Dst="0" />
+<file name="Arrays.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004947947419" remote="133506623520000000" Dst="0" />
+<file name="NumericString.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004948059655" remote="133506623520000000" Dst="0" />
+<file name="PdfDate.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004949983597" remote="133506623520000000" Dst="0" />
+<file name="UtfString.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004950133727" remote="133506623520000000" Dst="0" />
 </dwsync>

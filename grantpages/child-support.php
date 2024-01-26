@@ -210,7 +210,7 @@
         <div class="container">
             <div class="row flex-nowrap justify-content-center">
                 <div class="col-sm-2 m-1 p-1"></div>
-                <div class="col-sm-8 pt-4 pb-2 text-danger font-weight-bold"><?=$siblingno>0 ? 'Select children to apply for above.' : 'No found for the applicant.' ?></div>
+                <div class="col-sm-8 pt-4 pb-2 text-danger font-weight-bold"><?=$siblingno>0 ? 'Select child(ren) above to apply for.' : 'No child(ren) found for the applicant.' ?></div>
                 <div class="col-sm-2 m-1 p-1"></div>
             </div>
 
@@ -226,7 +226,7 @@
                 </div>
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='./child-support-docs.php';">Next -&gt;</button>
+                    <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='/grantpages/child-support-docs.php';">Next -&gt;</button>
                 </div>
 
             </div>

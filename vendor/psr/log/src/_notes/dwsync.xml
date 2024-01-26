@@ -8,4 +8,20 @@
 <file name="LoggerInterface.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005095690092" remote="132706872000000000" Dst="0" />
 <file name="LoggerTrait.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005097364392" remote="132706872000000000" Dst="0" />
 <file name="NullLogger.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005097513051" remote="132706872000000000" Dst="0" />
+<file name="AbstractLogger.php" server="sassa-live.futurism.co.za" local="133461005091407625" remote="133506619430000000" Dst="0" />
+<file name="InvalidArgumentException.php" server="sassa-live.futurism.co.za" local="133461005091550450" remote="133506619430000000" Dst="0" />
+<file name="LoggerAwareInterface.php" server="sassa-live.futurism.co.za" local="133461005093532475" remote="133506619430000000" Dst="0" />
+<file name="LoggerAwareTrait.php" server="sassa-live.futurism.co.za" local="133461005095512364" remote="133506619430000000" Dst="0" />
+<file name="LoggerInterface.php" server="sassa-live.futurism.co.za" local="133461005095690092" remote="133506619430000000" Dst="0" />
+<file name="LoggerTrait.php" server="sassa-live.futurism.co.za" local="133461005097364392" remote="133506619430000000" Dst="0" />
+<file name="LogLevel.php" server="sassa-live.futurism.co.za" local="133461005093351138" remote="133506619430000000" Dst="0" />
+<file name="NullLogger.php" server="sassa-live.futurism.co.za" local="133461005097513051" remote="133506619430000000" Dst="0" />
+<file name="AbstractLogger.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005091407625" remote="133506623670000000" Dst="0" />
+<file name="InvalidArgumentException.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005091550450" remote="133506623670000000" Dst="0" />
+<file name="LoggerAwareInterface.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005093532475" remote="133506623670000000" Dst="0" />
+<file name="LoggerAwareTrait.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005095512364" remote="133506623670000000" Dst="0" />
+<file name="LoggerInterface.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005095690092" remote="133506623670000000" Dst="0" />
+<file name="LoggerTrait.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005097364392" remote="133506623680000000" Dst="0" />
+<file name="LogLevel.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005093351138" remote="133506623680000000" Dst="0" />
+<file name="NullLogger.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005097513051" remote="133506623680000000" Dst="0" />
 </dwsync>

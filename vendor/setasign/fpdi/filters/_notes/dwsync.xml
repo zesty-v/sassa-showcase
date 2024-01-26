@@ -3,4 +3,10 @@
 <file name="FilterASCII85.php" server="sassa-dev.futurism.co.za//var/www/html/" local="131389539480000000" remote="133459887000000000" Dst="0" />
 <file name="FilterASCIIHexDecode.php" server="sassa-dev.futurism.co.za//var/www/html/" local="131389539480000000" remote="133459887000000000" Dst="0" />
 <file name="FilterLZW.php" server="sassa-dev.futurism.co.za//var/www/html/" local="131389539480000000" remote="133459887000000000" Dst="0" />
+<file name="FilterASCII85.php" server="sassa-live.futurism.co.za" local="131389539480000000" remote="133506620690000000" Dst="0" />
+<file name="FilterASCIIHexDecode.php" server="sassa-live.futurism.co.za" local="131389539480000000" remote="133506620690000000" Dst="0" />
+<file name="FilterLZW.php" server="sassa-live.futurism.co.za" local="131389539480000000" remote="133506620690000000" Dst="0" />
+<file name="FilterASCII85.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131389539480000000" remote="133506623680000000" Dst="0" />
+<file name="FilterASCIIHexDecode.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131389539480000000" remote="133506623680000000" Dst="0" />
+<file name="FilterLZW.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131389539480000000" remote="133506623680000000" Dst="0" />
 </dwsync>

@@ -3,4 +3,10 @@
 <file name="ClientInterface.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004784919577" remote="133438387200000000" Dst="0" />
 <file name="CurlHttpClient.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004785085520" remote="133438387200000000" Dst="0" />
 <file name="SocketHttpClient.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004791255635" remote="133438387200000000" Dst="0" />
+<file name="ClientInterface.php" server="sassa-live.futurism.co.za" local="133461004784919577" remote="133506619280000000" Dst="0" />
+<file name="CurlHttpClient.php" server="sassa-live.futurism.co.za" local="133461004785085520" remote="133506619280000000" Dst="0" />
+<file name="SocketHttpClient.php" server="sassa-live.futurism.co.za" local="133461004791255635" remote="133506619280000000" Dst="0" />
+<file name="ClientInterface.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004784919577" remote="133506623450000000" Dst="0" />
+<file name="CurlHttpClient.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004785085520" remote="133506623450000000" Dst="0" />
+<file name="SocketHttpClient.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004791255635" remote="133506623460000000" Dst="0" />
 </dwsync>

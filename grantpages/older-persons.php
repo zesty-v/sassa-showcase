@@ -1,5 +1,7 @@
 <?php
 
+    require_once '/db/dbfunctions.php';
+
     // Name of the view.
     $appType = 'Older Persons Grant';
     $viewName = 'Older Persons Grant';
@@ -8,7 +10,7 @@
     require('../partials/standard-page-requires.php');
     
     // Make audit Entry
-    $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Application Start Older Persons Grant.';
+    writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, ' Application started.');
 
     // Get the applican ID record from the "Profile Database".
     $data = dn_profile_id_verification($_SESSION['curr-id'], time());
@@ -18,14 +20,6 @@
     // Now get the ID photo from HA
     $image = dn_photo_id_verification($_SESSION['curr-id'], time());
 
-
-    // If not, perform a real-time id verification.
-
-
-    // On success retrieve the image:
-
-
-    // Ensure fields are ready to be used below.
 ?>
 
 <!DOCTYPE html>
@@ -139,7 +133,7 @@
                 </div>
                 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='https://sassa-dev.futurism.co.za/grantpages/older-persons-docs.php';">Next -&gt;</button>
+                    <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='/grantpages/older-persons-docs.php';">Next -&gt;</button>
                 </div>
 
             </div>

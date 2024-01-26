@@ -3,4 +3,10 @@
 <file name="DoctrineCollectionFilter.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005034126678" remote="133227000000000000" Dst="0" />
 <file name="DoctrineEmptyCollectionFilter.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005034297601" remote="133227000000000000" Dst="0" />
 <file name="DoctrineProxyFilter.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005036182282" remote="133227000000000000" Dst="0" />
+<file name="DoctrineCollectionFilter.php" server="sassa-live.futurism.co.za" local="133461005034126678" remote="133506619400000000" Dst="0" />
+<file name="DoctrineEmptyCollectionFilter.php" server="sassa-live.futurism.co.za" local="133461005034297601" remote="133506619400000000" Dst="0" />
+<file name="DoctrineProxyFilter.php" server="sassa-live.futurism.co.za" local="133461005036182282" remote="133506619400000000" Dst="0" />
+<file name="DoctrineCollectionFilter.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005034126678" remote="133506623650000000" Dst="0" />
+<file name="DoctrineEmptyCollectionFilter.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005034297601" remote="133506623650000000" Dst="0" />
+<file name="DoctrineProxyFilter.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005036182282" remote="133506623650000000" Dst="0" />
 </dwsync>

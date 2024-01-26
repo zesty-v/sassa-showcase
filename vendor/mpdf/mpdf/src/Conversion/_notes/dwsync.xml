@@ -5,4 +5,14 @@
 <file name="DecToHebrew.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004750766300" remote="133438387200000000" Dst="0" />
 <file name="DecToOther.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004750938241" remote="133438387200000000" Dst="0" />
 <file name="DecToRoman.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004752781332" remote="133438387200000000" Dst="0" />
+<file name="DecToAlpha.php" server="sassa-live.futurism.co.za" local="133461004748816347" remote="133506619270000000" Dst="0" />
+<file name="DecToCjk.php" server="sassa-live.futurism.co.za" local="133461004749008732" remote="133506619270000000" Dst="0" />
+<file name="DecToHebrew.php" server="sassa-live.futurism.co.za" local="133461004750766300" remote="133506619270000000" Dst="0" />
+<file name="DecToOther.php" server="sassa-live.futurism.co.za" local="133461004750938241" remote="133506619270000000" Dst="0" />
+<file name="DecToRoman.php" server="sassa-live.futurism.co.za" local="133461004752781332" remote="133506619270000000" Dst="0" />
+<file name="DecToAlpha.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004748816347" remote="133506623440000000" Dst="0" />
+<file name="DecToCjk.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004749008732" remote="133506623440000000" Dst="0" />
+<file name="DecToHebrew.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004750766300" remote="133506623440000000" Dst="0" />
+<file name="DecToOther.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004750938241" remote="133506623440000000" Dst="0" />
+<file name="DecToRoman.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004752781332" remote="133506623440000000" Dst="0" />
 </dwsync>

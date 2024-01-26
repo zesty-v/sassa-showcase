@@ -4,4 +4,12 @@
 <file name="ForbiddenRequestException.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004787282722" remote="133438387200000000" Dst="0" />
 <file name="NetworkException.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004789132010" remote="133438387200000000" Dst="0" />
 <file name="RequestException.php" server="sassa-dev.futurism.co.za//var/www/html/" local="133461004789304153" remote="133438387200000000" Dst="0" />
+<file name="ClientException.php" server="sassa-live.futurism.co.za" local="133461004787101278" remote="133506619280000000" Dst="0" />
+<file name="ForbiddenRequestException.php" server="sassa-live.futurism.co.za" local="133461004787282722" remote="133506619280000000" Dst="0" />
+<file name="NetworkException.php" server="sassa-live.futurism.co.za" local="133461004789132010" remote="133506619280000000" Dst="0" />
+<file name="RequestException.php" server="sassa-live.futurism.co.za" local="133461004789304153" remote="133506619280000000" Dst="0" />
+<file name="ClientException.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004787101278" remote="133506623450000000" Dst="0" />
+<file name="ForbiddenRequestException.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004787282722" remote="133506623450000000" Dst="0" />
+<file name="NetworkException.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004789132010" remote="133506623450000000" Dst="0" />
+<file name="RequestException.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004789304153" remote="133506623460000000" Dst="0" />
 </dwsync>

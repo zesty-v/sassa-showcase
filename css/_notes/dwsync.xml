@@ -8,4 +8,8 @@
 <file name="sassa-custom.css" server="192.168.0.117//var/www/html/" local="133443659610131922" remote="133446874200000000" Dst="0" />
 <file name="bootstrap-4.4.1.css" server="sassa-dev.futurism.co.za//var/www/html/" local="133440740049691093" remote="133448034600000000" Dst="0" />
 <file name="sassa-custom.css" server="sassa-dev.futurism.co.za//var/www/html/" local="133460715665801771" remote="133460715600000000" Dst="0" />
+<file name="bootstrap-4.4.1.css" server="sassa-live.futurism.co.za" local="133440740049691093" remote="133506619170000000" Dst="0" />
+<file name="sassa-custom.css" server="sassa-live.futurism.co.za" local="133460715665801771" remote="133506619170000000" Dst="0" />
+<file name="bootstrap-4.4.1.css" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133440740049691093" remote="133506622970000000" Dst="0" />
+<file name="sassa-custom.css" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133460715665801771" remote="133506622970000000" Dst="0" />
 </dwsync>

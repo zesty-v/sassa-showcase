@@ -4,4 +4,12 @@
 <file name="LICENSE" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005073371337" remote="133250328000000000" Dst="0" />
 <file name="README.md" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005075323152" remote="133250328000000000" Dst="0" />
 <file name="composer.json" server="sassa-dev.futurism.co.za//var/www/html/" local="133461005075446193" remote="133250328000000000" Dst="0" />
+<file name="CHANGELOG.md" server="sassa-live.futurism.co.za" local="133461005073178813" remote="133506619420000000" Dst="0" />
+<file name="composer.json" server="sassa-live.futurism.co.za" local="133461005075446193" remote="133506619420000000" Dst="0" />
+<file name="LICENSE" server="sassa-live.futurism.co.za" local="133461005073371337" remote="133506619420000000" Dst="0" />
+<file name="README.md" server="sassa-live.futurism.co.za" local="133461005075323152" remote="133506619430000000" Dst="0" />
+<file name="CHANGELOG.md" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005073178813" remote="133506623670000000" Dst="0" />
+<file name="composer.json" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005075446193" remote="133506623670000000" Dst="0" />
+<file name="LICENSE" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005073371337" remote="133506623670000000" Dst="0" />
+<file name="README.md" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461005075323152" remote="133506623670000000" Dst="0" />
 </dwsync>
