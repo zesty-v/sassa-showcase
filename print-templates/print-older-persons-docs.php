@@ -29,7 +29,7 @@ $formattedFilename = str_replace(' ', '', $idnumber) . '.' . $timestamp->format(
 
 // Save file for DocuWare to index.
 $mpdf->Output($_SERVER['DOCUMENT_ROOT'] . "/DW-FILES/$formattedFilename", \Mpdf\Output\Destination::FILE);
-ob_clean();
+ob_clean(); 
 
 // Output file to browser.
 $mpdf->Output("$formattedFilename", 'I'); 

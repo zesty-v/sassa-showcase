@@ -1,13 +1,12 @@
 <?php
 
+    // All standard page includes
+    require('../partials/standard-page-requires.php');
+
     // Name of the view.
     $appType = 'Older Persons Grant';
     $viewName = 'Older Persons Grant Documents';
 
-    // All standard page includes
-    require_once '../db/dbfunctions.php';
-    require('../partials/standard-page-requires.php');
-    
     // Make audit entry.
     writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Marking Older Persons Grant application documents that are available.');
 
@@ -167,7 +166,7 @@
                     <button type="button" class="btn btn-warning btn-w-110" onclick="window.location.href='../menu.php';">Cancel</button>
                 </div>
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='../print.php';">Print Letter</button>
+                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='../print-templates/print-older-persons-docs.php';">Print Letter</button>
                 </div>
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">

@@ -9,7 +9,6 @@
     $deceasedstatus = '';
             
     // All standard page includes
-    require_once '../db/dbfunctions.php';
     require('../partials/standard-page-requires.php');
     
     // Audit Entry
@@ -203,7 +202,6 @@
                 <div class="col-sm-3 m-1 p-1 text-center lead">
                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='/grantpages/older-persons-docs.php';">Next -&gt;</button>
                 </div>
-
             </div>
 
             <hr>

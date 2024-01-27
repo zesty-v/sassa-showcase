@@ -1,15 +1,14 @@
 <?php
     
+    // All standard page includes
+    require('../partials/standard-page-requires.php');    
+
     // Name of the view.
     $appType = 'Child Support Grant';           // NAme of the application
     $viewName = 'Child Support Grant';          // Name of the View
     $reference = time();                        // Reference for the Datanamic API calls.
     $children = FALSE;                          // Flag to check if children were found.
     $siblingno = 0;                             // Counting the children :-)
-
-    // All standard page includes
-    require('../partials/standard-page-requires.php');    
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-consumer-lineage.php');
 
     //Store the ID
     $_SESSION['curr-id'] = $_GET['idNumber'];
