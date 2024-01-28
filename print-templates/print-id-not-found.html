@@ -35,7 +35,7 @@
             width: 50%; /* Divides the width equally among the three columns */
             border: 0px solid transparent; /* Invisible borders */
             text-align: left; /* Centering text in each cell */
-        }
+        } 
     </style>
 </head>
     
@@ -43,7 +43,7 @@
     <!-- Image in a div for centering -->
     <div class="center-image">
         <img src="sassa-logo1.png" alt="SASSA Logo">
-    <h2>Older Persons Grant - Visitation Letter</h2>
+    <h2>ID Number Problem - {{application-type}} Application</h2>
     </div>
     <hr>
     
@@ -54,41 +54,22 @@
             <td class="td1">SASSA House<br>501 Prodinsa Building<br>cnr Steve Biko and Pretorius Street<br>PRETORIA<br>{{current-date}}</td>
         </tr>
         <tr>
-            <td class="td1">TO: {{name}} {{surname}}<br>ID: &nbsp;{{idnumber}}</td>
+            <td class="td1">
+                TO: The applicant<br>
+                ID: &nbsp;{{idnumber}}<br>
+                Application: {{application-type}}
+            </td>
             <td class="td1"></td>
             <td class="td1"></td>
         </tr>
     </table>
     
-    <b><h3><u>RE: Acknowledgement of visit to the SASSA offices</u></h3></b>
+    <b><h3><u>RE: Incorrect ID number</u></h3></b>
     <br>
     We would like to thank you for visiting the SASSA Offices today regarding the application for the abovementioned grant type. 
     <br>
-    <p>To be able to process your application, you are required to submit the following documents:</p>
-    <table>
-        <tr>
-            <td><b>DOCUMENTS PRESENTED:</b></td>
-            <td><b>DOCUMENTS OUTSTANDING:</b></td>
-        </tr>
-        <tr>
-            <td class="td1"> 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9745; &nbsp;Application form (REQUIRED).<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9745; &nbsp;SA ID of the Applicant (REQUIRED).<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9745; &nbsp;Proof of residence (REQUIRED).<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9745; &nbsp;Proof of income.<br>
-            </td>
-            <td class="td1">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9744; &nbsp;Proof of assets.<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9744; &nbsp;Proof of private pension.<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9744; &nbsp;3 Month's bank statements (REQUIRED).<br>  
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9744; &nbsp;UIF Member of Discharge certificate.<br>
-
-            </td>
-        </tr>
-    </table>
-<br>
-
-    <p>Please ensure that with your next visit that all the documents above marked REQUIRED are available to enable us to process your application.</p>
+    <p>Our systems indicated that the ID number that you supplied to us is incorrect. Please take this matter up with the Department of Home Affairs for resolution.</p>
+    <p>Once the the matter has been resolved with the department can the application for the process commence.</p>
     <p>Kind Regards</p>
     <br><br><br><br>MS BJ MEMELA-KHAMBULA<br>CHIEF EXECUTIVE OFFICER
     

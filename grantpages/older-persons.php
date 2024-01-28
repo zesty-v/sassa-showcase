@@ -10,7 +10,10 @@
             
     // All standard page includes
     require('../partials/standard-page-requires.php');
-    
+
+    // Capture application type for printing.
+    $_SESSION['application-type'] = $appType;
+
     // Audit Entry
     writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Application started.');
 
@@ -29,8 +32,9 @@
             // Now check the HA DB.
             writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID verification unsuccessful.');
             
-            // TODO: Here we need to navigate to an error page. Like an ID not found. 
-            
+            // Here we need to navigate to an error page. Like an ID not found. 
+            header('Location: ../id-not-found.php');
+            exit;
         
         } else {
             
@@ -70,22 +74,13 @@
     }
 
     // Determine the difference between the current date and the birth date of the citizen. Used for determining the age of the citizen to check eligibility.
-    if (!empty($dob)) {
-        
-        $dobDateTime = new DateTime($dob);
-        $currentDate = new DateTime('now');
+    $dobDateTime = new DateTime($dob);
+    $currentDate = new DateTime('now');
+    $interval = $dobDateTime->diff($currentDate);
 
-        $interval = $dobDateTime->diff($currentDate);
-        
-    } else {
-        
-        // Show page fail page.
-        
-    }
-
+    // Save name and surname etc for printing purposes.
     $_SESSION['name'] = $citizen->firstNames;
     $_SESSION['surname'] = $citizen->surName;
-
 
 ?>
 
@@ -205,7 +200,7 @@
             </div>
 
             <hr>
-
+ 
         </div>
     </div>
 

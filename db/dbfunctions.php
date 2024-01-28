@@ -3,7 +3,7 @@
 function openDatabaseConnection() {
     $servername = "localhost"; // Replace with your server name
     $username = "sassa-user";     // Replace with your username
-    $password = "Clavis777";     // Replace with your password
+    $password = "Clavis777!";     // Replace with your password
     $dbname = "sassa-db";            // The database name
 
     // Create connection

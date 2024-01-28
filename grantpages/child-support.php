@@ -10,52 +10,73 @@
     $children = FALSE;                          // Flag to check if children were found.
     $siblingno = 0;                             // Counting the children :-)
 
-    //Store the ID
-    $_SESSION['curr-id'] = $_GET['idNumber'];
+    // Capture application type for printing.
+    $_SESSION['application-type'] = $appType;
 
-    // Capture audit Entry
-    $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Application Start for' . $appType;
+    // Audit Entry
+    writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Application started.');
 
     // Get the applican ID record from the "Profile Database".
     $data = dn_profile_id_verification($_SESSION['curr-id'], $reference);
     
-    // Now check if there were results that were returned.
-    if ($data == '') {
-
-        // Capture audit Entry: ID was NOT found on Profile db.
-        $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' PROFILE ID NOT found for ' . $appType;
+    // Now check the results that were returned.
+    if (empty($data)) {
         
-        // If not, perform a real-time id verification.
-        $data = dn_realtime_id_verification($_SESSION['curr-id'], $reference);        
-
-        // Check if the ID is still not found.
-        if ($data == '') {
-
-            // Capture audit Entry: ID was NOT found on realtime HA db.
-            $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' REALTIME ID NOT found for ' . $appType;
-
-            // No results were returned, so go to the id-not-found page
-            header('Location: ../id-not-found.php?id_no' . urlencode($_SESSION['curr-id']) . '&app-type=' . urlencode($appType));
+        writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Profile ID verification unsuccessful. will try realtime Home Affairs check.');
+        
+        // Now check the HA DB.
+        $data = dn_realtime_id_verification($_SESSION['curr-id'], time());
+        
+        if (empty($data)) {
+        
+            writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID verification unsuccessful.');
+            
+            // Here we need to navigate to an error page. Like an ID not found. 
+            header('Location: ../id-not-found.php');
             exit;
         
         } else {
+            
+            writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID verification success.');
 
-            // Capture audit Entry: ID was found on realtime HA db.
-            $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' REALTIME ID found for ' . $appType;
-
-        }
+            // Capture dob to be user to determine eligibility.
+            $dob = $data->realTimeResults->dob;
+            $citizen = $data->realTimeResults;
+            $deceasedstatus =  !empty($data->realTimeResults->deceasedDate) ? 'Alive' : 'Deceased';
+       }
+            
     } else {
         
-        // Capture audit Entry: ID was found on profile.
-        $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' PROFILE ID found for ' . $appType;
-        
+        $citizen = $data->idProfile;
+
     }
 
-    // Now get the ID photo from HA
-    $image = dn_photo_id_verification($_SESSION['curr-id'], $reference);
+    // Citizen profile was found in the database (non-HA).
+    writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Profile ID verification success.');
 
+
+    // Now get the ID photo from HA
+    $image = dn_photo_id_verification($_SESSION['curr-id'], time());
+
+    // Check if the image was found. 
+    if (empty($image)) {
+
+        // this is not the end of the world, we just wont show the ID photo if not found.
+        writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID photo retrieval unsuccessful.');
+
+    } else {
+
+        // Make an audit log not that we could not find the id.
+        writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID photo retrieval success.');
+
+    }
+        
     // Now check for lineage.
     $lineage = dn_consumer_lineage($_SESSION['curr-id'], $reference);
+
+    // Capture the name and surname etc. for printing purposes.
+    $_SESSION['name'] = $citizen->firstNames;
+    $_SESSION['surname'] = $citizen->surName;
 
 ?>
 
@@ -221,7 +242,7 @@
                 </div>
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='../print.php';">Print Letter</button>
+                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='../print-templates/print-child-support.php';">Print Letter</button>
                 </div>
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">

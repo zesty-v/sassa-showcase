@@ -12,7 +12,7 @@ $idnumber = $_SESSION['curr-id'];
 $curr_date = date("d F Y");
  
 // Load html template
-$template = file_get_contents(__DIR__ . '/print-older-persons-docs.html');
+$template = file_get_contents(__DIR__ . '/print-child-support-docs.html');
 
 // Substitute fields in the template with session vars.
 $htmlContent = str_replace('{{idnumber}}', $idnumber, $template);

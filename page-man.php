@@ -1,7 +1,6 @@
 <?php
 
     // Start or keep the session going.
-    // if (session_status() == PHP_SESSION_NONE) { session_start(); $_SESSION['loggedin'] = false;}
     session_start();
 
     // If called from the login.php file, ignore.
@@ -26,7 +25,6 @@
             break;
 
         case $_SERVER['DOCUMENT_ROOT'] . '/id-not-found.php':
-            $_SESSION['curr-id'] = '';
             break;
 
         case $_SERVER['DOCUMENT_ROOT'] . '/menu.php':

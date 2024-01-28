@@ -30,7 +30,7 @@ function dn_profile_id_verification($id_number, $reference_number) {
         // Execute cURL session and fetch the response
         $response = curl_exec($ch);
 
-        // Check for any cURL errors
+        // Check for any cURL errors.
         if (curl_errno($ch)) {
             $response = '';
             echo 'Error:' . curl_error($ch);
@@ -61,11 +61,14 @@ function dn_profile_id_verification($id_number, $reference_number) {
                 }
             }';
         
-        $response = json_decode($jsonString);
-        return $response;
-        
-        
-        
+        // This is just to test the "ID not found error page" while we dont have access to the DN API.
+        if ($id_number == '711005 5084 08 1') {
+            $response = json_decode($jsonString);
+            return $response;
+        } else {
+            return;
+        }
+    
     }
 
 }

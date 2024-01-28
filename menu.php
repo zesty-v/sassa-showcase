@@ -10,8 +10,9 @@
 
 
     // Clear the Audit as we are starting with a new session for a new applicant. 
-    $_SESSION['sessionAudit'] = array();
-
+    $_SESSION['application-type'] = '';
+    $_SESSION['name'] = '';
+    $_SESSION['surname'] = '';
 
 ?>
 

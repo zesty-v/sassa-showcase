@@ -1,20 +1,12 @@
 <?php
 
     // Name of the view.
+    session_start();
 
     $viewName = 'ID Not Found';
 
-    require($_SERVER['DOCUMENT_ROOT'] . '/const-site.php');
-
-    sleep(CONST_PAGE_DELAY);
-   
-    require($_SERVER['DOCUMENT_ROOT'] . '/page-man.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
-
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-real-time-id-verification.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-profile-id-verification.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-photo-id-verification.php');
+    require($_SERVER['DOCUMENT_ROOT'] . '/partials/standard-page-requires.php');
+    
 
 ?>
 
@@ -53,9 +45,9 @@
                     <div class="display-4 text-white bg-danger">ID Not Found</div>
                     <hr class="my-0">
                     <div></div>
-                    <div class="dark-text"><h4 class="mt-4"> ID number not found on Profile or Home Affairs</h4></div>
-                    <div class="dark-text"> ID number: <?= $_GET['id_no'] ?></div>
-                    <div class="dark-text mb-4"> Application type: <?= $_GET['app_type'] ?></div>
+                    <div class="dark-text"><h4 class="mt-4"> ID number not found on Profile or at Home Affairs</h4></div>
+                    <div class="dark-text"><b> ID number: </b><?= $_SESSION['curr-id'] ?></div>
+                    <div class="dark-text mb-4"><b> Application type: </b><?= $_SESSION['application-type'] ?></div>
                     
                 </div>
             </div>
@@ -69,7 +61,7 @@
                 </div>
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='../print.php';">Print Letter</button>
+                     <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='/print-templates/print-id-not-found.php';">Print Letter</button>
                 </div>
 
             </div>
