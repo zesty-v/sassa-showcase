@@ -5,10 +5,10 @@
     $viewName = 'Child Support Grant Documents';
 
     // All standard page includes
-    require('../partials/standard-page-requires.php');
+    require($_SERVER['DOCUMENT_ROOT'] . '/partials/standard-page-requires.php');
     
     // Make Audit Entry.
-    $_SESSION['sessionAudit'][] = time() . ': ' . $_SESSION['userName'] . ' - ' . $_SESSION['curr-id'] . ' Marking Child Support Grant application documents that are available.';
+    writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Marking Child Support Grant application documents that are available.');
 
 ?>
 

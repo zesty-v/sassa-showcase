@@ -1,16 +1,15 @@
 <?php
 
+    // All standard page includes
+    require($_SERVER['DOCUMENT_ROOT'] . '/partials/standard-page-requires.php');
+
     // Name of the view.
     $appType = 'Older Persons Grant';
     $viewName = 'Older Persons Grant';
-    $error = '';
     $dob = '';
     $citizen = '';
     $deceasedstatus = '';
-            
-    // All standard page includes
-    require('../partials/standard-page-requires.php');
-
+    
     // Capture application type for printing.
     $_SESSION['application-type'] = $appType;
 
@@ -20,16 +19,16 @@
     // Get the applican ID record from the "Profile Database".
     $data = dn_profile_id_verification($_SESSION['curr-id'], time());
 
-    // Now check if there were results that were returned.
+    // Now check the results that were returned.
     if (empty($data)) {
         
         writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Profile ID verification unsuccessful. will try realtime Home Affairs check.');
-        
+    
+        // Now check the HA DB.
         $data = dn_realtime_id_verification($_SESSION['curr-id'], time());
         
         if (empty($data)) {
         
-            // Now check the HA DB.
             writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID verification unsuccessful.');
             
             // Here we need to navigate to an error page. Like an ID not found. 
@@ -38,41 +37,44 @@
         
         } else {
             
+            writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID verification success.');
+
             // Capture dob to be user to determine eligibility.
             $dob = $data->realTimeResults->dob;
             $citizen = $data->realTimeResults;
             $deceasedstatus =  !empty($data->realTimeResults->deceasedDate) ? 'Alive' : 'Deceased';
-       }
-        
-        
+        }
+                
     } else {
         
-        // Citizen profile was found in the database (non-HA).
-        writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Profile ID verification success.');
-        
-        // Capture dob to be user to determine eligibility for the older persons grant. Must be 60+ years.
-        $dob = $data->idProfile->dob;
         $citizen = $data->idProfile;
-        $deceasedstatus =  !empty($data->idProfile->deathDate) ? 'Alive' : 'Deceased';
-        
-        // Now get the ID photo from HA
-        $image = dn_photo_id_verification($_SESSION['curr-id'], time());
-        
-        // Check if the image was found. 
-        if (empty($image)) {
-            
-            // this is not the end of the world, we just wont show the ID photo if not found.
-            writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID photo retrieval unsuccessful.');
-        
-        } else {
-            
-            // Make an audit log not that we could not find the id.
-            writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID photo retrieval success.');
-            
-        }
         
     }
 
+    // Citizen profile was found in the database (non-HA).
+    writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'Profile ID verification success.');
+
+    // Capture dob to be user to determine eligibility for the older persons grant. Must be 60+ years.
+    $dob = $data->idProfile->dob;
+
+    $deceasedstatus =  !empty($data->idProfile->deathDate) ? 'Alive' : 'Deceased';
+
+    // Now get the ID photo from HA
+    $image = dn_photo_id_verification($_SESSION['curr-id'], time());
+
+    // Check if the image was found. 
+    if (empty($image)) {
+
+        // this is not the end of the world, we just wont show the ID photo if not found.
+        writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID photo retrieval unsuccessful.');
+
+    } else {
+
+        // Make an audit log not that we could not find the id.
+        writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID photo retrieval success.');
+
+    }
+        
     // Determine the difference between the current date and the birth date of the citizen. Used for determining the age of the citizen to check eligibility.
     $dobDateTime = new DateTime($dob);
     $currentDate = new DateTime('now');

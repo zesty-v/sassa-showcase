@@ -1,13 +1,7 @@
 <?php
 
-    require($_SERVER['DOCUMENT_ROOT'] . '/const-site.php');
-    
-    sleep(CONST_PAGE_DELAY);
-
-    require($_SERVER['DOCUMENT_ROOT'] . '/page-man.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dn-api/dn-active-check.php');
-    require($_SERVER['DOCUMENT_ROOT'] . '/dw-api/dw-active-check.php');
-
+    // All standard page includes
+    require($_SERVER['DOCUMENT_ROOT'] . '/partials/standard-page-requires.php');
 
     // Clear the Audit as we are starting with a new session for a new applicant. 
     $_SESSION['application-type'] = '';

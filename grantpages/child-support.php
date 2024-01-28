@@ -1,7 +1,7 @@
 <?php
     
     // All standard page includes
-    require('../partials/standard-page-requires.php');    
+    require($_SERVER['DOCUMENT_ROOT'] . '/partials/standard-page-requires.php');  
 
     // Name of the view.
     $appType = 'Child Support Grant';           // NAme of the application
@@ -42,7 +42,7 @@
             // Capture dob to be user to determine eligibility.
             $dob = $data->realTimeResults->dob;
             $citizen = $data->realTimeResults;
-            $deceasedstatus =  !empty($data->realTimeResults->deceasedDate) ? 'Alive' : 'Deceased';
+            
        }
             
     } else {
@@ -70,13 +70,18 @@
         writeAuditlog($_SESSION['userName'], $_SESSION['curr-id'], $appType, 'HA ID photo retrieval success.');
 
     }
-        
-    // Now check for lineage.
-    $lineage = dn_consumer_lineage($_SESSION['curr-id'], $reference);
 
     // Capture the name and surname etc. for printing purposes.
     $_SESSION['name'] = $citizen->firstNames;
     $_SESSION['surname'] = $citizen->surName;
+
+    // Now check for lineage.
+    $lineage = dn_consumer_lineage($_SESSION['curr-id'], $reference);
+
+    // Check if children were found.
+    // I dont want to go into details about when there are no children as this is a showcase of 
+    // profile and real-time ID verification and not a demonstration that we understand the rules
+    // of SASSA 101%.
 
 ?>
 
@@ -246,7 +251,7 @@
                 </div>
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='/grantpages/child-support-docs.php';">Next -&gt;</button>
+                    <button type="button" class="btn btn-primary btn-w-110" onclick="this.disabled=true; window.location.href='/grantpages/child-support-docs.php';">Next -&gt;</button>
                 </div>
 
             </div>

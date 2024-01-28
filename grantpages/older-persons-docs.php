@@ -1,7 +1,7 @@
 <?php
 
     // All standard page includes
-    require('../partials/standard-page-requires.php');
+    require($_SERVER['DOCUMENT_ROOT'] . '/partials/standard-page-requires.php');
 
     // Name of the view.
     $appType = 'Older Persons Grant';

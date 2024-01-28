@@ -33,6 +33,7 @@
 
         case $_SERVER['DOCUMENT_ROOT'] . '/grantpages/child-support.php':
             $_SESSION['curr-id'] = $_GET['idNumber'];
+            $_SESSION['cellNo'] = $_GET['cellNumber'];
             break;
 
         case $_SERVER['DOCUMENT_ROOT'] . '/grantpages/child-support-docs.php':
@@ -40,6 +41,7 @@
 
         case $_SERVER['DOCUMENT_ROOT'] . '/grantpages/older-persons.php':
             $_SESSION['curr-id'] = $_GET['idNumber'];
+            $_SESSION['cellNo'] = $_GET['cellNumber'];
             break;
 
         case $_SERVER['DOCUMENT_ROOT'] . '/grantpages/older-persons-docs.php':
