@@ -36,4 +36,16 @@
 <file name="pl.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131259769380000000" remote="133506623300000000" Dst="0" />
 <file name="ru.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131259769380000000" remote="133506623300000000" Dst="0" />
 <file name="sv.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131259769380000000" remote="133506623300000000" Dst="0" />
+<file name="de.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419930000000" Dst="0" />
+<file name="dictionary.txt" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419930000000" Dst="0" />
+<file name="en.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419930000000" Dst="0" />
+<file name="es.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419930000000" Dst="0" />
+<file name="fi.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419930000000" Dst="0" />
+<file name="fr.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419930000000" Dst="0" />
+<file name="it.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419940000000" Dst="0" />
+<file name="nl.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419940000000" Dst="0" />
+<file name="NOTES.txt" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419940000000" Dst="0" />
+<file name="pl.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419940000000" Dst="0" />
+<file name="ru.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419940000000" Dst="0" />
+<file name="sv.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419940000000" Dst="0" />
 </dwsync>

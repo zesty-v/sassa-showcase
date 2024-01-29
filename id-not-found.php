@@ -1,12 +1,10 @@
 <?php
 
-    // Name of the view.
-    session_start();
-
-    $viewName = 'ID Not Found';
-
     require($_SERVER['DOCUMENT_ROOT'] . '/partials/standard-page-requires.php');
     
+    // Name of the view.
+    $viewName = 'ID Not Found';
+
 
 ?>
 
@@ -53,7 +51,6 @@
             </div>
 		</div>
         
-    
             <div class="row flex-nowrap  justify-content-center">
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
@@ -66,7 +63,7 @@
 
             </div>
 
-            <hr>
+        <?php require("./db/audit-history.php") ?>
 
         </div>
     </div>

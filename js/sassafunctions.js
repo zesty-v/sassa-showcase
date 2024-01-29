@@ -1,13 +1,16 @@
 // JavaScript Document
 var spinnerShown = false; // Global flag
 
+// this function tries to put the cursor focus on the ID number text field upon loading.
 window.onload = function (){
     document.getElementById("numberInput").focus;
 }
 
+// Create a quick fade-in effect of the page on load.
 window.addEventListener('load', (event) => {
     document.body.classList.add('fade-in');
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -40,6 +43,8 @@ document.addEventListener('keydown', function(event) {
 
 });
 
+// This function does validation checks on the 13 digit SA ID and then navigates to the 
+// relevant page.
 function isValidSAID(linkElement, idNumber) {
 
     // Select the div element by its ID
@@ -124,6 +129,8 @@ function isValidSAID(linkElement, idNumber) {
 
 }
 
+// this function switches the image of the menu buttons around when being clicked,
+// creating a push-button effect.
 function toggleImageSrc(imgElement, altSrc) {
     
     let currentSrc = imgElement.getAttribute('src');
@@ -140,6 +147,7 @@ function toggleImageSrc(imgElement, altSrc) {
     }
 }
 
+// This function groups the ID number digits in the classical format of 711005 5084 08 1 
 function formatInput(input) {
   
     let numbers = input.value.replace(/\D/g, '');
@@ -149,7 +157,7 @@ function formatInput(input) {
     if (numbers.length == 0) {
         var divMessage = document.getElementById('idNotice');
         divMessage.className = 'text-primary';
-        divMessage.textContent = "Please enter an ID Number."; // Replace 'New text content' with the text you want to display
+        divMessage.textContent = "Please enter an ID Number.";
     } 
     if (numbers.length > 6) sections.push(numbers.substring(6, 10)); // Next 4 digits
     if (numbers.length > 10) sections.push(numbers.substring(10, 12)); // Next 2 digits
@@ -159,6 +167,7 @@ function formatInput(input) {
 	
 }
 
+// This function displays an html modal message box. 
 function showModal(userMessage, title){
 
     var modalElement = document.getElementById('modalDialog');

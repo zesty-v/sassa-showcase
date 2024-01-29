@@ -201,7 +201,7 @@
                 </div>
             </div>
 
-            <hr>
+            <?php require("../db/audit-history.php") ?>
  
         </div>
     </div>

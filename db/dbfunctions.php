@@ -1,6 +1,7 @@
 <?php
 
 function openDatabaseConnection() {
+    
     $servername = "localhost";      // Replace with your server name
     $username = "sassa-user";       // Replace with your username
     $password = "Clavis777!";       // Replace with your password
@@ -48,6 +49,19 @@ function writeAuditlog($user_name, $idNumber, $action, $description) {
     // Close statement and connection
     $stmt->close();
     closeDatabaseConnection($conn);
+}
+
+function getAuditEntriesByID($id_no) {
+    
+    // Open the database connection
+    $conn = openDatabaseConnection();
+    
+    $idNumber =str_replace(' ', '', $id_no);
+    
+    $sql = "SELECT timestamp, user_name, id_number, action, description FROM audit where id_number = '" . $idNumber . "' order by timestamp DESC;";
+    
+    return $conn->query($sql);
+    
 }
 
 ?>

@@ -12,4 +12,6 @@
 <file name="dw-const.php" server="sassa-live.futurism.co.za" local="133499894115680145" remote="133506619180000000" Dst="0" />
 <file name="dw-active-check.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133442566758468012" remote="133506622980000000" Dst="0" />
 <file name="dw-const.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133499894115680145" remote="133506622980000000" Dst="0" />
+<file name="dw-active-check.php" server="sassa-live.futurism.co.za//var/www/html/" local="133442566758468012" remote="133509419710000000" Dst="0" />
+<file name="dw-const.php" server="sassa-live.futurism.co.za//var/www/html/" local="133499894115680145" remote="133509419720000000" Dst="0" />
 </dwsync>

@@ -29,8 +29,9 @@
 
     <body>
     
+        <?php require('./navbar.php'); ?>
         <?php require('modalmessage.php'); ?>
-        
+
          <div class="row">
            <div class="col-sm text-center img-fluid pt-3"><img src="/images/sassa-logo1.png" alt="" class="img-fluid"></div>
         </div>  
@@ -43,12 +44,14 @@
                     <div class="row flex-nowrap justify-content-center my-3">
                         <div class="col-md-2"></div>
                         <div class="col-md-3">
-                            <input type="text" id="numberInput" name="idNumber" oninput="formatInput(this)" placeholder="711005 5000 00 1" value="711005 5084 08 1" pattern="\d*" required>
+                            <!-- <input type="text" id="numberInput" name="idNumber" oninput="formatInput(this)" placeholder="711005 5000 00 1" value="711005 5084 08 1" pattern="\d*" required> -->
+                            <input type="text" id="numberInput" name="idNumber" oninput="formatInput(this)" placeholder="711005 5000 00 1" pattern="\d*" required>
                             <div id='idNotice' class="text-info">Client SA ID number.</div>
                         </div>
                         <div class="col-md-2"></div>
                         <div class="col-md-3">
-                            <input type="text" id="cellInput" name="cellNumber" oninput="formatInput(this)" placeholder="+27 81 559 2853" value="+27 81 559 2853" pattern="\d*" required>
+                            <!-- <input type="text" id="cellInput" name="cellNumber" oninput="formatInput(this)" placeholder="+27 81 559 2853" value="+27 81 559 2853" pattern="\d*" required> -->
+                            <input type="text" id="cellInput" name="cellNumber" oninput="" placeholder="+27 81 559 2853" pattern="\d*" required>
                             <div id='idNotice' class="text-info">Client cell number.</div>
                         </div>
                         <div class="col-md-2"></div>

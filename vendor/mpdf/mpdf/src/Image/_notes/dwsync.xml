@@ -15,4 +15,9 @@
 <file name="ImageTypeGuesser.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004795414865" remote="133506623460000000" Dst="0" />
 <file name="Svg.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004795711499" remote="133506623460000000" Dst="0" />
 <file name="Wmf.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004797568094" remote="133506623460000000" Dst="0" />
+<file name="Bmp.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004793347788" remote="133509420070000000" Dst="0" />
+<file name="ImageProcessor.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004793535142" remote="133509420070000000" Dst="0" />
+<file name="ImageTypeGuesser.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004795414865" remote="133509420070000000" Dst="0" />
+<file name="Svg.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004795711499" remote="133509420070000000" Dst="0" />
+<file name="Wmf.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004797568094" remote="133509420070000000" Dst="0" />
 </dwsync>

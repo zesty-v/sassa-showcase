@@ -23,16 +23,18 @@ def calculate_checksum(id_number):
 
 def generate_random_id_number():
     """Generate a random South African ID number."""
-    birth_date = random_date().strftime('%y%m%d')
-    gender = str(random.randint(0000, 9999)).zfill(4)
+    birth_date = random_date()
+    birth_date_str = birth_date.strftime('%y%m%d')
+    gender_number = random.randint(0, 9999)
+    gender = 'F' if gender_number < 5000 else 'M'
+    gender_str = str(gender_number).zfill(4)
     citizenship = random.choice(['0', '1'])  # 0 for citizen, 1 for resident
     race_digit = str(random.randint(0, 9))   # No longer relevant, but included for format completeness
-    id_number = birth_date + gender + citizenship + race_digit
+    id_number = birth_date_str + gender_str + citizenship + race_digit
     checksum = calculate_checksum(id_number)
-    return id_number + str(checksum)
+    full_id = id_number + str(checksum)
+    return f"{full_id}, {gender}, {birth_date.strftime('%Y-%m-%d')}"
 
-# Generate 10 random ID numbers
-random_id_numbers = [generate_random_id_number() for _ in range(100)]
-print (random_id_numbers)
-
-
+# Generate 255 random ID numbers and print each on a separate line
+for _ in range(1000):
+    print(generate_random_id_number())

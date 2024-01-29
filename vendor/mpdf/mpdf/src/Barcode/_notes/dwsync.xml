@@ -48,4 +48,20 @@
 <file name="Postnet.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004730616277" remote="133506623430000000" Dst="0" />
 <file name="Rm4Scc.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004732624093" remote="133506623430000000" Dst="0" />
 <file name="S25.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004734386019" remote="133506623430000000" Dst="0" />
+<file name="AbstractBarcode.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004717982125" remote="133509420030000000" Dst="0" />
+<file name="BarcodeException.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004718080594" remote="133509420030000000" Dst="0" />
+<file name="BarcodeInterface.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004720116394" remote="133509420030000000" Dst="0" />
+<file name="Codabar.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004720260381" remote="133509420030000000" Dst="0" />
+<file name="Code11.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004722295052" remote="133509420040000000" Dst="0" />
+<file name="Code128.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004722465698" remote="133509420040000000" Dst="0" />
+<file name="Code39.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004724337342" remote="133509420040000000" Dst="0" />
+<file name="Code93.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004724455612" remote="133509420040000000" Dst="0" />
+<file name="EanExt.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004726447542" remote="133509420040000000" Dst="0" />
+<file name="EanUpc.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004726565103" remote="133509420040000000" Dst="0" />
+<file name="I25.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004728450434" remote="133509420040000000" Dst="0" />
+<file name="Imb.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004728568933" remote="133509420040000000" Dst="0" />
+<file name="Msi.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004730541372" remote="133509420040000000" Dst="0" />
+<file name="Postnet.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004730616277" remote="133509420040000000" Dst="0" />
+<file name="Rm4Scc.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004732624093" remote="133509420040000000" Dst="0" />
+<file name="S25.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004734386019" remote="133509420040000000" Dst="0" />
 </dwsync>

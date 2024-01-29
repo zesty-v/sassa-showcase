@@ -35,4 +35,11 @@
 <file name="dn-photo-id-verification.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133505607225955011" remote="133506622980000000" Dst="0" />
 <file name="dn-profile-id-verification.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133508324473428393" remote="133508415380000000" Dst="0" />
 <file name="dn-real-time-id-verification.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133508325592993260" remote="133508415380000000" Dst="0" />
+<file name="dn-active-check.php" server="sassa-live.futurism.co.za//var/www/html/" local="133499893567135406" remote="133509419710000000" Dst="0" />
+<file name="dn-auth.php" server="sassa-live.futurism.co.za//var/www/html/" local="133444468457144729" remote="133509419710000000" Dst="0" />
+<file name="dn-const.php" server="sassa-live.futurism.co.za//var/www/html/" local="133454969818911965" remote="133509419710000000" Dst="0" />
+<file name="dn-consumer-lineage.php" server="sassa-live.futurism.co.za//var/www/html/" local="133506643462642246" remote="133506643460000000" Dst="0" />
+<file name="dn-photo-id-verification.php" server="sassa-live.futurism.co.za//var/www/html/" local="133505607225955011" remote="133509419710000000" Dst="0" />
+<file name="dn-profile-id-verification.php" server="sassa-live.futurism.co.za//var/www/html/" local="133508324473428393" remote="133509419710000000" Dst="0" />
+<file name="dn-real-time-id-verification.php" server="sassa-live.futurism.co.za//var/www/html/" local="133508325592993260" remote="133509419710000000" Dst="0" />
 </dwsync>

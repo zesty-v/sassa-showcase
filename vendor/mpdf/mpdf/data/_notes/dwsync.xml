@@ -36,4 +36,16 @@
 <file name="subs_core.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004210509165" remote="133506623280000000" Dst="0" />
 <file name="subs_win-1252.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004210586541" remote="133506623280000000" Dst="0" />
 <file name="upperCase.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004212564860" remote="133506623280000000" Dst="0" />
+<file name="CJKdata.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461003975284342" remote="133509419840000000" Dst="0" />
+<file name="entity_substitutions.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004171881477" remote="133509419900000000" Dst="0" />
+<file name="lang2fonts.css" server="sassa-live.futurism.co.za//var/www/html/" local="133461004188534733" remote="133509419900000000" Dst="0" />
+<file name="linebrdictK.dat" server="sassa-live.futurism.co.za//var/www/html/" local="133461004191370839" remote="133509419900000000" Dst="0" />
+<file name="linebrdictL.dat" server="sassa-live.futurism.co.za//var/www/html/" local="133461004190831693" remote="133509419900000000" Dst="0" />
+<file name="linebrdictT.dat" server="sassa-live.futurism.co.za//var/www/html/" local="133461004193165495" remote="133509419910000000" Dst="0" />
+<file name="mpdf.css" server="sassa-live.futurism.co.za//var/www/html/" local="133461004193223462" remote="133509419910000000" Dst="0" />
+<file name="no_image.jpg" server="sassa-live.futurism.co.za//var/www/html/" local="133461004194823176" remote="133509419910000000" Dst="0" />
+<file name="out.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004194951737" remote="133509419910000000" Dst="0" />
+<file name="subs_core.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004210509165" remote="133509419910000000" Dst="0" />
+<file name="subs_win-1252.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004210586541" remote="133509419910000000" Dst="0" />
+<file name="upperCase.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004212564860" remote="133509419910000000" Dst="0" />
 </dwsync>

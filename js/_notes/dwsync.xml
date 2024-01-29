@@ -15,7 +15,7 @@
 <file name="bootstrap-4.4.1.js" server="sassa-dev.futurism.co.za//var/www/html/" local="133436651072457341" remote="133448034600000000" Dst="0" />
 <file name="jquery-3.4.1.min.js" server="sassa-dev.futurism.co.za//var/www/html/" local="133436651070696129" remote="133448034600000000" Dst="0" />
 <file name="popper.min.js" server="sassa-dev.futurism.co.za//var/www/html/" local="133436651071533873" remote="133448034600000000" Dst="0" />
-<file name="sassafunctions.js" server="sassa-dev.futurism.co.za//var/www/html/" local="133506484283387712" remote="133506478200000000" Dst="0" />
+<file name="sassafunctions.js" server="sassa-dev.futurism.co.za//var/www/html/" local="133509816401562312" remote="133509816000000000" Dst="0" />
 <file name="bootstrap-4.4.1.js" server="sassa-live.futurism.co.za" local="133436651072457341" remote="133506619210000000" Dst="0" />
 <file name="jquery-3.4.1.min.js" server="sassa-live.futurism.co.za" local="133436651070696129" remote="133506619210000000" Dst="0" />
 <file name="popper.min.js" server="sassa-live.futurism.co.za" local="133436651071533873" remote="133506619210000000" Dst="0" />
@@ -24,4 +24,8 @@
 <file name="jquery-3.4.1.min.js" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133436651070696129" remote="133506623030000000" Dst="0" />
 <file name="popper.min.js" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133436651071533873" remote="133506623030000000" Dst="0" />
 <file name="sassafunctions.js" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133506484283387712" remote="133506623030000000" Dst="0" />
+<file name="jquery-3.4.1.min.js" server="sassa-live.futurism.co.za//var/www/html/" local="133436651070696129" remote="133509411340000000" Dst="0" />
+<file name="popper.min.js" server="sassa-live.futurism.co.za//var/www/html/" local="133436651071533873" remote="133509411340000000" Dst="0" />
+<file name="bootstrap-4.4.1.js" server="sassa-live.futurism.co.za//var/www/html/" local="133436651072457341" remote="133509411340000000" Dst="0" />
+<file name="sassafunctions.js" server="sassa-live.futurism.co.za//var/www/html/" local="133509816401562312" remote="133509816550000000" Dst="0" />
 </dwsync>

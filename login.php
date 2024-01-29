@@ -69,8 +69,6 @@
     
     <!-- Custom functions for SASSA -->
     <script src="js/sassafunctions.js"></script>
-
-<?php var_dump($_SESSION['sessionAudit']); ?>
       
   </body>
 </html>

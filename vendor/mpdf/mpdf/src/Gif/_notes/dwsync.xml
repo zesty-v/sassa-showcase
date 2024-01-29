@@ -18,4 +18,10 @@
 <file name="Image.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004778718941" remote="133506623450000000" Dst="0" />
 <file name="ImageHeader.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004780514579" remote="133506623450000000" Dst="0" />
 <file name="Lzw.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="133461004780672101" remote="133506623450000000" Dst="0" />
+<file name="ColorTable.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004776582097" remote="133509420060000000" Dst="0" />
+<file name="FileHeader.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004776709824" remote="133509420060000000" Dst="0" />
+<file name="Gif.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004778572198" remote="133509420060000000" Dst="0" />
+<file name="Image.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004778718941" remote="133509420060000000" Dst="0" />
+<file name="ImageHeader.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004780514579" remote="133509420060000000" Dst="0" />
+<file name="Lzw.php" server="sassa-live.futurism.co.za//var/www/html/" local="133461004780672101" remote="133509420060000000" Dst="0" />
 </dwsync>

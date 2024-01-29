@@ -30,4 +30,14 @@
 <file name="subs_core.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131259769380000000" remote="133506623300000000" Dst="0" />
 <file name="subs_win-1252.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131259769380000000" remote="133506623300000000" Dst="0" />
 <file name="upperCase.php" server="sassa-live.futurism.co.za//var/www/sassa-live.futurism.co.za/" local="131259769380000000" remote="133506623300000000" Dst="0" />
+<file name="CJKdata.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419920000000" Dst="0" />
+<file name="functions.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419920000000" Dst="0" />
+<file name="linebrdictK.dat" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419920000000" Dst="0" />
+<file name="linebrdictL.dat" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419920000000" Dst="0" />
+<file name="linebrdictT.dat" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419920000000" Dst="0" />
+<file name="no_image.jpg" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419920000000" Dst="0" />
+<file name="out.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419930000000" Dst="0" />
+<file name="subs_core.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419930000000" Dst="0" />
+<file name="subs_win-1252.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419930000000" Dst="0" />
+<file name="upperCase.php" server="sassa-live.futurism.co.za//var/www/html/" local="131259769380000000" remote="133509419930000000" Dst="0" />
 </dwsync>
