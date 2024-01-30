@@ -68,7 +68,7 @@
                                 <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
                                 </div>
                             </a>
-                        </div>Care Dependency<br><br>
+                        </div>Care Dependency Grant<br><br>
                     </div>
 
                     <div class="col-md">
@@ -79,7 +79,7 @@
                                 </div>
                             </a>
                         </div>
-                        Child Support<br><br>
+                        Child Support Grant<br><br>
                     </div>
 
                     <div class="col-md">
@@ -90,7 +90,7 @@
                                 </div>
                             </a>
                         </div>
-                        Foster Child<br><br>
+                        Foster Child Grant<br><br>
                     </div>
                 </div>
 
@@ -104,7 +104,7 @@
                                 </div>
                             </a>
                         </div>
-                    Disability<br><br>
+                    Disability Grant<br><br>
                     </div>
 
                     <div class="col-md">
@@ -126,7 +126,7 @@
                                 </div>
                             </a>
                         </div>
-                        Older Persons<br><br>
+                        Older Persons Grant<br><br>
                     </div>
 
                 </div>
@@ -140,7 +140,7 @@
                                 </div>
                             </a>
                         </div>
-                        Relief of Distress<br><br>
+                        Relief of Distress Grant<br><br>
                     </div>
 
                     <div class="col-md">
@@ -151,17 +151,17 @@
                                 </div>
                             </a>
                         </div>
-                        War Veterans<br><br>
+                        War Veterans Grant<br><br>
                     </div>
                     <div class="col-md">
                         <div class="position-relative">
                             <a href="grantpages/covid-19-relief.php" onclick="return isValidSAID(this, document.getElementById('numberInput').value);">
-                                <img src="images/9.0.caredependencycovid.png" onmouseover="toggleImageSrc(this, 'images/9.1.caredependencycovid.png');" alt="Relief of Distress" onmouseout="toggleImageSrc(this, 'images/9.0.caredependencycovid.png');" class="img-fluid max-size-210">
+                                <img src="images/9.0.caredependencycovid.png" onmouseover="toggleImageSrc(this, 'images/9.1.caredependencycovid.png');" alt="Social Relief of Distress Grant" onmouseout="toggleImageSrc(this, 'images/9.0.caredependencycovid.png');" class="img-fluid max-size-210">
                                 <div class="spinner-border position-absolute" role="status" style="width: 4rem; height: 4rem; top: 40%; left: 40%; display: none;">
                                 </div>
                             </a>
                         </div>
-                        Covid-19 Relief of Distress<br><br>
+                        Covid-19 SRD Grant<br><br>
                     </div>
                 </div>
             </div>

@@ -32,7 +32,7 @@ def generate_random_id_number():
     return id_number + str(checksum)
 
 # Generate 10 random ID numbers
-random_id_numbers = [generate_random_id_number() for _ in range(100)]
+random_id_numbers = [generate_random_id_number() for _ in range(1000)]
 print (random_id_numbers)
 
 
