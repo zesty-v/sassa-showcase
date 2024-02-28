@@ -43,31 +43,166 @@ function dn_profile_id_verification($id_number, $reference_number) {
         return $response;
 
     } else {
-        $jsonString = '{
-            "Status": "Success",
-            "idProfile": {
-                "traceId": 10286383,
-                "idNumber": "8307065125487",
-                "firstNames": "Sytze",
-                "surName": "Visser",
-                "dob": "1961-10-05",
-                "age": 52,
-                "gender": "Male",
-                "citizenship": "South African",
-                "status": "1",
-                "dateOfIssue": "2001-11-13T00:00:00+02:00",
-                "deathDate": [],
-                "deathPlace": ""
-                }
-            }';
         
-        // This is just to test the "ID not found error page" while we dont have access to the DN API.
-        if ($id_number == '711005 5084 08 1') {
-            $response = json_decode($jsonString);
-            return $response;
-        } else {
-            return;
+        switch(str_replace(' ', '', $id_number)) {
+            case '7110055084081':
+                $jsonString = '{
+                    "Status": "Success",
+                    "idProfile": {
+                        "traceId": 10286383,
+                        "idNumber": "7110055084081",
+                        "firstNames": "Sytze",
+                        "surName": "Visser",
+                        "dob": "1971-10-05",
+                        "age": 52,
+                        "gender": "Male",
+                        "citizenship": "South African",
+                        "status": "1",
+                        "dateOfIssue": "2001-11-13T00:00:00+02:00",
+                        "deathDate": [],
+                        "deathPlace": ""
+                        }
+                    }';
+                    break;
+            case '0407051274147':
+                $jsonString = '{
+                    "Status": "Success",
+                    "idProfile": {
+                        "traceId": 10286383,
+                        "idNumber": "0407051274147",
+                        "firstNames": "Marley",
+                        "surName": "Sherman",
+                        "dob": "1983-07-06",
+                        "age": 41,
+                        "gender": "Female",
+                        "citizenship": "South African",
+                        "status": "1",
+                        "dateOfIssue": "2001-11-13T00:00:00+02:00",
+                        "deathDate": [],
+                        "deathPlace": ""
+                        }
+                    }';
+                    break;
+            case '0401113432181':
+                $jsonString = '{
+                    "Status": "Success",
+                    "idProfile": {
+                        "traceId":  10286383,
+                        "idNumber": "0401113432181",
+                        "firstNames": "Mariah",
+                        "surName": "Dyer",
+                        "dob": "2004-01-11",
+                        "age": 19,
+                        "gender": "Female",
+                        "citizenship": "South African",
+                        "status": "1",
+                        "dateOfIssue": "2001-11-13T00:00:00+02:00",
+                        "deathDate": [],
+                        "deathPlace": ""
+                        }
+                    }';
+                    break;
+            case '9304220005158':
+                $jsonString = '{
+                    "Status": "Success",
+                    "idProfile": {
+                        "traceId": 10286383,
+                        "idNumber": "9304220005158",
+                        "firstNames": "Kaila",
+                        "surName": "Knox",
+                        "dob": "1993-04-22",
+                        "age": 30,
+                        "gender": "Female",
+                        "citizenship": "South African",
+                        "status": "1",
+                        "dateOfIssue": "2001-11-13T00:00:00+02:00",
+                        "deathDate": [],
+                        "deathPlace": ""
+                        }
+                    }';
+                    break;
+            case '9012065008167':
+                $jsonString = '{
+                    "Status": "Success",
+                    "idProfile": {
+                        "traceId": 10286383,
+                        "idNumber": "9012065008167",
+                        "firstNames": "Hadassah",
+                        "surName": "Salazar",
+                        "dob": "1990-12-06",
+                        "age": 23,
+                        "gender": "Male",
+                        "citizenship": "South African",
+                        "status": "1",
+                        "dateOfIssue": "2001-11-13T00:00:00+02:00",
+                        "deathDate": [],
+                        "deathPlace": ""
+                        }
+                    }';
+                    break;
+            case '8005080056089':
+                $jsonString = '{
+                    "Status": "Success",
+                    "idProfile": {
+                        "traceId": 10286383,
+                        "idNumber": "8005080056089",
+                        "firstNames": "Virginia",
+                        "surName": "Kunene",
+                        "dob": "1980-05-08",
+                        "age": 43,
+                        "gender": "Female",
+                        "citizenship": "South African",
+                        "status": "1",
+                        "dateOfIssue": "2001-11-13T00:00:00+02:00",
+                        "deathDate": [],
+                        "deathPlace": ""
+                        }
+                    }';
+                    break;
+            case '8004305003018':
+                $jsonString = '{
+                    "Status": "Success",
+                    "idProfile": {
+                        "traceId": 10286383,
+                        "idNumber": "8004305003018",
+                        "firstNames": "Tumelo",
+                        "surName": "Magubane",
+                        "dob": "1980-04-30",
+                        "age": 43,
+                        "gender": "Male",
+                        "citizenship": "South African",
+                        "status": "1",
+                        "dateOfIssue": "2001-11-13T00:00:00+02:00",
+                        "deathDate": [],
+                        "deathPlace": ""
+                        }
+                    }';
+                    break;
+            case '8905310088176':
+                $jsonString = '{
+                    "Status": "Success",
+                    "idProfile": {
+                        "traceId": 10286383,
+                        "idNumber": "8905310088176",
+                        "firstNames": "Rorisang",
+                        "surName": "Mabizela",
+                        "dob": "1989-05-31",
+                        "age": 33,
+                        "gender": "Female",
+                        "citizenship": "South African",
+                        "status": "1",
+                        "dateOfIssue": "2001-11-13T00:00:00+02:00",
+                        "deathDate": [],
+                        "deathPlace": ""
+                        }
+                    }';
+                    break;
+            default:
+                return;
         }
+                
+        $response = json_decode($jsonString);
+        return $response;
     
     }
 

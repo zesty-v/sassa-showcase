@@ -11,6 +11,7 @@ function print_id_not_found_letter() {
     $idnumber = $_SESSION['curr-id']; 
     $curr_date = date("d F Y");
     $appType = $_SESSION['application-type'];
+    $curr_time = date("H:i:s", time());
 
     // Load html template
     $template = file_get_contents(__DIR__ . '/print-id-not-found.html');
@@ -18,6 +19,7 @@ function print_id_not_found_letter() {
     // Substitute fields in the template with session vars.
     $htmlContent = str_replace('{{idnumber}}', $idnumber, $template);
     $htmlContent = str_replace('{{current-date}}', $curr_date, $htmlContent);
+    $htmlContent = str_replace('{{current-time}}', $curr_time, $htmlContent);
     $htmlContent = str_replace('{{application-type}}', $appType, $htmlContent);
 
     // Put into HTML

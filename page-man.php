@@ -44,6 +44,11 @@
             $_SESSION['cellNo'] = $_GET['cellNumber'];
             break;
 
+        case $_SERVER['DOCUMENT_ROOT'] . '/querylist.php':
+            $_SESSION['curr-id'] = $_GET['idNumber'];
+            $_SESSION['cellNo'] = $_GET['cellNumber'];
+            break;
+
         case $_SERVER['DOCUMENT_ROOT'] . '/grantpages/older-persons-docs.php':
             break;
 

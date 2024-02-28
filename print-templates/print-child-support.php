@@ -12,6 +12,7 @@ function print_child_support_letter() {
     $surname = $_SESSION['surname'];
     $idnumber = $_SESSION['curr-id'];
     $curr_date = date("d F Y");
+    $curr_time = date("H:i:s", time());
 
     // Load html template
     $template = file_get_contents(__DIR__ . '/print-child-support.html');
@@ -21,6 +22,7 @@ function print_child_support_letter() {
     $htmlContent = str_replace('{{name}}', $name, $htmlContent);
     $htmlContent = str_replace('{{surname}}', $surname, $htmlContent);
     $htmlContent = str_replace('{{current-date}}', $curr_date, $htmlContent);
+    $htmlContent = str_replace('{{current-time}}', $curr_time, $htmlContent);
 
     // Put into HTML
     $mpdf->WriteHTML($htmlContent);

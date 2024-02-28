@@ -3,7 +3,7 @@
     require($_SERVER['DOCUMENT_ROOT'] . '/partials/standard-page-requires.php');
     
     // Name of the view.
-    $viewName = 'Not Implemented';
+    $viewName = 'Queue';
 
 
 ?>
@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
       
-    <title>NOTICE: Functionality not implemented</title>
+    <title>ACTION: Client was sucessfully added to the queue</title>
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -27,7 +27,9 @@
   </head>
 
   <body>
-
+      
+    <?php require('modalmessage.php'); ?>
+    <?php require('navbar.php'); ?>
 
     <div class="row">
        <div class="col-sm text-center img-fluid pt-3"><img src="/images/2.2.childcare.png" alt="" class="img-fluid"></div>
@@ -38,11 +40,13 @@
             <div class="row">
                 <div class="col-sm">
         	        <hr class="my-0 mt-4">
-                    <div class="display-4 text-white bg-danger">Showcase Not implemented</div>
+                    <div class="display-4 text-white bg-info">Client added to queue</div>
                     <hr class="my-0">
                     <div></div>
-                    <div class="dark-text"><h4 class="mt-4"> Only the Child Support and Older Persons Grants are currently available</h4></div>
-                    <div class="dark-text"><b> Please click the back button to get back to the menu. </b></div>
+                    <div class="dark-text"><h4 class="mt-4"> Client has successfully been added to the queue to proceed with the application.</h4></div>
+                    <div class="dark-text"><b> ID number: </b><?= $_SESSION['curr-id'] ?></div>
+                    <div class="dark-text mb-4"><b> Application type: </b><?= $_SESSION['application-type'] ?></div>
+                    
                 </div>
             </div>
 		</div>
@@ -50,14 +54,17 @@
             <div class="row flex-nowrap  justify-content-center">
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-warning btn-w-110" onclick="window.location.href='../menu.php';">Go Back!</button>
+                    <button type="button" class="btn btn-warning btn-w-110" onclick="window.location.href='../menu.php';">Back</button>
                 </div>
-                
+
             </div>
+
+        <?php require("./db/audit-history.php") ?>
 
         </div>
     </div>
-
+    
+    <?php include('bottom-status.php'); ?>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
     <script src="/js/jquery-3.4.1.min.js"></script>

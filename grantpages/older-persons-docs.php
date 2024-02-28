@@ -170,7 +170,7 @@
                 </div>
 
                 <div class="col-sm-3 m-1 p-1 text-center lead">
-                    <button type="button" class="btn btn-primary btn-w-110">Next -&gt;</button>
+                    <button type="button" class="btn btn-primary btn-w-110" onclick="window.location.href='../queue.php';">Next -&gt;</button>
                 </div>
             </div>
 

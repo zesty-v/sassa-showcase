@@ -5,7 +5,8 @@ session_start();
 // Static credentials --> add more if you want to.
 $credentials = [
     'sytze' => 'Rhopalocera777!',
-    'jason' => 'getmein!' 
+    'jason' => 'getmein!', 
+    'test' => 'test'
 ];
 
 $_SESSION['loggedin'] = false;
